@@ -1,0 +1,10 @@
+C:\Users\LocalAdmin\Documents\PSoC Creator\SysTick_Example01\SysTick_Example03.cydsn\SysTick_Example03.cyprj|e4a2c2e2-d11f-4e28-af92-36858fc5d3b1
+D:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|179e3216-743d-431a-8e67-5adfc8d008d6
+D:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|7ace0c90-d908-429c-97fe-53087ad372fa
+C:\Users\LocalAdmin\Documents\PSoC Creator\4.3\Downloads ( 4.3).cylib\Downloads ( 4.3).cyprj|8f3fde63-701c-4ddf-822d-61466ccb6732
+D:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|349ea9b8-6bcf-4968-9167-21866acdaf5b
+D:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|fc3dd13a-f6ef-4d4c-8b06-6b68c5a3a4ad
+D:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|fa69255f-fbf3-4c7d-8f5f-6803c3f301a2
+C:\Users\LocalAdmin\Documents\PSoC Creator\SysTick_Example01\SysTick_Example01.cydsn\SysTick_Example01.cyprj|0c9f1341-48a7-487f-950e-6fd9a14df2f7
+C:\Users\LocalAdmin\Documents\PSoC Creator\SysTick_Example01\SysTick_Example02.cydsn\SysTick_Example02.cyprj|e24160f0-9e43-40a8-9a4a-eed0c985bc61
+C:\Users\LocalAdmin\Documents\PSoC Creator\SysTick_Example01\Interrupts_Example01.cydsn\Interrupts_Example01.cyprj|2914ead2-40d0-4dff-93f3-883a9e1b2b8c

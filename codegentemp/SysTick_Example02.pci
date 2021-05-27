@@ -1,0 +1,16 @@
+# SysTick_Example02
+# 2021-05-19 14:44:42Z
+
+# IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
+dont_use_io iocell 3 2
+# IO_3@[IOP=(3)][IoId=(3)] is reserved: SWDDebugEnabled
+dont_use_io iocell 3 3
+set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
+set_io "SW0(0)" iocell 0 7
+set_io "LED(0)" iocell 1 6
+set_io "\UART:tx(0)\" iocell 7 1
+set_io "\UART:rx(0)\" iocell 7 0
+set_io "LED_GPIO0(0)" iocell 0 6
+set_io "LED_GPIO1(0)" iocell 0 5
+set_io "LED_GPIO2(0)" iocell 0 4
+set_io "LED_GPIO3(0)" iocell 0 3

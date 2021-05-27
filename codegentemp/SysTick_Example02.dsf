@@ -1,0 +1,4 @@
+Stub-:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v20+:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v22==>:interrupt_idmux_2.in_0
+Stub-:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v17+:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v19==>:interrupt_idmux_1.in_0
+Stub-:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v16+:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v18==>:interrupt_idmux_0.in_0
+Stub-:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v21+:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v23==>:interrupt_idmux_3.in_0

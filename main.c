@@ -186,7 +186,7 @@ int main()
     }
 
     
-    UART_UartPutString("HelloWorld\r\n");
+    UART_UartPutString("BeeMill 1V0\r\n");
 
     for(;;)
     {
@@ -216,13 +216,21 @@ int main()
             sprintf(buffer, "%s", RxBuffer);
             if (strcmp ("start",buffer) == 0){
                 boStart = true;
+                msCount = 0;
                 CySysTickEnable();
+                isr_GPIO_0_Enable();
+                isr_GPIO_1_Enable();
+                isr_GPIO_2_Enable();
+                isr_GPIO_3_Enable();
                 LED_Write(LIGHT_ON);
             }
             if (strcmp ("stop",buffer) == 0){
                 boStart = false;
                 CySysTickStop();
-                msCount = 0;
+                isr_GPIO_0_Disable();
+                isr_GPIO_1_Disable();
+                isr_GPIO_2_Disable();
+                isr_GPIO_3_Disable();
                 LED_Write(LIGHT_OFF);
             }
 

@@ -36,11 +36,15 @@ volatile uint32 intSW0 = 0;
 volatile uint32 intSW1 = 0;
 volatile uint32 intSW2 = 0;
 volatile uint32 intSW3 = 0;
+volatile uint32 intSW4 = 0;
+volatile uint32 intSW5 = 0;
 
 volatile bool boSW0 = false;
 volatile bool boSW1 = false;
 volatile bool boSW2 = false;
 volatile bool boSW3 = false;
+volatile bool boSW4 = false;
+volatile bool boSW5 = false;
 
 /* Function Prototypes */
 void SysTickISRCallback(void);
@@ -93,6 +97,29 @@ CY_ISR(GPIO3IsrHandler)
     boSW3 = true;
 }
 
+CY_ISR(GPIO4IsrHandler)
+{
+    /* Clear pending Interrupt */
+    isr_GPIO_4_ClearPending();
+    
+    /* Clear pin Interrupt */
+    SW4_ClearInterrupt();
+
+    intSW4 = msCount;
+    boSW4 = true;
+}
+
+CY_ISR(GPIO5IsrHandler)
+{
+    /* Clear pending Interrupt */
+    isr_GPIO_5_ClearPending();
+    
+    /* Clear pin Interrupt */
+    SW5_ClearInterrupt();
+
+    intSW5 = msCount;
+    boSW5 = true;
+}
 
 /*******************************************************************************
 * Function Name: main
@@ -123,14 +150,6 @@ int main()
     
     char RxBuffer[RxBufferSize];     // Rx circular buffer to hold all incoming command
     char *RxWriteIndex = RxBuffer;    // pointer to position in RxBuffer to read and process bytes
-
-    /* Initialize global variables. */
-    intSW0 = 0;
-    intSW1 = 0;
-    intSW2 = 0;
-    intSW3 = 0;
-    
-    boSW0 = false;
     
     boCRLF = false;
     boStart = false;
@@ -160,10 +179,23 @@ int main()
 
     /* Changes initial priority for the GPIO interrupt */
     isr_GPIO_3_SetPriority(DEFAULT_PRIORITY);
+    
+    /* Sets up the GPIO interrupt and enables it */
+    isr_GPIO_4_StartEx(GPIO4IsrHandler);
+
+    /* Changes initial priority for the GPIO interrupt */
+    isr_GPIO_4_SetPriority(DEFAULT_PRIORITY);
+    
+    /* Sets up the GPIO interrupt and enables it */
+    isr_GPIO_5_StartEx(GPIO5IsrHandler);
+
+    /* Changes initial priority for the GPIO interrupt */
+    isr_GPIO_5_SetPriority(DEFAULT_PRIORITY);
 
     /* Enable global interrupts. */
     CyGlobalIntEnable;
     
+    LED_Write(LIGHT_OFF);
     UART_Start();
 
     /* Configure the SysTick timer to generate interrupt every 1 ms
@@ -186,7 +218,7 @@ int main()
     }
 
     
-    UART_UartPutString("BeeMill 1V0\r\n");
+    UART_UartPutString("BeeMill 2V0\r\n");
 
     for(;;)
     {
@@ -222,6 +254,8 @@ int main()
                 isr_GPIO_1_Enable();
                 isr_GPIO_2_Enable();
                 isr_GPIO_3_Enable();
+                isr_GPIO_4_Enable();
+                isr_GPIO_5_Enable();
                 LED_Write(LIGHT_ON);
             }
             if (strcmp ("stop",buffer) == 0){
@@ -231,6 +265,8 @@ int main()
                 isr_GPIO_1_Disable();
                 isr_GPIO_2_Disable();
                 isr_GPIO_3_Disable();
+                isr_GPIO_4_Disable();
+                isr_GPIO_5_Disable();
                 LED_Write(LIGHT_OFF);
             }
 
@@ -275,6 +311,26 @@ int main()
             UART_UartPutString(time);
             LED_GPIO3_Write(~LED_GPIO3_Read());
             boSW3 = false;            
+        }
+        
+        /* Tick status fires only once every millisecond. */
+        if(boSW4 != 0u && boStart == true)
+        {
+            UART_UartPutString("Input4;");
+            sprintf(time, "%lu\r\n", intSW4);
+            UART_UartPutString(time);
+            LED_GPIO4_Write(~LED_GPIO4_Read());
+            boSW4 = false;            
+        }
+        
+        /* Tick status fires only once every millisecond. */
+        if(boSW5 != 0u && boStart == true)
+        {
+            UART_UartPutString("Input5;");
+            sprintf(time, "%lu\r\n", intSW5);
+            UART_UartPutString(time);
+            LED_GPIO5_Write(~LED_GPIO5_Read());
+            boSW5 = false;            
         }
     }
 }

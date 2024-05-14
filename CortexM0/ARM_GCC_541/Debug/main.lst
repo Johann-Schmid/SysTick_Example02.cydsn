@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 1
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 1
 
 
    1              		.syntax unified
@@ -45,38 +45,60 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 1
   42              		.size	intSW3, 4
   43              	intSW3:
   44 000c 00000000 		.space	4
-  45              		.global	boSW0
-  46              		.type	boSW0, %object
-  47              		.size	boSW0, 1
-  48              	boSW0:
-  49 0010 00       		.space	1
-  50              		.global	boSW1
-  51              		.type	boSW1, %object
-  52              		.size	boSW1, 1
-  53              	boSW1:
-  54 0011 00       		.space	1
-  55              		.global	boSW2
-  56              		.type	boSW2, %object
-  57              		.size	boSW2, 1
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 2
+  45              		.global	intSW4
+  46              		.align	2
+  47              		.type	intSW4, %object
+  48              		.size	intSW4, 4
+  49              	intSW4:
+  50 0010 00000000 		.space	4
+  51              		.global	intSW5
+  52              		.align	2
+  53              		.type	intSW5, %object
+  54              		.size	intSW5, 4
+  55              	intSW5:
+  56 0014 00000000 		.space	4
+  57              		.global	boSW0
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 2
 
 
-  58              	boSW2:
-  59 0012 00       		.space	1
-  60              		.global	boSW3
-  61              		.type	boSW3, %object
-  62              		.size	boSW3, 1
-  63              	boSW3:
-  64 0013 00       		.space	1
-  65              		.section	.text.GPIO0IsrHandler,"ax",%progbits
-  66              		.align	2
-  67              		.global	GPIO0IsrHandler
-  68              		.code	16
-  69              		.thumb_func
-  70              		.type	GPIO0IsrHandler, %function
-  71              	GPIO0IsrHandler:
-  72              	.LFB35:
-  73              		.file 1 "main.c"
+  58              		.type	boSW0, %object
+  59              		.size	boSW0, 1
+  60              	boSW0:
+  61 0018 00       		.space	1
+  62              		.global	boSW1
+  63              		.type	boSW1, %object
+  64              		.size	boSW1, 1
+  65              	boSW1:
+  66 0019 00       		.space	1
+  67              		.global	boSW2
+  68              		.type	boSW2, %object
+  69              		.size	boSW2, 1
+  70              	boSW2:
+  71 001a 00       		.space	1
+  72              		.global	boSW3
+  73              		.type	boSW3, %object
+  74              		.size	boSW3, 1
+  75              	boSW3:
+  76 001b 00       		.space	1
+  77              		.global	boSW4
+  78              		.type	boSW4, %object
+  79              		.size	boSW4, 1
+  80              	boSW4:
+  81 001c 00       		.space	1
+  82              		.global	boSW5
+  83              		.type	boSW5, %object
+  84              		.size	boSW5, 1
+  85              	boSW5:
+  86 001d 00       		.space	1
+  87              		.section	.text.GPIO0IsrHandler,"ax",%progbits
+  88              		.align	2
+  89              		.global	GPIO0IsrHandler
+  90              		.code	16
+  91              		.thumb_func
+  92              		.type	GPIO0IsrHandler, %function
+  93              	GPIO0IsrHandler:
+  94              	.LFB35:
+  95              		.file 1 "main.c"
    1:main.c        **** /*******************************************************************************
    2:main.c        **** * File: main.c
    3:main.c        **** *
@@ -96,6 +118,9 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 1
   17:main.c        **** * WITH REGARD TO THIS SOFTWARE, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT,
   18:main.c        **** * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
   19:main.c        **** *******************************************************************************/
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 3
+
+
   20:main.c        **** #include <project.h>
   21:main.c        **** #include <stdio.h>
   22:main.c        **** #include <stdbool.h>
@@ -115,2088 +140,2467 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 1
   36:main.c        **** volatile uint32 intSW1 = 0;
   37:main.c        **** volatile uint32 intSW2 = 0;
   38:main.c        **** volatile uint32 intSW3 = 0;
-  39:main.c        **** 
-  40:main.c        **** volatile bool boSW0 = false;
-  41:main.c        **** volatile bool boSW1 = false;
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 3
-
-
-  42:main.c        **** volatile bool boSW2 = false;
-  43:main.c        **** volatile bool boSW3 = false;
-  44:main.c        **** 
-  45:main.c        **** /* Function Prototypes */
-  46:main.c        **** void SysTickISRCallback(void);
-  47:main.c        **** 
-  48:main.c        **** CY_ISR(GPIO0IsrHandler)
-  49:main.c        **** {
-  74              		.loc 1 49 0
-  75              		.cfi_startproc
-  76              		@ args = 0, pretend = 0, frame = 0
-  77              		@ frame_needed = 1, uses_anonymous_args = 0
-  78 0000 80B5     		push	{r7, lr}
-  79              		.cfi_def_cfa_offset 8
-  80              		.cfi_offset 7, -8
-  81              		.cfi_offset 14, -4
-  82 0002 00AF     		add	r7, sp, #0
-  83              		.cfi_def_cfa_register 7
-  50:main.c        ****     /* Clear pending Interrupt */
-  51:main.c        ****     isr_GPIO_0_ClearPending();
-  84              		.loc 1 51 0
-  85 0004 FFF7FEFF 		bl	isr_GPIO_0_ClearPending
-  52:main.c        ****     
-  53:main.c        ****     /* Clear pin Interrupt */
-  54:main.c        ****     SW0_ClearInterrupt();
-  86              		.loc 1 54 0
-  87 0008 FFF7FEFF 		bl	SW0_ClearInterrupt
-  55:main.c        **** 
-  56:main.c        ****     intSW0 = msCount;
-  88              		.loc 1 56 0
-  89 000c 044B     		ldr	r3, .L2
-  90 000e 1A68     		ldr	r2, [r3]
-  91 0010 044B     		ldr	r3, .L2+4
-  92 0012 1A60     		str	r2, [r3]
-  57:main.c        ****     boSW0 = true;
-  93              		.loc 1 57 0
-  94 0014 044B     		ldr	r3, .L2+8
-  95 0016 0122     		movs	r2, #1
-  96 0018 1A70     		strb	r2, [r3]
-  58:main.c        **** }
-  97              		.loc 1 58 0
-  98 001a C046     		nop
-  99 001c BD46     		mov	sp, r7
- 100              		@ sp needed
- 101 001e 80BD     		pop	{r7, pc}
- 102              	.L3:
- 103              		.align	2
- 104              	.L2:
- 105 0020 00000000 		.word	msCount
- 106 0024 00000000 		.word	intSW0
- 107 0028 00000000 		.word	boSW0
- 108              		.cfi_endproc
- 109              	.LFE35:
- 110              		.size	GPIO0IsrHandler, .-GPIO0IsrHandler
- 111              		.section	.text.GPIO1IsrHandler,"ax",%progbits
- 112              		.align	2
- 113              		.global	GPIO1IsrHandler
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 4
-
-
- 114              		.code	16
- 115              		.thumb_func
- 116              		.type	GPIO1IsrHandler, %function
- 117              	GPIO1IsrHandler:
- 118              	.LFB36:
+  39:main.c        **** volatile uint32 intSW4 = 0;
+  40:main.c        **** volatile uint32 intSW5 = 0;
+  41:main.c        **** 
+  42:main.c        **** volatile bool boSW0 = false;
+  43:main.c        **** volatile bool boSW1 = false;
+  44:main.c        **** volatile bool boSW2 = false;
+  45:main.c        **** volatile bool boSW3 = false;
+  46:main.c        **** volatile bool boSW4 = false;
+  47:main.c        **** volatile bool boSW5 = false;
+  48:main.c        **** 
+  49:main.c        **** /* Function Prototypes */
+  50:main.c        **** void SysTickISRCallback(void);
+  51:main.c        **** 
+  52:main.c        **** CY_ISR(GPIO0IsrHandler)
+  53:main.c        **** {
+  96              		.loc 1 53 0
+  97              		.cfi_startproc
+  98              		@ args = 0, pretend = 0, frame = 0
+  99              		@ frame_needed = 1, uses_anonymous_args = 0
+ 100 0000 80B5     		push	{r7, lr}
+ 101              		.cfi_def_cfa_offset 8
+ 102              		.cfi_offset 7, -8
+ 103              		.cfi_offset 14, -4
+ 104 0002 00AF     		add	r7, sp, #0
+ 105              		.cfi_def_cfa_register 7
+  54:main.c        ****     /* Clear pending Interrupt */
+  55:main.c        ****     isr_GPIO_0_ClearPending();
+ 106              		.loc 1 55 0
+ 107 0004 FFF7FEFF 		bl	isr_GPIO_0_ClearPending
+  56:main.c        ****     
+  57:main.c        ****     /* Clear pin Interrupt */
+  58:main.c        ****     SW0_ClearInterrupt();
+ 108              		.loc 1 58 0
+ 109 0008 FFF7FEFF 		bl	SW0_ClearInterrupt
   59:main.c        **** 
-  60:main.c        **** CY_ISR(GPIO1IsrHandler)
-  61:main.c        **** {
- 119              		.loc 1 61 0
- 120              		.cfi_startproc
- 121              		@ args = 0, pretend = 0, frame = 0
- 122              		@ frame_needed = 1, uses_anonymous_args = 0
- 123 0000 80B5     		push	{r7, lr}
- 124              		.cfi_def_cfa_offset 8
- 125              		.cfi_offset 7, -8
- 126              		.cfi_offset 14, -4
- 127 0002 00AF     		add	r7, sp, #0
- 128              		.cfi_def_cfa_register 7
-  62:main.c        ****     /* Clear pending Interrupt */
-  63:main.c        ****     isr_GPIO_1_ClearPending();
- 129              		.loc 1 63 0
- 130 0004 FFF7FEFF 		bl	isr_GPIO_1_ClearPending
-  64:main.c        ****     
-  65:main.c        ****     /* Clear pin Interrupt */
-  66:main.c        ****     SW1_ClearInterrupt();
- 131              		.loc 1 66 0
- 132 0008 FFF7FEFF 		bl	SW1_ClearInterrupt
-  67:main.c        **** 
-  68:main.c        ****     intSW1 = msCount;
- 133              		.loc 1 68 0
- 134 000c 044B     		ldr	r3, .L5
- 135 000e 1A68     		ldr	r2, [r3]
- 136 0010 044B     		ldr	r3, .L5+4
- 137 0012 1A60     		str	r2, [r3]
-  69:main.c        ****     boSW1 = true;
- 138              		.loc 1 69 0
- 139 0014 044B     		ldr	r3, .L5+8
- 140 0016 0122     		movs	r2, #1
- 141 0018 1A70     		strb	r2, [r3]
-  70:main.c        **** }
- 142              		.loc 1 70 0
- 143 001a C046     		nop
- 144 001c BD46     		mov	sp, r7
- 145              		@ sp needed
- 146 001e 80BD     		pop	{r7, pc}
- 147              	.L6:
- 148              		.align	2
- 149              	.L5:
- 150 0020 00000000 		.word	msCount
- 151 0024 00000000 		.word	intSW1
- 152 0028 00000000 		.word	boSW1
- 153              		.cfi_endproc
- 154              	.LFE36:
- 155              		.size	GPIO1IsrHandler, .-GPIO1IsrHandler
- 156              		.section	.text.GPIO2IsrHandler,"ax",%progbits
- 157              		.align	2
- 158              		.global	GPIO2IsrHandler
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 5
+  60:main.c        ****     intSW0 = msCount;
+ 110              		.loc 1 60 0
+ 111 000c 044B     		ldr	r3, .L2
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 4
 
 
- 159              		.code	16
- 160              		.thumb_func
- 161              		.type	GPIO2IsrHandler, %function
- 162              	GPIO2IsrHandler:
- 163              	.LFB37:
+ 112 000e 1A68     		ldr	r2, [r3]
+ 113 0010 044B     		ldr	r3, .L2+4
+ 114 0012 1A60     		str	r2, [r3]
+  61:main.c        ****     boSW0 = true;
+ 115              		.loc 1 61 0
+ 116 0014 044B     		ldr	r3, .L2+8
+ 117 0016 0122     		movs	r2, #1
+ 118 0018 1A70     		strb	r2, [r3]
+  62:main.c        **** }
+ 119              		.loc 1 62 0
+ 120 001a C046     		nop
+ 121 001c BD46     		mov	sp, r7
+ 122              		@ sp needed
+ 123 001e 80BD     		pop	{r7, pc}
+ 124              	.L3:
+ 125              		.align	2
+ 126              	.L2:
+ 127 0020 00000000 		.word	msCount
+ 128 0024 00000000 		.word	intSW0
+ 129 0028 00000000 		.word	boSW0
+ 130              		.cfi_endproc
+ 131              	.LFE35:
+ 132              		.size	GPIO0IsrHandler, .-GPIO0IsrHandler
+ 133              		.section	.text.GPIO1IsrHandler,"ax",%progbits
+ 134              		.align	2
+ 135              		.global	GPIO1IsrHandler
+ 136              		.code	16
+ 137              		.thumb_func
+ 138              		.type	GPIO1IsrHandler, %function
+ 139              	GPIO1IsrHandler:
+ 140              	.LFB36:
+  63:main.c        **** 
+  64:main.c        **** CY_ISR(GPIO1IsrHandler)
+  65:main.c        **** {
+ 141              		.loc 1 65 0
+ 142              		.cfi_startproc
+ 143              		@ args = 0, pretend = 0, frame = 0
+ 144              		@ frame_needed = 1, uses_anonymous_args = 0
+ 145 0000 80B5     		push	{r7, lr}
+ 146              		.cfi_def_cfa_offset 8
+ 147              		.cfi_offset 7, -8
+ 148              		.cfi_offset 14, -4
+ 149 0002 00AF     		add	r7, sp, #0
+ 150              		.cfi_def_cfa_register 7
+  66:main.c        ****     /* Clear pending Interrupt */
+  67:main.c        ****     isr_GPIO_1_ClearPending();
+ 151              		.loc 1 67 0
+ 152 0004 FFF7FEFF 		bl	isr_GPIO_1_ClearPending
+  68:main.c        ****     
+  69:main.c        ****     /* Clear pin Interrupt */
+  70:main.c        ****     SW1_ClearInterrupt();
+ 153              		.loc 1 70 0
+ 154 0008 FFF7FEFF 		bl	SW1_ClearInterrupt
   71:main.c        **** 
-  72:main.c        **** CY_ISR(GPIO2IsrHandler)
-  73:main.c        **** {
- 164              		.loc 1 73 0
- 165              		.cfi_startproc
- 166              		@ args = 0, pretend = 0, frame = 0
- 167              		@ frame_needed = 1, uses_anonymous_args = 0
- 168 0000 80B5     		push	{r7, lr}
- 169              		.cfi_def_cfa_offset 8
- 170              		.cfi_offset 7, -8
- 171              		.cfi_offset 14, -4
- 172 0002 00AF     		add	r7, sp, #0
- 173              		.cfi_def_cfa_register 7
-  74:main.c        ****     /* Clear pending Interrupt */
-  75:main.c        ****     isr_GPIO_2_ClearPending();
- 174              		.loc 1 75 0
- 175 0004 FFF7FEFF 		bl	isr_GPIO_2_ClearPending
-  76:main.c        ****     
-  77:main.c        ****     /* Clear pin Interrupt */
-  78:main.c        ****     SW2_ClearInterrupt();
- 176              		.loc 1 78 0
- 177 0008 FFF7FEFF 		bl	SW2_ClearInterrupt
-  79:main.c        **** 
-  80:main.c        ****     intSW2 = msCount;
- 178              		.loc 1 80 0
- 179 000c 044B     		ldr	r3, .L8
- 180 000e 1A68     		ldr	r2, [r3]
- 181 0010 044B     		ldr	r3, .L8+4
- 182 0012 1A60     		str	r2, [r3]
-  81:main.c        ****     boSW2 = true;
- 183              		.loc 1 81 0
- 184 0014 044B     		ldr	r3, .L8+8
- 185 0016 0122     		movs	r2, #1
- 186 0018 1A70     		strb	r2, [r3]
-  82:main.c        **** }
- 187              		.loc 1 82 0
- 188 001a C046     		nop
- 189 001c BD46     		mov	sp, r7
- 190              		@ sp needed
- 191 001e 80BD     		pop	{r7, pc}
- 192              	.L9:
- 193              		.align	2
- 194              	.L8:
- 195 0020 00000000 		.word	msCount
- 196 0024 00000000 		.word	intSW2
- 197 0028 00000000 		.word	boSW2
- 198              		.cfi_endproc
- 199              	.LFE37:
- 200              		.size	GPIO2IsrHandler, .-GPIO2IsrHandler
- 201              		.section	.text.GPIO3IsrHandler,"ax",%progbits
- 202              		.align	2
- 203              		.global	GPIO3IsrHandler
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 6
+  72:main.c        ****     intSW1 = msCount;
+ 155              		.loc 1 72 0
+ 156 000c 044B     		ldr	r3, .L5
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 5
 
 
- 204              		.code	16
- 205              		.thumb_func
- 206              		.type	GPIO3IsrHandler, %function
- 207              	GPIO3IsrHandler:
- 208              	.LFB38:
+ 157 000e 1A68     		ldr	r2, [r3]
+ 158 0010 044B     		ldr	r3, .L5+4
+ 159 0012 1A60     		str	r2, [r3]
+  73:main.c        ****     boSW1 = true;
+ 160              		.loc 1 73 0
+ 161 0014 044B     		ldr	r3, .L5+8
+ 162 0016 0122     		movs	r2, #1
+ 163 0018 1A70     		strb	r2, [r3]
+  74:main.c        **** }
+ 164              		.loc 1 74 0
+ 165 001a C046     		nop
+ 166 001c BD46     		mov	sp, r7
+ 167              		@ sp needed
+ 168 001e 80BD     		pop	{r7, pc}
+ 169              	.L6:
+ 170              		.align	2
+ 171              	.L5:
+ 172 0020 00000000 		.word	msCount
+ 173 0024 00000000 		.word	intSW1
+ 174 0028 00000000 		.word	boSW1
+ 175              		.cfi_endproc
+ 176              	.LFE36:
+ 177              		.size	GPIO1IsrHandler, .-GPIO1IsrHandler
+ 178              		.section	.text.GPIO2IsrHandler,"ax",%progbits
+ 179              		.align	2
+ 180              		.global	GPIO2IsrHandler
+ 181              		.code	16
+ 182              		.thumb_func
+ 183              		.type	GPIO2IsrHandler, %function
+ 184              	GPIO2IsrHandler:
+ 185              	.LFB37:
+  75:main.c        **** 
+  76:main.c        **** CY_ISR(GPIO2IsrHandler)
+  77:main.c        **** {
+ 186              		.loc 1 77 0
+ 187              		.cfi_startproc
+ 188              		@ args = 0, pretend = 0, frame = 0
+ 189              		@ frame_needed = 1, uses_anonymous_args = 0
+ 190 0000 80B5     		push	{r7, lr}
+ 191              		.cfi_def_cfa_offset 8
+ 192              		.cfi_offset 7, -8
+ 193              		.cfi_offset 14, -4
+ 194 0002 00AF     		add	r7, sp, #0
+ 195              		.cfi_def_cfa_register 7
+  78:main.c        ****     /* Clear pending Interrupt */
+  79:main.c        ****     isr_GPIO_2_ClearPending();
+ 196              		.loc 1 79 0
+ 197 0004 FFF7FEFF 		bl	isr_GPIO_2_ClearPending
+  80:main.c        ****     
+  81:main.c        ****     /* Clear pin Interrupt */
+  82:main.c        ****     SW2_ClearInterrupt();
+ 198              		.loc 1 82 0
+ 199 0008 FFF7FEFF 		bl	SW2_ClearInterrupt
   83:main.c        **** 
-  84:main.c        **** CY_ISR(GPIO3IsrHandler)
-  85:main.c        **** {
- 209              		.loc 1 85 0
- 210              		.cfi_startproc
- 211              		@ args = 0, pretend = 0, frame = 0
- 212              		@ frame_needed = 1, uses_anonymous_args = 0
- 213 0000 80B5     		push	{r7, lr}
- 214              		.cfi_def_cfa_offset 8
- 215              		.cfi_offset 7, -8
- 216              		.cfi_offset 14, -4
- 217 0002 00AF     		add	r7, sp, #0
- 218              		.cfi_def_cfa_register 7
-  86:main.c        ****     /* Clear pending Interrupt */
-  87:main.c        ****     isr_GPIO_3_ClearPending();
- 219              		.loc 1 87 0
- 220 0004 FFF7FEFF 		bl	isr_GPIO_3_ClearPending
-  88:main.c        ****     
-  89:main.c        ****     /* Clear pin Interrupt */
-  90:main.c        ****     SW3_ClearInterrupt();
- 221              		.loc 1 90 0
- 222 0008 FFF7FEFF 		bl	SW3_ClearInterrupt
-  91:main.c        **** 
-  92:main.c        ****     intSW3 = msCount;
- 223              		.loc 1 92 0
- 224 000c 044B     		ldr	r3, .L11
- 225 000e 1A68     		ldr	r2, [r3]
- 226 0010 044B     		ldr	r3, .L11+4
- 227 0012 1A60     		str	r2, [r3]
-  93:main.c        ****     boSW3 = true;
- 228              		.loc 1 93 0
- 229 0014 044B     		ldr	r3, .L11+8
- 230 0016 0122     		movs	r2, #1
- 231 0018 1A70     		strb	r2, [r3]
-  94:main.c        **** }
- 232              		.loc 1 94 0
- 233 001a C046     		nop
- 234 001c BD46     		mov	sp, r7
- 235              		@ sp needed
- 236 001e 80BD     		pop	{r7, pc}
- 237              	.L12:
- 238              		.align	2
- 239              	.L11:
- 240 0020 00000000 		.word	msCount
- 241 0024 00000000 		.word	intSW3
- 242 0028 00000000 		.word	boSW3
- 243              		.cfi_endproc
- 244              	.LFE38:
- 245              		.size	GPIO3IsrHandler, .-GPIO3IsrHandler
- 246              		.section	.rodata
- 247              		.align	2
- 248              	.LC23:
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 7
+  84:main.c        ****     intSW2 = msCount;
+ 200              		.loc 1 84 0
+ 201 000c 044B     		ldr	r3, .L8
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 6
 
 
- 249 0000 48656C6C 		.ascii	"HelloWorld\015\012\000"
- 249      6F576F72 
- 249      6C640D0A 
- 249      00
- 250 000d 000000   		.align	2
- 251              	.LC25:
- 252 0010 73746172 		.ascii	"start\000"
- 252      7400
- 253 0016 0000     		.align	2
- 254              	.LC27:
- 255 0018 73746F70 		.ascii	"stop\000"
- 255      00
- 256 001d 000000   		.align	2
- 257              	.LC29:
- 258 0020 496E7075 		.ascii	"Input0;\000"
- 258      74303B00 
- 259              		.align	2
- 260              	.LC31:
- 261 0028 256C750D 		.ascii	"%lu\015\012\000"
- 261      0A00
- 262 002e 0000     		.align	2
- 263              	.LC34:
- 264 0030 496E7075 		.ascii	"Input1;\000"
- 264      74313B00 
- 265              		.align	2
- 266              	.LC37:
- 267 0038 496E7075 		.ascii	"Input2;\000"
- 267      74323B00 
- 268              		.align	2
- 269              	.LC40:
- 270 0040 496E7075 		.ascii	"Input3;\000"
- 270      74333B00 
- 271              		.section	.text.main,"ax",%progbits
- 272              		.align	2
- 273              		.global	main
- 274              		.code	16
- 275              		.thumb_func
- 276              		.type	main, %function
- 277              	main:
- 278              	.LFB39:
+ 202 000e 1A68     		ldr	r2, [r3]
+ 203 0010 044B     		ldr	r3, .L8+4
+ 204 0012 1A60     		str	r2, [r3]
+  85:main.c        ****     boSW2 = true;
+ 205              		.loc 1 85 0
+ 206 0014 044B     		ldr	r3, .L8+8
+ 207 0016 0122     		movs	r2, #1
+ 208 0018 1A70     		strb	r2, [r3]
+  86:main.c        **** }
+ 209              		.loc 1 86 0
+ 210 001a C046     		nop
+ 211 001c BD46     		mov	sp, r7
+ 212              		@ sp needed
+ 213 001e 80BD     		pop	{r7, pc}
+ 214              	.L9:
+ 215              		.align	2
+ 216              	.L8:
+ 217 0020 00000000 		.word	msCount
+ 218 0024 00000000 		.word	intSW2
+ 219 0028 00000000 		.word	boSW2
+ 220              		.cfi_endproc
+ 221              	.LFE37:
+ 222              		.size	GPIO2IsrHandler, .-GPIO2IsrHandler
+ 223              		.section	.text.GPIO3IsrHandler,"ax",%progbits
+ 224              		.align	2
+ 225              		.global	GPIO3IsrHandler
+ 226              		.code	16
+ 227              		.thumb_func
+ 228              		.type	GPIO3IsrHandler, %function
+ 229              	GPIO3IsrHandler:
+ 230              	.LFB38:
+  87:main.c        **** 
+  88:main.c        **** CY_ISR(GPIO3IsrHandler)
+  89:main.c        **** {
+ 231              		.loc 1 89 0
+ 232              		.cfi_startproc
+ 233              		@ args = 0, pretend = 0, frame = 0
+ 234              		@ frame_needed = 1, uses_anonymous_args = 0
+ 235 0000 80B5     		push	{r7, lr}
+ 236              		.cfi_def_cfa_offset 8
+ 237              		.cfi_offset 7, -8
+ 238              		.cfi_offset 14, -4
+ 239 0002 00AF     		add	r7, sp, #0
+ 240              		.cfi_def_cfa_register 7
+  90:main.c        ****     /* Clear pending Interrupt */
+  91:main.c        ****     isr_GPIO_3_ClearPending();
+ 241              		.loc 1 91 0
+ 242 0004 FFF7FEFF 		bl	isr_GPIO_3_ClearPending
+  92:main.c        ****     
+  93:main.c        ****     /* Clear pin Interrupt */
+  94:main.c        ****     SW3_ClearInterrupt();
+ 243              		.loc 1 94 0
+ 244 0008 FFF7FEFF 		bl	SW3_ClearInterrupt
   95:main.c        **** 
-  96:main.c        **** 
-  97:main.c        **** /*******************************************************************************
-  98:main.c        **** * Function Name: main
-  99:main.c        **** ********************************************************************************
- 100:main.c        **** *
- 101:main.c        **** * Summary:
- 102:main.c        **** *  Starts the SysTick timer and sets the callback function that will be called
- 103:main.c        **** *  on SysTick interrupt. Updates timing variables at one millisecond rate and
- 104:main.c        **** *  prints the system time to the UART once every second in the main loop.
- 105:main.c        **** *
- 106:main.c        **** * Parameters:
- 107:main.c        **** *  None
- 108:main.c        **** *
- 109:main.c        **** * Return:
- 110:main.c        **** *  None
- 111:main.c        **** *
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 8
+  96:main.c        ****     intSW3 = msCount;
+ 245              		.loc 1 96 0
+ 246 000c 044B     		ldr	r3, .L11
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 7
 
 
- 112:main.c        **** *******************************************************************************/
- 113:main.c        **** int main()
- 114:main.c        **** {
- 279              		.loc 1 114 0
- 280              		.cfi_startproc
- 281              		@ args = 0, pretend = 0, frame = 192
- 282              		@ frame_needed = 1, uses_anonymous_args = 0
- 283 0000 F0B5     		push	{r4, r5, r6, r7, lr}
- 284              		.cfi_def_cfa_offset 20
- 285              		.cfi_offset 4, -20
- 286              		.cfi_offset 5, -16
- 287              		.cfi_offset 6, -12
- 288              		.cfi_offset 7, -8
- 289              		.cfi_offset 14, -4
- 290 0002 B1B0     		sub	sp, sp, #196
- 291              		.cfi_def_cfa_offset 216
- 292 0004 00AF     		add	r7, sp, #0
- 293              		.cfi_def_cfa_register 7
- 115:main.c        ****     char time[16u];
- 116:main.c        ****     char buffer[128u];
- 117:main.c        ****     uint32 byte, i;
- 118:main.c        ****     bool boCRLF;
- 119:main.c        ****     bool boStart;
- 120:main.c        **** 
- 121:main.c        ****     
- 122:main.c        ****     const int RxBufferSize = 128;
- 294              		.loc 1 122 0
- 295 0006 8020     		movs	r0, #128
- 296 0008 9C23     		movs	r3, #156
- 297 000a 1024     		movs	r4, #16
- 298 000c A446     		mov	ip, r4
- 299 000e BC44     		add	ip, ip, r7
- 300 0010 6344     		add	r3, r3, ip
- 301 0012 1860     		str	r0, [r3]
- 123:main.c        ****     
- 124:main.c        ****     char RxBuffer[RxBufferSize];     // Rx circular buffer to hold all incoming command
- 302              		.loc 1 124 0
- 303 0014 9C23     		movs	r3, #156
- 304 0016 1020     		movs	r0, #16
- 305 0018 8446     		mov	ip, r0
- 306 001a BC44     		add	ip, ip, r7
- 307 001c 6344     		add	r3, r3, ip
- 308 001e 1868     		ldr	r0, [r3]
- 309 0020 0138     		subs	r0, r0, #1
- 310 0022 9823     		movs	r3, #152
- 311 0024 1024     		movs	r4, #16
- 312 0026 A446     		mov	ip, r4
- 313 0028 BC44     		add	ip, ip, r7
- 314 002a 6344     		add	r3, r3, ip
- 315 002c 1860     		str	r0, [r3]
- 316 002e 9C23     		movs	r3, #156
- 317 0030 1020     		movs	r0, #16
- 318 0032 8446     		mov	ip, r0
- 319 0034 BC44     		add	ip, ip, r7
- 320 0036 6344     		add	r3, r3, ip
- 321 0038 1868     		ldr	r0, [r3]
- 322 003a B860     		str	r0, [r7, #8]
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 9
+ 247 000e 1A68     		ldr	r2, [r3]
+ 248 0010 044B     		ldr	r3, .L11+4
+ 249 0012 1A60     		str	r2, [r3]
+  97:main.c        ****     boSW3 = true;
+ 250              		.loc 1 97 0
+ 251 0014 044B     		ldr	r3, .L11+8
+ 252 0016 0122     		movs	r2, #1
+ 253 0018 1A70     		strb	r2, [r3]
+  98:main.c        **** }
+ 254              		.loc 1 98 0
+ 255 001a C046     		nop
+ 256 001c BD46     		mov	sp, r7
+ 257              		@ sp needed
+ 258 001e 80BD     		pop	{r7, pc}
+ 259              	.L12:
+ 260              		.align	2
+ 261              	.L11:
+ 262 0020 00000000 		.word	msCount
+ 263 0024 00000000 		.word	intSW3
+ 264 0028 00000000 		.word	boSW3
+ 265              		.cfi_endproc
+ 266              	.LFE38:
+ 267              		.size	GPIO3IsrHandler, .-GPIO3IsrHandler
+ 268              		.section	.text.GPIO4IsrHandler,"ax",%progbits
+ 269              		.align	2
+ 270              		.global	GPIO4IsrHandler
+ 271              		.code	16
+ 272              		.thumb_func
+ 273              		.type	GPIO4IsrHandler, %function
+ 274              	GPIO4IsrHandler:
+ 275              	.LFB39:
+  99:main.c        **** 
+ 100:main.c        **** CY_ISR(GPIO4IsrHandler)
+ 101:main.c        **** {
+ 276              		.loc 1 101 0
+ 277              		.cfi_startproc
+ 278              		@ args = 0, pretend = 0, frame = 0
+ 279              		@ frame_needed = 1, uses_anonymous_args = 0
+ 280 0000 80B5     		push	{r7, lr}
+ 281              		.cfi_def_cfa_offset 8
+ 282              		.cfi_offset 7, -8
+ 283              		.cfi_offset 14, -4
+ 284 0002 00AF     		add	r7, sp, #0
+ 285              		.cfi_def_cfa_register 7
+ 102:main.c        ****     /* Clear pending Interrupt */
+ 103:main.c        ****     isr_GPIO_4_ClearPending();
+ 286              		.loc 1 103 0
+ 287 0004 FFF7FEFF 		bl	isr_GPIO_4_ClearPending
+ 104:main.c        ****     
+ 105:main.c        ****     /* Clear pin Interrupt */
+ 106:main.c        ****     SW4_ClearInterrupt();
+ 288              		.loc 1 106 0
+ 289 0008 FFF7FEFF 		bl	SW4_ClearInterrupt
+ 107:main.c        **** 
+ 108:main.c        ****     intSW4 = msCount;
+ 290              		.loc 1 108 0
+ 291 000c 044B     		ldr	r3, .L14
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 8
 
 
- 323 003c 0020     		movs	r0, #0
- 324 003e F860     		str	r0, [r7, #12]
- 325 0040 BB68     		ldr	r3, [r7, #8]
- 326 0042 580F     		lsrs	r0, r3, #29
- 327 0044 FB68     		ldr	r3, [r7, #12]
- 328 0046 DA00     		lsls	r2, r3, #3
- 329 0048 0243     		orrs	r2, r0
- 330 004a BB68     		ldr	r3, [r7, #8]
- 331 004c D900     		lsls	r1, r3, #3
- 332 004e 9C23     		movs	r3, #156
- 333 0050 1022     		movs	r2, #16
- 334 0052 9446     		mov	ip, r2
- 335 0054 BC44     		add	ip, ip, r7
- 336 0056 6344     		add	r3, r3, ip
- 337 0058 1A68     		ldr	r2, [r3]
- 338 005a 1500     		movs	r5, r2
- 339 005c 0022     		movs	r2, #0
- 340 005e 1600     		movs	r6, r2
- 341 0060 6A0F     		lsrs	r2, r5, #29
- 342 0062 F300     		lsls	r3, r6, #3
- 343 0064 7B60     		str	r3, [r7, #4]
- 344 0066 7B68     		ldr	r3, [r7, #4]
- 345 0068 1343     		orrs	r3, r2
- 346 006a 7B60     		str	r3, [r7, #4]
- 347 006c EB00     		lsls	r3, r5, #3
- 348 006e 3B60     		str	r3, [r7]
- 349 0070 9C23     		movs	r3, #156
- 350 0072 1022     		movs	r2, #16
- 351 0074 9446     		mov	ip, r2
- 352 0076 BC44     		add	ip, ip, r7
- 353 0078 6344     		add	r3, r3, ip
- 354 007a 1B68     		ldr	r3, [r3]
- 355 007c 0733     		adds	r3, r3, #7
- 356 007e DB08     		lsrs	r3, r3, #3
- 357 0080 DB00     		lsls	r3, r3, #3
- 358 0082 6A46     		mov	r2, sp
- 359 0084 D31A     		subs	r3, r2, r3
- 360 0086 9D46     		mov	sp, r3
- 361 0088 6B46     		mov	r3, sp
- 362 008a 0033     		adds	r3, r3, #0
- 363 008c 9422     		movs	r2, #148
- 364 008e 1021     		movs	r1, #16
- 365 0090 8C46     		mov	ip, r1
- 366 0092 BC44     		add	ip, ip, r7
- 367 0094 6244     		add	r2, r2, ip
- 368 0096 1360     		str	r3, [r2]
- 125:main.c        ****     char *RxWriteIndex = RxBuffer;    // pointer to position in RxBuffer to read and process bytes
- 369              		.loc 1 125 0
- 370 0098 9423     		movs	r3, #148
- 371 009a 1022     		movs	r2, #16
- 372 009c 9446     		mov	ip, r2
- 373 009e BC44     		add	ip, ip, r7
- 374 00a0 6344     		add	r3, r3, ip
- 375 00a2 1B68     		ldr	r3, [r3]
- 376 00a4 A022     		movs	r2, #160
- 377 00a6 1021     		movs	r1, #16
- 378 00a8 8C46     		mov	ip, r1
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 10
+ 292 000e 1A68     		ldr	r2, [r3]
+ 293 0010 044B     		ldr	r3, .L14+4
+ 294 0012 1A60     		str	r2, [r3]
+ 109:main.c        ****     boSW4 = true;
+ 295              		.loc 1 109 0
+ 296 0014 044B     		ldr	r3, .L14+8
+ 297 0016 0122     		movs	r2, #1
+ 298 0018 1A70     		strb	r2, [r3]
+ 110:main.c        **** }
+ 299              		.loc 1 110 0
+ 300 001a C046     		nop
+ 301 001c BD46     		mov	sp, r7
+ 302              		@ sp needed
+ 303 001e 80BD     		pop	{r7, pc}
+ 304              	.L15:
+ 305              		.align	2
+ 306              	.L14:
+ 307 0020 00000000 		.word	msCount
+ 308 0024 00000000 		.word	intSW4
+ 309 0028 00000000 		.word	boSW4
+ 310              		.cfi_endproc
+ 311              	.LFE39:
+ 312              		.size	GPIO4IsrHandler, .-GPIO4IsrHandler
+ 313              		.section	.text.GPIO5IsrHandler,"ax",%progbits
+ 314              		.align	2
+ 315              		.global	GPIO5IsrHandler
+ 316              		.code	16
+ 317              		.thumb_func
+ 318              		.type	GPIO5IsrHandler, %function
+ 319              	GPIO5IsrHandler:
+ 320              	.LFB40:
+ 111:main.c        **** 
+ 112:main.c        **** CY_ISR(GPIO5IsrHandler)
+ 113:main.c        **** {
+ 321              		.loc 1 113 0
+ 322              		.cfi_startproc
+ 323              		@ args = 0, pretend = 0, frame = 0
+ 324              		@ frame_needed = 1, uses_anonymous_args = 0
+ 325 0000 80B5     		push	{r7, lr}
+ 326              		.cfi_def_cfa_offset 8
+ 327              		.cfi_offset 7, -8
+ 328              		.cfi_offset 14, -4
+ 329 0002 00AF     		add	r7, sp, #0
+ 330              		.cfi_def_cfa_register 7
+ 114:main.c        ****     /* Clear pending Interrupt */
+ 115:main.c        ****     isr_GPIO_5_ClearPending();
+ 331              		.loc 1 115 0
+ 332 0004 FFF7FEFF 		bl	isr_GPIO_5_ClearPending
+ 116:main.c        ****     
+ 117:main.c        ****     /* Clear pin Interrupt */
+ 118:main.c        ****     SW5_ClearInterrupt();
+ 333              		.loc 1 118 0
+ 334 0008 FFF7FEFF 		bl	SW5_ClearInterrupt
+ 119:main.c        **** 
+ 120:main.c        ****     intSW5 = msCount;
+ 335              		.loc 1 120 0
+ 336 000c 044B     		ldr	r3, .L17
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 9
 
 
- 379 00aa BC44     		add	ip, ip, r7
- 380 00ac 6244     		add	r2, r2, ip
- 381 00ae 1360     		str	r3, [r2]
- 126:main.c        **** 
- 127:main.c        ****     /* Initialize global variables. */
- 128:main.c        ****     intSW0 = 0;
- 382              		.loc 1 128 0
- 383 00b0 3C4B     		ldr	r3, .L30
- 384 00b2 0022     		movs	r2, #0
- 385 00b4 1A60     		str	r2, [r3]
- 129:main.c        ****     intSW1 = 0;
- 386              		.loc 1 129 0
- 387 00b6 3C4B     		ldr	r3, .L30+4
- 388 00b8 0022     		movs	r2, #0
- 389 00ba 1A60     		str	r2, [r3]
- 130:main.c        ****     intSW2 = 0;
- 390              		.loc 1 130 0
- 391 00bc 3B4B     		ldr	r3, .L30+8
- 392 00be 0022     		movs	r2, #0
- 393 00c0 1A60     		str	r2, [r3]
- 131:main.c        ****     intSW3 = 0;
- 394              		.loc 1 131 0
- 395 00c2 3B4B     		ldr	r3, .L30+12
- 396 00c4 0022     		movs	r2, #0
- 397 00c6 1A60     		str	r2, [r3]
- 132:main.c        ****     
- 133:main.c        ****     boSW0 = false;
- 398              		.loc 1 133 0
- 399 00c8 3A4B     		ldr	r3, .L30+16
- 400 00ca 0022     		movs	r2, #0
- 401 00cc 1A70     		strb	r2, [r3]
- 134:main.c        ****     
- 135:main.c        ****     boCRLF = false;
- 402              		.loc 1 135 0
- 403 00ce A723     		movs	r3, #167
- 404 00d0 1022     		movs	r2, #16
- 405 00d2 9446     		mov	ip, r2
- 406 00d4 BC44     		add	ip, ip, r7
- 407 00d6 6344     		add	r3, r3, ip
- 408 00d8 0022     		movs	r2, #0
- 409 00da 1A70     		strb	r2, [r3]
- 136:main.c        ****     boStart = false;
- 410              		.loc 1 136 0
- 411 00dc A623     		movs	r3, #166
- 412 00de 1022     		movs	r2, #16
- 413 00e0 9446     		mov	ip, r2
- 414 00e2 BC44     		add	ip, ip, r7
- 415 00e4 6344     		add	r3, r3, ip
- 416 00e6 0022     		movs	r2, #0
- 417 00e8 1A70     		strb	r2, [r3]
- 137:main.c        ****     
- 138:main.c        ****     msCount = 0u;
- 418              		.loc 1 138 0
- 419 00ea 334B     		ldr	r3, .L30+20
- 420 00ec 0022     		movs	r2, #0
- 421 00ee 1A60     		str	r2, [r3]
- 139:main.c        ****     
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 11
+ 337 000e 1A68     		ldr	r2, [r3]
+ 338 0010 044B     		ldr	r3, .L17+4
+ 339 0012 1A60     		str	r2, [r3]
+ 121:main.c        ****     boSW5 = true;
+ 340              		.loc 1 121 0
+ 341 0014 044B     		ldr	r3, .L17+8
+ 342 0016 0122     		movs	r2, #1
+ 343 0018 1A70     		strb	r2, [r3]
+ 122:main.c        **** }
+ 344              		.loc 1 122 0
+ 345 001a C046     		nop
+ 346 001c BD46     		mov	sp, r7
+ 347              		@ sp needed
+ 348 001e 80BD     		pop	{r7, pc}
+ 349              	.L18:
+ 350              		.align	2
+ 351              	.L17:
+ 352 0020 00000000 		.word	msCount
+ 353 0024 00000000 		.word	intSW5
+ 354 0028 00000000 		.word	boSW5
+ 355              		.cfi_endproc
+ 356              	.LFE40:
+ 357              		.size	GPIO5IsrHandler, .-GPIO5IsrHandler
+ 358              		.section	.rodata
+ 359              		.align	2
+ 360              	.LC26:
+ 361 0000 4265654D 		.ascii	"BeeMill 2V0\015\012\000"
+ 361      696C6C20 
+ 361      3256300D 
+ 361      0A00
+ 362 000e 0000     		.align	2
+ 363              	.LC28:
+ 364 0010 73746172 		.ascii	"start\000"
+ 364      7400
+ 365 0016 0000     		.align	2
+ 366              	.LC30:
+ 367 0018 73746F70 		.ascii	"stop\000"
+ 367      00
+ 368 001d 000000   		.align	2
+ 369              	.LC33:
+ 370 0020 496E7075 		.ascii	"Input0;\000"
+ 370      74303B00 
+ 371              		.align	2
+ 372              	.LC36:
+ 373 0028 256C750D 		.ascii	"%lu\015\012\000"
+ 373      0A00
+ 374 002e 0000     		.align	2
+ 375              	.LC39:
+ 376 0030 496E7075 		.ascii	"Input1;\000"
+ 376      74313B00 
+ 377              		.align	2
+ 378              	.LC43:
+ 379 0038 496E7075 		.ascii	"Input2;\000"
+ 379      74323B00 
+ 380              		.align	2
+ 381              	.LC47:
+ 382 0040 496E7075 		.ascii	"Input3;\000"
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 10
 
 
- 140:main.c        ****     /* Sets up the GPIO interrupt and enables it */
- 141:main.c        ****     isr_GPIO_0_StartEx(GPIO0IsrHandler);
- 422              		.loc 1 141 0
- 423 00f0 324B     		ldr	r3, .L30+24
- 424 00f2 1800     		movs	r0, r3
- 425 00f4 FFF7FEFF 		bl	isr_GPIO_0_StartEx
- 142:main.c        **** 
- 143:main.c        ****     /* Changes initial priority for the GPIO interrupt */
- 144:main.c        ****     isr_GPIO_0_SetPriority(DEFAULT_PRIORITY);
- 426              		.loc 1 144 0
- 427 00f8 0320     		movs	r0, #3
- 428 00fa FFF7FEFF 		bl	isr_GPIO_0_SetPriority
- 145:main.c        ****     
- 146:main.c        ****     /* Sets up the GPIO interrupt and enables it */
- 147:main.c        ****     isr_GPIO_1_StartEx(GPIO1IsrHandler);
- 429              		.loc 1 147 0
- 430 00fe 304B     		ldr	r3, .L30+28
- 431 0100 1800     		movs	r0, r3
- 432 0102 FFF7FEFF 		bl	isr_GPIO_1_StartEx
+ 382      74333B00 
+ 383              		.align	2
+ 384              	.LC51:
+ 385 0048 496E7075 		.ascii	"Input4;\000"
+ 385      74343B00 
+ 386              		.align	2
+ 387              	.LC55:
+ 388 0050 496E7075 		.ascii	"Input5;\000"
+ 388      74353B00 
+ 389              		.section	.text.main,"ax",%progbits
+ 390              		.align	2
+ 391              		.global	main
+ 392              		.code	16
+ 393              		.thumb_func
+ 394              		.type	main, %function
+ 395              	main:
+ 396              	.LFB41:
+ 123:main.c        **** 
+ 124:main.c        **** 
+ 125:main.c        **** /*******************************************************************************
+ 126:main.c        **** * Function Name: main
+ 127:main.c        **** ********************************************************************************
+ 128:main.c        **** *
+ 129:main.c        **** * Summary:
+ 130:main.c        **** *  Starts the SysTick timer and sets the callback function that will be called
+ 131:main.c        **** *  on SysTick interrupt. Updates timing variables at one millisecond rate and
+ 132:main.c        **** *  prints the system time to the UART once every second in the main loop.
+ 133:main.c        **** *
+ 134:main.c        **** * Parameters:
+ 135:main.c        **** *  None
+ 136:main.c        **** *
+ 137:main.c        **** * Return:
+ 138:main.c        **** *  None
+ 139:main.c        **** *
+ 140:main.c        **** *******************************************************************************/
+ 141:main.c        **** int main()
+ 142:main.c        **** {
+ 397              		.loc 1 142 0
+ 398              		.cfi_startproc
+ 399              		@ args = 0, pretend = 0, frame = 192
+ 400              		@ frame_needed = 1, uses_anonymous_args = 0
+ 401 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 402              		.cfi_def_cfa_offset 20
+ 403              		.cfi_offset 4, -20
+ 404              		.cfi_offset 5, -16
+ 405              		.cfi_offset 6, -12
+ 406              		.cfi_offset 7, -8
+ 407              		.cfi_offset 14, -4
+ 408 0002 B1B0     		sub	sp, sp, #196
+ 409              		.cfi_def_cfa_offset 216
+ 410 0004 00AF     		add	r7, sp, #0
+ 411              		.cfi_def_cfa_register 7
+ 143:main.c        ****     char time[16u];
+ 144:main.c        ****     char buffer[128u];
+ 145:main.c        ****     uint32 byte, i;
+ 146:main.c        ****     bool boCRLF;
+ 147:main.c        ****     bool boStart;
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 11
+
+
  148:main.c        **** 
- 149:main.c        ****     /* Changes initial priority for the GPIO interrupt */
- 150:main.c        ****     isr_GPIO_1_SetPriority(DEFAULT_PRIORITY);
- 433              		.loc 1 150 0
- 434 0106 0320     		movs	r0, #3
- 435 0108 FFF7FEFF 		bl	isr_GPIO_1_SetPriority
+ 149:main.c        ****     
+ 150:main.c        ****     const int RxBufferSize = 128;
+ 412              		.loc 1 150 0
+ 413 0006 8020     		movs	r0, #128
+ 414 0008 9C23     		movs	r3, #156
+ 415 000a 1024     		movs	r4, #16
+ 416 000c A446     		mov	ip, r4
+ 417 000e BC44     		add	ip, ip, r7
+ 418 0010 6344     		add	r3, r3, ip
+ 419 0012 1860     		str	r0, [r3]
  151:main.c        ****     
- 152:main.c        ****     /* Sets up the GPIO interrupt and enables it */
- 153:main.c        ****     isr_GPIO_2_StartEx(GPIO2IsrHandler);
- 436              		.loc 1 153 0
- 437 010c 2D4B     		ldr	r3, .L30+32
- 438 010e 1800     		movs	r0, r3
- 439 0110 FFF7FEFF 		bl	isr_GPIO_2_StartEx
- 154:main.c        **** 
- 155:main.c        ****     /* Changes initial priority for the GPIO interrupt */
- 156:main.c        ****     isr_GPIO_2_SetPriority(DEFAULT_PRIORITY);
- 440              		.loc 1 156 0
- 441 0114 0320     		movs	r0, #3
- 442 0116 FFF7FEFF 		bl	isr_GPIO_2_SetPriority
+ 152:main.c        ****     char RxBuffer[RxBufferSize];     // Rx circular buffer to hold all incoming command
+ 420              		.loc 1 152 0
+ 421 0014 9C23     		movs	r3, #156
+ 422 0016 1020     		movs	r0, #16
+ 423 0018 8446     		mov	ip, r0
+ 424 001a BC44     		add	ip, ip, r7
+ 425 001c 6344     		add	r3, r3, ip
+ 426 001e 1868     		ldr	r0, [r3]
+ 427 0020 0138     		subs	r0, r0, #1
+ 428 0022 9823     		movs	r3, #152
+ 429 0024 1024     		movs	r4, #16
+ 430 0026 A446     		mov	ip, r4
+ 431 0028 BC44     		add	ip, ip, r7
+ 432 002a 6344     		add	r3, r3, ip
+ 433 002c 1860     		str	r0, [r3]
+ 434 002e 9C23     		movs	r3, #156
+ 435 0030 1020     		movs	r0, #16
+ 436 0032 8446     		mov	ip, r0
+ 437 0034 BC44     		add	ip, ip, r7
+ 438 0036 6344     		add	r3, r3, ip
+ 439 0038 1868     		ldr	r0, [r3]
+ 440 003a B860     		str	r0, [r7, #8]
+ 441 003c 0020     		movs	r0, #0
+ 442 003e F860     		str	r0, [r7, #12]
+ 443 0040 BB68     		ldr	r3, [r7, #8]
+ 444 0042 580F     		lsrs	r0, r3, #29
+ 445 0044 FB68     		ldr	r3, [r7, #12]
+ 446 0046 DA00     		lsls	r2, r3, #3
+ 447 0048 0243     		orrs	r2, r0
+ 448 004a BB68     		ldr	r3, [r7, #8]
+ 449 004c D900     		lsls	r1, r3, #3
+ 450 004e 9C23     		movs	r3, #156
+ 451 0050 1022     		movs	r2, #16
+ 452 0052 9446     		mov	ip, r2
+ 453 0054 BC44     		add	ip, ip, r7
+ 454 0056 6344     		add	r3, r3, ip
+ 455 0058 1A68     		ldr	r2, [r3]
+ 456 005a 1500     		movs	r5, r2
+ 457 005c 0022     		movs	r2, #0
+ 458 005e 1600     		movs	r6, r2
+ 459 0060 6A0F     		lsrs	r2, r5, #29
+ 460 0062 F300     		lsls	r3, r6, #3
+ 461 0064 7B60     		str	r3, [r7, #4]
+ 462 0066 7B68     		ldr	r3, [r7, #4]
+ 463 0068 1343     		orrs	r3, r2
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 12
+
+
+ 464 006a 7B60     		str	r3, [r7, #4]
+ 465 006c EB00     		lsls	r3, r5, #3
+ 466 006e 3B60     		str	r3, [r7]
+ 467 0070 9C23     		movs	r3, #156
+ 468 0072 1022     		movs	r2, #16
+ 469 0074 9446     		mov	ip, r2
+ 470 0076 BC44     		add	ip, ip, r7
+ 471 0078 6344     		add	r3, r3, ip
+ 472 007a 1B68     		ldr	r3, [r3]
+ 473 007c 0733     		adds	r3, r3, #7
+ 474 007e DB08     		lsrs	r3, r3, #3
+ 475 0080 DB00     		lsls	r3, r3, #3
+ 476 0082 6A46     		mov	r2, sp
+ 477 0084 D31A     		subs	r3, r2, r3
+ 478 0086 9D46     		mov	sp, r3
+ 479 0088 6B46     		mov	r3, sp
+ 480 008a 0033     		adds	r3, r3, #0
+ 481 008c 9422     		movs	r2, #148
+ 482 008e 1021     		movs	r1, #16
+ 483 0090 8C46     		mov	ip, r1
+ 484 0092 BC44     		add	ip, ip, r7
+ 485 0094 6244     		add	r2, r2, ip
+ 486 0096 1360     		str	r3, [r2]
+ 153:main.c        ****     char *RxWriteIndex = RxBuffer;    // pointer to position in RxBuffer to read and process bytes
+ 487              		.loc 1 153 0
+ 488 0098 9423     		movs	r3, #148
+ 489 009a 1022     		movs	r2, #16
+ 490 009c 9446     		mov	ip, r2
+ 491 009e BC44     		add	ip, ip, r7
+ 492 00a0 6344     		add	r3, r3, ip
+ 493 00a2 1B68     		ldr	r3, [r3]
+ 494 00a4 A022     		movs	r2, #160
+ 495 00a6 1021     		movs	r1, #16
+ 496 00a8 8C46     		mov	ip, r1
+ 497 00aa BC44     		add	ip, ip, r7
+ 498 00ac 6244     		add	r2, r2, ip
+ 499 00ae 1360     		str	r3, [r2]
+ 154:main.c        ****     
+ 155:main.c        ****     boCRLF = false;
+ 500              		.loc 1 155 0
+ 501 00b0 A723     		movs	r3, #167
+ 502 00b2 1022     		movs	r2, #16
+ 503 00b4 9446     		mov	ip, r2
+ 504 00b6 BC44     		add	ip, ip, r7
+ 505 00b8 6344     		add	r3, r3, ip
+ 506 00ba 0022     		movs	r2, #0
+ 507 00bc 1A70     		strb	r2, [r3]
+ 156:main.c        ****     boStart = false;
+ 508              		.loc 1 156 0
+ 509 00be A623     		movs	r3, #166
+ 510 00c0 1022     		movs	r2, #16
+ 511 00c2 9446     		mov	ip, r2
+ 512 00c4 BC44     		add	ip, ip, r7
+ 513 00c6 6344     		add	r3, r3, ip
+ 514 00c8 0022     		movs	r2, #0
+ 515 00ca 1A70     		strb	r2, [r3]
  157:main.c        ****     
- 158:main.c        ****     /* Sets up the GPIO interrupt and enables it */
- 159:main.c        ****     isr_GPIO_3_StartEx(GPIO3IsrHandler);
- 443              		.loc 1 159 0
- 444 011a 2B4B     		ldr	r3, .L30+36
- 445 011c 1800     		movs	r0, r3
- 446 011e FFF7FEFF 		bl	isr_GPIO_3_StartEx
- 160:main.c        **** 
- 161:main.c        ****     /* Changes initial priority for the GPIO interrupt */
- 162:main.c        ****     isr_GPIO_3_SetPriority(DEFAULT_PRIORITY);
- 447              		.loc 1 162 0
- 448 0122 0320     		movs	r0, #3
- 449 0124 FFF7FEFF 		bl	isr_GPIO_3_SetPriority
- 163:main.c        **** 
- 164:main.c        ****     /* Enable global interrupts. */
- 165:main.c        ****     CyGlobalIntEnable;
- 450              		.loc 1 165 0
- 451              		.syntax divided
- 452              	@ 165 "main.c" 1
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 12
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 13
 
 
- 453 0128 62B6     		CPSIE   i
- 454              	@ 0 "" 2
- 166:main.c        ****     
- 167:main.c        ****     UART_Start();
- 455              		.loc 1 167 0
- 456              		.thumb
- 457              		.syntax unified
- 458 012a FFF7FEFF 		bl	UART_Start
+ 158:main.c        ****     msCount = 0u;
+ 516              		.loc 1 158 0
+ 517 00cc 364B     		ldr	r3, .L38
+ 518 00ce 0022     		movs	r2, #0
+ 519 00d0 1A60     		str	r2, [r3]
+ 159:main.c        ****     
+ 160:main.c        ****     /* Sets up the GPIO interrupt and enables it */
+ 161:main.c        ****     isr_GPIO_0_StartEx(GPIO0IsrHandler);
+ 520              		.loc 1 161 0
+ 521 00d2 364B     		ldr	r3, .L38+4
+ 522 00d4 1800     		movs	r0, r3
+ 523 00d6 FFF7FEFF 		bl	isr_GPIO_0_StartEx
+ 162:main.c        **** 
+ 163:main.c        ****     /* Changes initial priority for the GPIO interrupt */
+ 164:main.c        ****     isr_GPIO_0_SetPriority(DEFAULT_PRIORITY);
+ 524              		.loc 1 164 0
+ 525 00da 0320     		movs	r0, #3
+ 526 00dc FFF7FEFF 		bl	isr_GPIO_0_SetPriority
+ 165:main.c        ****     
+ 166:main.c        ****     /* Sets up the GPIO interrupt and enables it */
+ 167:main.c        ****     isr_GPIO_1_StartEx(GPIO1IsrHandler);
+ 527              		.loc 1 167 0
+ 528 00e0 334B     		ldr	r3, .L38+8
+ 529 00e2 1800     		movs	r0, r3
+ 530 00e4 FFF7FEFF 		bl	isr_GPIO_1_StartEx
  168:main.c        **** 
- 169:main.c        ****     /* Configure the SysTick timer to generate interrupt every 1 ms
- 170:main.c        ****     * and start its operation. Call the function before assigning the
- 171:main.c        ****     * callbacks as it calls CySysTickInit() during first run that 
- 172:main.c        ****     * re-initializes the callback addresses to the NULL pointers.
- 173:main.c        ****     */
- 174:main.c        ****     //CySysTickStart();
- 175:main.c        ****     CySysTickInit();
- 459              		.loc 1 175 0
- 460 012e FFF7FEFF 		bl	CySysTickInit
- 176:main.c        ****     
- 177:main.c        ****     /* Find unused callback slot and assign the callback. */
- 178:main.c        ****     for (i = 0u; i < CY_SYS_SYST_NUM_OF_CALLBACKS; ++i)
- 461              		.loc 1 178 0
- 462 0132 0023     		movs	r3, #0
- 463 0134 A822     		movs	r2, #168
- 464 0136 1021     		movs	r1, #16
- 465 0138 8C46     		mov	ip, r1
- 466 013a BC44     		add	ip, ip, r7
- 467 013c 6244     		add	r2, r2, ip
- 468 013e 1360     		str	r3, [r2]
- 469 0140 23E0     		b	.L14
- 470              	.L17:
- 179:main.c        ****     {
- 180:main.c        ****         if (CySysTickGetCallback(i) == NULL)
- 471              		.loc 1 180 0
- 472 0142 A823     		movs	r3, #168
- 473 0144 1022     		movs	r2, #16
- 474 0146 9446     		mov	ip, r2
- 475 0148 BC44     		add	ip, ip, r7
- 476 014a 6344     		add	r3, r3, ip
- 477 014c 1B68     		ldr	r3, [r3]
- 478 014e 1800     		movs	r0, r3
- 479 0150 FFF7FEFF 		bl	CySysTickGetCallback
- 480 0154 031E     		subs	r3, r0, #0
- 481 0156 0BD1     		bne	.L15
- 181:main.c        ****         {
- 182:main.c        ****             /* Set callback */
- 183:main.c        ****             CySysTickSetCallback(i, SysTickISRCallback);
- 482              		.loc 1 183 0
- 483 0158 1C4A     		ldr	r2, .L30+40
- 484 015a A823     		movs	r3, #168
- 485 015c 1021     		movs	r1, #16
- 486 015e 8C46     		mov	ip, r1
- 487 0160 BC44     		add	ip, ip, r7
- 488 0162 6344     		add	r3, r3, ip
- 489 0164 1B68     		ldr	r3, [r3]
- 490 0166 1100     		movs	r1, r2
- 491 0168 1800     		movs	r0, r3
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 13
+ 169:main.c        ****     /* Changes initial priority for the GPIO interrupt */
+ 170:main.c        ****     isr_GPIO_1_SetPriority(DEFAULT_PRIORITY);
+ 531              		.loc 1 170 0
+ 532 00e8 0320     		movs	r0, #3
+ 533 00ea FFF7FEFF 		bl	isr_GPIO_1_SetPriority
+ 171:main.c        ****     
+ 172:main.c        ****     /* Sets up the GPIO interrupt and enables it */
+ 173:main.c        ****     isr_GPIO_2_StartEx(GPIO2IsrHandler);
+ 534              		.loc 1 173 0
+ 535 00ee 314B     		ldr	r3, .L38+12
+ 536 00f0 1800     		movs	r0, r3
+ 537 00f2 FFF7FEFF 		bl	isr_GPIO_2_StartEx
+ 174:main.c        **** 
+ 175:main.c        ****     /* Changes initial priority for the GPIO interrupt */
+ 176:main.c        ****     isr_GPIO_2_SetPriority(DEFAULT_PRIORITY);
+ 538              		.loc 1 176 0
+ 539 00f6 0320     		movs	r0, #3
+ 540 00f8 FFF7FEFF 		bl	isr_GPIO_2_SetPriority
+ 177:main.c        ****     
+ 178:main.c        ****     /* Sets up the GPIO interrupt and enables it */
+ 179:main.c        ****     isr_GPIO_3_StartEx(GPIO3IsrHandler);
+ 541              		.loc 1 179 0
+ 542 00fc 2E4B     		ldr	r3, .L38+16
+ 543 00fe 1800     		movs	r0, r3
+ 544 0100 FFF7FEFF 		bl	isr_GPIO_3_StartEx
+ 180:main.c        **** 
+ 181:main.c        ****     /* Changes initial priority for the GPIO interrupt */
+ 182:main.c        ****     isr_GPIO_3_SetPriority(DEFAULT_PRIORITY);
+ 545              		.loc 1 182 0
+ 546 0104 0320     		movs	r0, #3
+ 547 0106 FFF7FEFF 		bl	isr_GPIO_3_SetPriority
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 14
 
 
- 492 016a FFF7FEFF 		bl	CySysTickSetCallback
- 184:main.c        ****             break;
- 493              		.loc 1 184 0
- 494 016e 14E0     		b	.L16
- 495              	.L15:
- 178:main.c        ****     {
- 496              		.loc 1 178 0 discriminator 2
- 497 0170 A823     		movs	r3, #168
- 498 0172 1022     		movs	r2, #16
- 499 0174 9446     		mov	ip, r2
- 500 0176 BC44     		add	ip, ip, r7
- 501 0178 6344     		add	r3, r3, ip
- 502 017a 1B68     		ldr	r3, [r3]
- 503 017c 0133     		adds	r3, r3, #1
- 504 017e A822     		movs	r2, #168
- 505 0180 1021     		movs	r1, #16
- 506 0182 8C46     		mov	ip, r1
- 507 0184 BC44     		add	ip, ip, r7
- 508 0186 6244     		add	r2, r2, ip
- 509 0188 1360     		str	r3, [r2]
- 510              	.L14:
- 178:main.c        ****     {
- 511              		.loc 1 178 0 is_stmt 0 discriminator 1
- 512 018a A823     		movs	r3, #168
- 513 018c 1022     		movs	r2, #16
- 514 018e 9446     		mov	ip, r2
- 515 0190 BC44     		add	ip, ip, r7
- 516 0192 6344     		add	r3, r3, ip
- 517 0194 1B68     		ldr	r3, [r3]
- 518 0196 042B     		cmp	r3, #4
- 519 0198 D3D9     		bls	.L17
- 520              	.L16:
- 185:main.c        ****         }
- 186:main.c        ****     }
- 187:main.c        **** 
- 188:main.c        ****     
- 189:main.c        ****     UART_UartPutString("HelloWorld\r\n");
- 521              		.loc 1 189 0 is_stmt 1
- 522 019a 0D4B     		ldr	r3, .L30+44
- 523 019c 1800     		movs	r0, r3
- 524 019e FFF7FEFF 		bl	UART_UartPutString
- 525              	.L29:
- 190:main.c        **** 
- 191:main.c        ****     for(;;)
- 192:main.c        ****     {
- 193:main.c        **** 
- 194:main.c        ****         while((byte = UART_UartGetChar()) !=0 )
- 526              		.loc 1 194 0 discriminator 1
- 527 01a2 79E0     		b	.L18
- 528              	.L31:
- 529              		.align	2
- 530              	.L30:
- 531 01a4 00000000 		.word	intSW0
- 532 01a8 00000000 		.word	intSW1
- 533 01ac 00000000 		.word	intSW2
- 534 01b0 00000000 		.word	intSW3
- 535 01b4 00000000 		.word	boSW0
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 14
+ 183:main.c        ****     
+ 184:main.c        ****     /* Sets up the GPIO interrupt and enables it */
+ 185:main.c        ****     isr_GPIO_4_StartEx(GPIO4IsrHandler);
+ 548              		.loc 1 185 0
+ 549 010a 2C4B     		ldr	r3, .L38+20
+ 550 010c 1800     		movs	r0, r3
+ 551 010e FFF7FEFF 		bl	isr_GPIO_4_StartEx
+ 186:main.c        **** 
+ 187:main.c        ****     /* Changes initial priority for the GPIO interrupt */
+ 188:main.c        ****     isr_GPIO_4_SetPriority(DEFAULT_PRIORITY);
+ 552              		.loc 1 188 0
+ 553 0112 0320     		movs	r0, #3
+ 554 0114 FFF7FEFF 		bl	isr_GPIO_4_SetPriority
+ 189:main.c        ****     
+ 190:main.c        ****     /* Sets up the GPIO interrupt and enables it */
+ 191:main.c        ****     isr_GPIO_5_StartEx(GPIO5IsrHandler);
+ 555              		.loc 1 191 0
+ 556 0118 294B     		ldr	r3, .L38+24
+ 557 011a 1800     		movs	r0, r3
+ 558 011c FFF7FEFF 		bl	isr_GPIO_5_StartEx
+ 192:main.c        **** 
+ 193:main.c        ****     /* Changes initial priority for the GPIO interrupt */
+ 194:main.c        ****     isr_GPIO_5_SetPriority(DEFAULT_PRIORITY);
+ 559              		.loc 1 194 0
+ 560 0120 0320     		movs	r0, #3
+ 561 0122 FFF7FEFF 		bl	isr_GPIO_5_SetPriority
+ 195:main.c        **** 
+ 196:main.c        ****     /* Enable global interrupts. */
+ 197:main.c        ****     CyGlobalIntEnable;
+ 562              		.loc 1 197 0
+ 563              		.syntax divided
+ 564              	@ 197 "main.c" 1
+ 565 0126 62B6     		CPSIE   i
+ 566              	@ 0 "" 2
+ 198:main.c        ****     
+ 199:main.c        ****     LED_Write(LIGHT_OFF);
+ 567              		.loc 1 199 0
+ 568              		.thumb
+ 569              		.syntax unified
+ 570 0128 0020     		movs	r0, #0
+ 571 012a FFF7FEFF 		bl	LED_Write
+ 200:main.c        ****     UART_Start();
+ 572              		.loc 1 200 0
+ 573 012e FFF7FEFF 		bl	UART_Start
+ 201:main.c        **** 
+ 202:main.c        ****     /* Configure the SysTick timer to generate interrupt every 1 ms
+ 203:main.c        ****     * and start its operation. Call the function before assigning the
+ 204:main.c        ****     * callbacks as it calls CySysTickInit() during first run that 
+ 205:main.c        ****     * re-initializes the callback addresses to the NULL pointers.
+ 206:main.c        ****     */
+ 207:main.c        ****     //CySysTickStart();
+ 208:main.c        ****     CySysTickInit();
+ 574              		.loc 1 208 0
+ 575 0132 FFF7FEFF 		bl	CySysTickInit
+ 209:main.c        ****     
+ 210:main.c        ****     /* Find unused callback slot and assign the callback. */
+ 211:main.c        ****     for (i = 0u; i < CY_SYS_SYST_NUM_OF_CALLBACKS; ++i)
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 15
 
 
- 536 01b8 00000000 		.word	msCount
- 537 01bc 00000000 		.word	GPIO0IsrHandler
- 538 01c0 00000000 		.word	GPIO1IsrHandler
- 539 01c4 00000000 		.word	GPIO2IsrHandler
- 540 01c8 00000000 		.word	GPIO3IsrHandler
- 541 01cc 00000000 		.word	SysTickISRCallback
- 542 01d0 00000000 		.word	.LC23
- 543              	.L21:
- 195:main.c        ****         {
- 196:main.c        ****             if ((byte == EOM_CR) || (byte == EOM_LF))
- 544              		.loc 1 196 0
- 545 01d4 AC23     		movs	r3, #172
- 546 01d6 1022     		movs	r2, #16
- 547 01d8 9446     		mov	ip, r2
- 548 01da BC44     		add	ip, ip, r7
- 549 01dc 6344     		add	r3, r3, ip
- 550 01de 1B68     		ldr	r3, [r3]
- 551 01e0 0D2B     		cmp	r3, #13
- 552 01e2 07D0     		beq	.L19
- 553              		.loc 1 196 0 is_stmt 0 discriminator 1
- 554 01e4 AC23     		movs	r3, #172
- 555 01e6 1022     		movs	r2, #16
- 556 01e8 9446     		mov	ip, r2
- 557 01ea BC44     		add	ip, ip, r7
- 558 01ec 6344     		add	r3, r3, ip
- 559 01ee 1B68     		ldr	r3, [r3]
- 560 01f0 0A2B     		cmp	r3, #10
- 561 01f2 0DD1     		bne	.L20
- 562              	.L19:
- 197:main.c        ****             {
- 198:main.c        ****                 boCRLF = true;
- 563              		.loc 1 198 0 is_stmt 1
- 564 01f4 A723     		movs	r3, #167
- 565 01f6 1022     		movs	r2, #16
- 566 01f8 9446     		mov	ip, r2
- 567 01fa BC44     		add	ip, ip, r7
- 568 01fc 6344     		add	r3, r3, ip
- 569 01fe 0122     		movs	r2, #1
- 570 0200 1A70     		strb	r2, [r3]
- 199:main.c        ****                 byte = '\0';
- 571              		.loc 1 199 0
- 572 0202 0023     		movs	r3, #0
- 573 0204 AC22     		movs	r2, #172
- 574 0206 1021     		movs	r1, #16
- 575 0208 8C46     		mov	ip, r1
- 576 020a BC44     		add	ip, ip, r7
- 577 020c 6244     		add	r2, r2, ip
- 578 020e 1360     		str	r3, [r2]
- 579              	.L20:
- 200:main.c        ****             }
- 201:main.c        ****             else
- 202:main.c        ****             {
- 203:main.c        ****                 
- 204:main.c        ****             }
- 205:main.c        ****             *RxWriteIndex = byte;
- 580              		.loc 1 205 0
- 581 0210 AC23     		movs	r3, #172
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 15
+ 576              		.loc 1 211 0
+ 577 0136 0023     		movs	r3, #0
+ 578 0138 A822     		movs	r2, #168
+ 579 013a 1021     		movs	r1, #16
+ 580 013c 8C46     		mov	ip, r1
+ 581 013e BC44     		add	ip, ip, r7
+ 582 0140 6244     		add	r2, r2, ip
+ 583 0142 1360     		str	r3, [r2]
+ 584 0144 23E0     		b	.L20
+ 585              	.L23:
+ 212:main.c        ****     {
+ 213:main.c        ****         if (CySysTickGetCallback(i) == NULL)
+ 586              		.loc 1 213 0
+ 587 0146 A823     		movs	r3, #168
+ 588 0148 1022     		movs	r2, #16
+ 589 014a 9446     		mov	ip, r2
+ 590 014c BC44     		add	ip, ip, r7
+ 591 014e 6344     		add	r3, r3, ip
+ 592 0150 1B68     		ldr	r3, [r3]
+ 593 0152 1800     		movs	r0, r3
+ 594 0154 FFF7FEFF 		bl	CySysTickGetCallback
+ 595 0158 031E     		subs	r3, r0, #0
+ 596 015a 0BD1     		bne	.L21
+ 214:main.c        ****         {
+ 215:main.c        ****             /* Set callback */
+ 216:main.c        ****             CySysTickSetCallback(i, SysTickISRCallback);
+ 597              		.loc 1 216 0
+ 598 015c 194A     		ldr	r2, .L38+28
+ 599 015e A823     		movs	r3, #168
+ 600 0160 1021     		movs	r1, #16
+ 601 0162 8C46     		mov	ip, r1
+ 602 0164 BC44     		add	ip, ip, r7
+ 603 0166 6344     		add	r3, r3, ip
+ 604 0168 1B68     		ldr	r3, [r3]
+ 605 016a 1100     		movs	r1, r2
+ 606 016c 1800     		movs	r0, r3
+ 607 016e FFF7FEFF 		bl	CySysTickSetCallback
+ 217:main.c        ****             break;
+ 608              		.loc 1 217 0
+ 609 0172 14E0     		b	.L22
+ 610              	.L21:
+ 211:main.c        ****     {
+ 611              		.loc 1 211 0 discriminator 2
+ 612 0174 A823     		movs	r3, #168
+ 613 0176 1022     		movs	r2, #16
+ 614 0178 9446     		mov	ip, r2
+ 615 017a BC44     		add	ip, ip, r7
+ 616 017c 6344     		add	r3, r3, ip
+ 617 017e 1B68     		ldr	r3, [r3]
+ 618 0180 0133     		adds	r3, r3, #1
+ 619 0182 A822     		movs	r2, #168
+ 620 0184 1021     		movs	r1, #16
+ 621 0186 8C46     		mov	ip, r1
+ 622 0188 BC44     		add	ip, ip, r7
+ 623 018a 6244     		add	r2, r2, ip
+ 624 018c 1360     		str	r3, [r2]
+ 625              	.L20:
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 16
 
 
- 582 0212 1022     		movs	r2, #16
- 583 0214 9446     		mov	ip, r2
- 584 0216 BC44     		add	ip, ip, r7
- 585 0218 6344     		add	r3, r3, ip
- 586 021a 1B68     		ldr	r3, [r3]
- 587 021c DAB2     		uxtb	r2, r3
- 588 021e A023     		movs	r3, #160
- 589 0220 1021     		movs	r1, #16
- 590 0222 8C46     		mov	ip, r1
- 591 0224 BC44     		add	ip, ip, r7
- 592 0226 6344     		add	r3, r3, ip
- 593 0228 1B68     		ldr	r3, [r3]
- 594 022a 1A70     		strb	r2, [r3]
- 206:main.c        ****             RxWriteIndex = RxWriteIndex + 1;
- 595              		.loc 1 206 0
- 596 022c A023     		movs	r3, #160
- 597 022e 1022     		movs	r2, #16
- 598 0230 9446     		mov	ip, r2
- 599 0232 BC44     		add	ip, ip, r7
- 600 0234 6344     		add	r3, r3, ip
- 601 0236 1B68     		ldr	r3, [r3]
- 602 0238 0133     		adds	r3, r3, #1
- 603 023a A022     		movs	r2, #160
- 604 023c 1021     		movs	r1, #16
- 605 023e 8C46     		mov	ip, r1
- 606 0240 BC44     		add	ip, ip, r7
- 607 0242 6244     		add	r2, r2, ip
- 608 0244 1360     		str	r3, [r2]
- 207:main.c        ****             *RxWriteIndex = '\0';
- 609              		.loc 1 207 0
- 610 0246 A023     		movs	r3, #160
- 611 0248 1022     		movs	r2, #16
- 612 024a 9446     		mov	ip, r2
- 613 024c BC44     		add	ip, ip, r7
- 614 024e 6344     		add	r3, r3, ip
- 615 0250 1B68     		ldr	r3, [r3]
- 616 0252 0022     		movs	r2, #0
- 617 0254 1A70     		strb	r2, [r3]
- 208:main.c        **** 		    if (RxWriteIndex >= RxBuffer + RxBufferSize) RxWriteIndex = RxBuffer;    
- 618              		.loc 1 208 0
- 619 0256 9423     		movs	r3, #148
- 620 0258 1022     		movs	r2, #16
- 621 025a 9446     		mov	ip, r2
- 622 025c BC44     		add	ip, ip, r7
- 623 025e 6344     		add	r3, r3, ip
- 624 0260 1A68     		ldr	r2, [r3]
- 625 0262 9C23     		movs	r3, #156
- 626 0264 1021     		movs	r1, #16
- 627 0266 8C46     		mov	ip, r1
- 628 0268 BC44     		add	ip, ip, r7
- 629 026a 6344     		add	r3, r3, ip
- 630 026c 1B68     		ldr	r3, [r3]
- 631 026e D218     		adds	r2, r2, r3
- 632 0270 A023     		movs	r3, #160
- 633 0272 1021     		movs	r1, #16
- 634 0274 8C46     		mov	ip, r1
- 635 0276 BC44     		add	ip, ip, r7
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 16
+ 211:main.c        ****     {
+ 626              		.loc 1 211 0 is_stmt 0 discriminator 1
+ 627 018e A823     		movs	r3, #168
+ 628 0190 1022     		movs	r2, #16
+ 629 0192 9446     		mov	ip, r2
+ 630 0194 BC44     		add	ip, ip, r7
+ 631 0196 6344     		add	r3, r3, ip
+ 632 0198 1B68     		ldr	r3, [r3]
+ 633 019a 042B     		cmp	r3, #4
+ 634 019c D3D9     		bls	.L23
+ 635              	.L22:
+ 218:main.c        ****         }
+ 219:main.c        ****     }
+ 220:main.c        **** 
+ 221:main.c        ****     
+ 222:main.c        ****     UART_UartPutString("BeeMill 2V0\r\n");
+ 636              		.loc 1 222 0 is_stmt 1
+ 637 019e 0A4B     		ldr	r3, .L38+32
+ 638 01a0 1800     		movs	r0, r3
+ 639 01a2 FFF7FEFF 		bl	UART_UartPutString
+ 640              	.L37:
+ 223:main.c        **** 
+ 224:main.c        ****     for(;;)
+ 225:main.c        ****     {
+ 226:main.c        **** 
+ 227:main.c        ****         while((byte = UART_UartGetChar()) !=0 )
+ 641              		.loc 1 227 0 discriminator 1
+ 642 01a6 73E0     		b	.L24
+ 643              	.L39:
+ 644              		.align	2
+ 645              	.L38:
+ 646 01a8 00000000 		.word	msCount
+ 647 01ac 00000000 		.word	GPIO0IsrHandler
+ 648 01b0 00000000 		.word	GPIO1IsrHandler
+ 649 01b4 00000000 		.word	GPIO2IsrHandler
+ 650 01b8 00000000 		.word	GPIO3IsrHandler
+ 651 01bc 00000000 		.word	GPIO4IsrHandler
+ 652 01c0 00000000 		.word	GPIO5IsrHandler
+ 653 01c4 00000000 		.word	SysTickISRCallback
+ 654 01c8 00000000 		.word	.LC26
+ 655              	.L27:
+ 228:main.c        ****         {
+ 229:main.c        ****             if ((byte == EOM_CR) || (byte == EOM_LF))
+ 656              		.loc 1 229 0
+ 657 01cc AC23     		movs	r3, #172
+ 658 01ce 1022     		movs	r2, #16
+ 659 01d0 9446     		mov	ip, r2
+ 660 01d2 BC44     		add	ip, ip, r7
+ 661 01d4 6344     		add	r3, r3, ip
+ 662 01d6 1B68     		ldr	r3, [r3]
+ 663 01d8 0D2B     		cmp	r3, #13
+ 664 01da 07D0     		beq	.L25
+ 665              		.loc 1 229 0 is_stmt 0 discriminator 1
+ 666 01dc AC23     		movs	r3, #172
+ 667 01de 1022     		movs	r2, #16
+ 668 01e0 9446     		mov	ip, r2
+ 669 01e2 BC44     		add	ip, ip, r7
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 17
 
 
- 636 0278 6344     		add	r3, r3, ip
- 637 027a 1B68     		ldr	r3, [r3]
- 638 027c 9A42     		cmp	r2, r3
- 639 027e 0BD8     		bhi	.L18
- 640              		.loc 1 208 0 is_stmt 0 discriminator 1
- 641 0280 9423     		movs	r3, #148
- 642 0282 1022     		movs	r2, #16
- 643 0284 9446     		mov	ip, r2
- 644 0286 BC44     		add	ip, ip, r7
- 645 0288 6344     		add	r3, r3, ip
- 646 028a 1B68     		ldr	r3, [r3]
- 647 028c A022     		movs	r2, #160
- 648 028e 1021     		movs	r1, #16
- 649 0290 8C46     		mov	ip, r1
- 650 0292 BC44     		add	ip, ip, r7
- 651 0294 6244     		add	r2, r2, ip
- 652 0296 1360     		str	r3, [r2]
- 653              	.L18:
- 194:main.c        ****         {
- 654              		.loc 1 194 0 is_stmt 1
- 655 0298 FFF7FEFF 		bl	UART_UartGetChar
- 656 029c 0300     		movs	r3, r0
- 657 029e AC22     		movs	r2, #172
- 658 02a0 1021     		movs	r1, #16
- 659 02a2 8C46     		mov	ip, r1
- 660 02a4 BC44     		add	ip, ip, r7
- 661 02a6 6244     		add	r2, r2, ip
- 662 02a8 1360     		str	r3, [r2]
- 663 02aa AC23     		movs	r3, #172
- 664 02ac 1022     		movs	r2, #16
- 665 02ae 9446     		mov	ip, r2
- 666 02b0 BC44     		add	ip, ip, r7
- 667 02b2 6344     		add	r3, r3, ip
- 668 02b4 1B68     		ldr	r3, [r3]
- 669 02b6 002B     		cmp	r3, #0
- 670 02b8 8CD1     		bne	.L21
- 209:main.c        **** 	    } 
- 210:main.c        ****         
- 211:main.c        ****         
- 212:main.c        ****         if (boCRLF == true)
- 671              		.loc 1 212 0
- 672 02ba A723     		movs	r3, #167
- 673 02bc 1022     		movs	r2, #16
- 674 02be 9446     		mov	ip, r2
- 675 02c0 BC44     		add	ip, ip, r7
- 676 02c2 6344     		add	r3, r3, ip
- 677 02c4 1B78     		ldrb	r3, [r3]
- 678 02c6 002B     		cmp	r3, #0
- 679 02c8 50D0     		beq	.L22
- 213:main.c        ****         {
- 214:main.c        ****             boCRLF = false;
- 680              		.loc 1 214 0
- 681 02ca A723     		movs	r3, #167
- 682 02cc 1022     		movs	r2, #16
- 683 02ce 9446     		mov	ip, r2
- 684 02d0 BC44     		add	ip, ip, r7
- 685 02d2 6344     		add	r3, r3, ip
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 17
+ 670 01e4 6344     		add	r3, r3, ip
+ 671 01e6 1B68     		ldr	r3, [r3]
+ 672 01e8 0A2B     		cmp	r3, #10
+ 673 01ea 0DD1     		bne	.L26
+ 674              	.L25:
+ 230:main.c        ****             {
+ 231:main.c        ****                 boCRLF = true;
+ 675              		.loc 1 231 0 is_stmt 1
+ 676 01ec A723     		movs	r3, #167
+ 677 01ee 1022     		movs	r2, #16
+ 678 01f0 9446     		mov	ip, r2
+ 679 01f2 BC44     		add	ip, ip, r7
+ 680 01f4 6344     		add	r3, r3, ip
+ 681 01f6 0122     		movs	r2, #1
+ 682 01f8 1A70     		strb	r2, [r3]
+ 232:main.c        ****                 byte = '\0';
+ 683              		.loc 1 232 0
+ 684 01fa 0023     		movs	r3, #0
+ 685 01fc AC22     		movs	r2, #172
+ 686 01fe 1021     		movs	r1, #16
+ 687 0200 8C46     		mov	ip, r1
+ 688 0202 BC44     		add	ip, ip, r7
+ 689 0204 6244     		add	r2, r2, ip
+ 690 0206 1360     		str	r3, [r2]
+ 691              	.L26:
+ 233:main.c        ****             }
+ 234:main.c        ****             else
+ 235:main.c        ****             {
+ 236:main.c        ****                 
+ 237:main.c        ****             }
+ 238:main.c        ****             *RxWriteIndex = byte;
+ 692              		.loc 1 238 0
+ 693 0208 AC23     		movs	r3, #172
+ 694 020a 1022     		movs	r2, #16
+ 695 020c 9446     		mov	ip, r2
+ 696 020e BC44     		add	ip, ip, r7
+ 697 0210 6344     		add	r3, r3, ip
+ 698 0212 1B68     		ldr	r3, [r3]
+ 699 0214 DAB2     		uxtb	r2, r3
+ 700 0216 A023     		movs	r3, #160
+ 701 0218 1021     		movs	r1, #16
+ 702 021a 8C46     		mov	ip, r1
+ 703 021c BC44     		add	ip, ip, r7
+ 704 021e 6344     		add	r3, r3, ip
+ 705 0220 1B68     		ldr	r3, [r3]
+ 706 0222 1A70     		strb	r2, [r3]
+ 239:main.c        ****             RxWriteIndex = RxWriteIndex + 1;
+ 707              		.loc 1 239 0
+ 708 0224 A023     		movs	r3, #160
+ 709 0226 1022     		movs	r2, #16
+ 710 0228 9446     		mov	ip, r2
+ 711 022a BC44     		add	ip, ip, r7
+ 712 022c 6344     		add	r3, r3, ip
+ 713 022e 1B68     		ldr	r3, [r3]
+ 714 0230 0133     		adds	r3, r3, #1
+ 715 0232 A022     		movs	r2, #160
+ 716 0234 1021     		movs	r1, #16
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 18
 
 
- 686 02d4 0022     		movs	r2, #0
- 687 02d6 1A70     		strb	r2, [r3]
- 215:main.c        ****             RxWriteIndex = RxBuffer;
- 688              		.loc 1 215 0
- 689 02d8 9423     		movs	r3, #148
- 690 02da 1022     		movs	r2, #16
- 691 02dc 9446     		mov	ip, r2
- 692 02de BC44     		add	ip, ip, r7
- 693 02e0 6344     		add	r3, r3, ip
- 694 02e2 1B68     		ldr	r3, [r3]
- 695 02e4 A022     		movs	r2, #160
- 696 02e6 1021     		movs	r1, #16
- 697 02e8 8C46     		mov	ip, r1
- 698 02ea BC44     		add	ip, ip, r7
- 699 02ec 6244     		add	r2, r2, ip
- 700 02ee 1360     		str	r3, [r2]
- 216:main.c        ****             sprintf(buffer, "%s", RxBuffer);
- 701              		.loc 1 216 0
- 702 02f0 9423     		movs	r3, #148
- 703 02f2 1022     		movs	r2, #16
- 704 02f4 9446     		mov	ip, r2
- 705 02f6 BC44     		add	ip, ip, r7
- 706 02f8 6344     		add	r3, r3, ip
- 707 02fa 1A68     		ldr	r2, [r3]
- 708 02fc 1423     		movs	r3, #20
- 709 02fe FB18     		adds	r3, r7, r3
- 710 0300 1100     		movs	r1, r2
- 711 0302 1800     		movs	r0, r3
- 712 0304 FFF7FEFF 		bl	strcpy
- 217:main.c        ****             if (strcmp ("start",buffer) == 0){
- 713              		.loc 1 217 0
- 714 0308 1423     		movs	r3, #20
- 715 030a FA18     		adds	r2, r7, r3
- 716 030c 774B     		ldr	r3, .L32
- 717 030e 1100     		movs	r1, r2
- 718 0310 1800     		movs	r0, r3
- 719 0312 FFF7FEFF 		bl	strcmp
- 720 0316 031E     		subs	r3, r0, #0
- 721 0318 0BD1     		bne	.L23
- 218:main.c        ****                 boStart = true;
- 722              		.loc 1 218 0
- 723 031a A623     		movs	r3, #166
- 724 031c 1022     		movs	r2, #16
- 725 031e 9446     		mov	ip, r2
- 726 0320 BC44     		add	ip, ip, r7
- 727 0322 6344     		add	r3, r3, ip
- 728 0324 0122     		movs	r2, #1
- 729 0326 1A70     		strb	r2, [r3]
- 219:main.c        ****                 CySysTickEnable();
- 730              		.loc 1 219 0
- 731 0328 FFF7FEFF 		bl	CySysTickEnable
- 220:main.c        ****                 LED_Write(LIGHT_ON);
- 732              		.loc 1 220 0
- 733 032c 0120     		movs	r0, #1
- 734 032e FFF7FEFF 		bl	LED_Write
- 735              	.L23:
- 221:main.c        ****             }
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 18
+ 717 0236 8C46     		mov	ip, r1
+ 718 0238 BC44     		add	ip, ip, r7
+ 719 023a 6244     		add	r2, r2, ip
+ 720 023c 1360     		str	r3, [r2]
+ 240:main.c        ****             *RxWriteIndex = '\0';
+ 721              		.loc 1 240 0
+ 722 023e A023     		movs	r3, #160
+ 723 0240 1022     		movs	r2, #16
+ 724 0242 9446     		mov	ip, r2
+ 725 0244 BC44     		add	ip, ip, r7
+ 726 0246 6344     		add	r3, r3, ip
+ 727 0248 1B68     		ldr	r3, [r3]
+ 728 024a 0022     		movs	r2, #0
+ 729 024c 1A70     		strb	r2, [r3]
+ 241:main.c        **** 		    if (RxWriteIndex >= RxBuffer + RxBufferSize) RxWriteIndex = RxBuffer;    
+ 730              		.loc 1 241 0
+ 731 024e 9423     		movs	r3, #148
+ 732 0250 1022     		movs	r2, #16
+ 733 0252 9446     		mov	ip, r2
+ 734 0254 BC44     		add	ip, ip, r7
+ 735 0256 6344     		add	r3, r3, ip
+ 736 0258 1A68     		ldr	r2, [r3]
+ 737 025a 9C23     		movs	r3, #156
+ 738 025c 1021     		movs	r1, #16
+ 739 025e 8C46     		mov	ip, r1
+ 740 0260 BC44     		add	ip, ip, r7
+ 741 0262 6344     		add	r3, r3, ip
+ 742 0264 1B68     		ldr	r3, [r3]
+ 743 0266 D218     		adds	r2, r2, r3
+ 744 0268 A023     		movs	r3, #160
+ 745 026a 1021     		movs	r1, #16
+ 746 026c 8C46     		mov	ip, r1
+ 747 026e BC44     		add	ip, ip, r7
+ 748 0270 6344     		add	r3, r3, ip
+ 749 0272 1B68     		ldr	r3, [r3]
+ 750 0274 9A42     		cmp	r2, r3
+ 751 0276 0BD8     		bhi	.L24
+ 752              		.loc 1 241 0 is_stmt 0 discriminator 1
+ 753 0278 9423     		movs	r3, #148
+ 754 027a 1022     		movs	r2, #16
+ 755 027c 9446     		mov	ip, r2
+ 756 027e BC44     		add	ip, ip, r7
+ 757 0280 6344     		add	r3, r3, ip
+ 758 0282 1B68     		ldr	r3, [r3]
+ 759 0284 A022     		movs	r2, #160
+ 760 0286 1021     		movs	r1, #16
+ 761 0288 8C46     		mov	ip, r1
+ 762 028a BC44     		add	ip, ip, r7
+ 763 028c 6244     		add	r2, r2, ip
+ 764 028e 1360     		str	r3, [r2]
+ 765              	.L24:
+ 227:main.c        ****         {
+ 766              		.loc 1 227 0 is_stmt 1
+ 767 0290 FFF7FEFF 		bl	UART_UartGetChar
+ 768 0294 0300     		movs	r3, r0
+ 769 0296 AC22     		movs	r2, #172
+ 770 0298 1021     		movs	r1, #16
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 19
 
 
- 222:main.c        ****             if (strcmp ("stop",buffer) == 0){
- 736              		.loc 1 222 0
- 737 0332 1423     		movs	r3, #20
- 738 0334 FA18     		adds	r2, r7, r3
- 739 0336 6E4B     		ldr	r3, .L32+4
- 740 0338 1100     		movs	r1, r2
- 741 033a 1800     		movs	r0, r3
- 742 033c FFF7FEFF 		bl	strcmp
- 743 0340 031E     		subs	r3, r0, #0
- 744 0342 0ED1     		bne	.L24
- 223:main.c        ****                 boStart = false;
- 745              		.loc 1 223 0
- 746 0344 A623     		movs	r3, #166
- 747 0346 1022     		movs	r2, #16
- 748 0348 9446     		mov	ip, r2
- 749 034a BC44     		add	ip, ip, r7
- 750 034c 6344     		add	r3, r3, ip
- 751 034e 0022     		movs	r2, #0
- 752 0350 1A70     		strb	r2, [r3]
- 224:main.c        ****                 CySysTickStop();
- 753              		.loc 1 224 0
- 754 0352 FFF7FEFF 		bl	CySysTickStop
- 225:main.c        ****                 msCount = 0;
- 755              		.loc 1 225 0
- 756 0356 674B     		ldr	r3, .L32+8
- 757 0358 0022     		movs	r2, #0
- 758 035a 1A60     		str	r2, [r3]
- 226:main.c        ****                 LED_Write(LIGHT_OFF);
- 759              		.loc 1 226 0
- 760 035c 0020     		movs	r0, #0
- 761 035e FFF7FEFF 		bl	LED_Write
- 762              	.L24:
- 227:main.c        ****             }
- 228:main.c        **** 
- 229:main.c        ****             UART_UartPutString(buffer); 
- 763              		.loc 1 229 0
- 764 0362 1423     		movs	r3, #20
- 765 0364 FB18     		adds	r3, r7, r3
- 766 0366 1800     		movs	r0, r3
- 767 0368 FFF7FEFF 		bl	UART_UartPutString
- 768              	.L22:
- 230:main.c        ****         }
- 231:main.c        ****         
- 232:main.c        ****         /* Tick status fires only once every millisecond. */
- 233:main.c        ****         if(boSW0 != 0u && boStart == true)
- 769              		.loc 1 233 0
- 770 036c 624B     		ldr	r3, .L32+12
- 771 036e 1B78     		ldrb	r3, [r3]
- 772 0370 DBB2     		uxtb	r3, r3
- 773 0372 002B     		cmp	r3, #0
- 774 0374 29D0     		beq	.L25
- 775              		.loc 1 233 0 is_stmt 0 discriminator 1
- 776 0376 A623     		movs	r3, #166
- 777 0378 1022     		movs	r2, #16
- 778 037a 9446     		mov	ip, r2
- 779 037c BC44     		add	ip, ip, r7
- 780 037e 6344     		add	r3, r3, ip
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 19
+ 771 029a 8C46     		mov	ip, r1
+ 772 029c BC44     		add	ip, ip, r7
+ 773 029e 6244     		add	r2, r2, ip
+ 774 02a0 1360     		str	r3, [r2]
+ 775 02a2 AC23     		movs	r3, #172
+ 776 02a4 1022     		movs	r2, #16
+ 777 02a6 9446     		mov	ip, r2
+ 778 02a8 BC44     		add	ip, ip, r7
+ 779 02aa 6344     		add	r3, r3, ip
+ 780 02ac 1B68     		ldr	r3, [r3]
+ 781 02ae 002B     		cmp	r3, #0
+ 782 02b0 8CD1     		bne	.L27
+ 242:main.c        **** 	    } 
+ 243:main.c        ****         
+ 244:main.c        ****         
+ 245:main.c        ****         if (boCRLF == true)
+ 783              		.loc 1 245 0
+ 784 02b2 A723     		movs	r3, #167
+ 785 02b4 1022     		movs	r2, #16
+ 786 02b6 9446     		mov	ip, r2
+ 787 02b8 BC44     		add	ip, ip, r7
+ 788 02ba 6344     		add	r3, r3, ip
+ 789 02bc 1B78     		ldrb	r3, [r3]
+ 790 02be 002B     		cmp	r3, #0
+ 791 02c0 68D0     		beq	.L28
+ 246:main.c        ****         {
+ 247:main.c        ****             boCRLF = false;
+ 792              		.loc 1 247 0
+ 793 02c2 A723     		movs	r3, #167
+ 794 02c4 1022     		movs	r2, #16
+ 795 02c6 9446     		mov	ip, r2
+ 796 02c8 BC44     		add	ip, ip, r7
+ 797 02ca 6344     		add	r3, r3, ip
+ 798 02cc 0022     		movs	r2, #0
+ 799 02ce 1A70     		strb	r2, [r3]
+ 248:main.c        ****             RxWriteIndex = RxBuffer;
+ 800              		.loc 1 248 0
+ 801 02d0 9423     		movs	r3, #148
+ 802 02d2 1022     		movs	r2, #16
+ 803 02d4 9446     		mov	ip, r2
+ 804 02d6 BC44     		add	ip, ip, r7
+ 805 02d8 6344     		add	r3, r3, ip
+ 806 02da 1B68     		ldr	r3, [r3]
+ 807 02dc A022     		movs	r2, #160
+ 808 02de 1021     		movs	r1, #16
+ 809 02e0 8C46     		mov	ip, r1
+ 810 02e2 BC44     		add	ip, ip, r7
+ 811 02e4 6244     		add	r2, r2, ip
+ 812 02e6 1360     		str	r3, [r2]
+ 249:main.c        ****             sprintf(buffer, "%s", RxBuffer);
+ 813              		.loc 1 249 0
+ 814 02e8 9423     		movs	r3, #148
+ 815 02ea 1022     		movs	r2, #16
+ 816 02ec 9446     		mov	ip, r2
+ 817 02ee BC44     		add	ip, ip, r7
+ 818 02f0 6344     		add	r3, r3, ip
+ 819 02f2 1A68     		ldr	r2, [r3]
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 20
 
 
- 781 0380 1B78     		ldrb	r3, [r3]
- 782 0382 002B     		cmp	r3, #0
- 783 0384 21D0     		beq	.L25
- 234:main.c        ****         {
- 235:main.c        ****             UART_UartPutString("Input0;");
- 784              		.loc 1 235 0 is_stmt 1
- 785 0386 5D4B     		ldr	r3, .L32+16
- 786 0388 1800     		movs	r0, r3
- 787 038a FFF7FEFF 		bl	UART_UartPutString
- 236:main.c        ****             sprintf(time, "%lu\r\n", intSW0);
- 788              		.loc 1 236 0
- 789 038e 5C4B     		ldr	r3, .L32+20
- 790 0390 1A68     		ldr	r2, [r3]
- 791 0392 5C49     		ldr	r1, .L32+24
- 792 0394 8423     		movs	r3, #132
- 793 0396 1020     		movs	r0, #16
- 794 0398 8446     		mov	ip, r0
- 795 039a BC44     		add	ip, ip, r7
- 796 039c 6344     		add	r3, r3, ip
- 797 039e 1800     		movs	r0, r3
- 798 03a0 FFF7FEFF 		bl	sprintf
- 237:main.c        ****             UART_UartPutString(time);
- 799              		.loc 1 237 0
- 800 03a4 8423     		movs	r3, #132
- 801 03a6 1022     		movs	r2, #16
- 802 03a8 9446     		mov	ip, r2
- 803 03aa BC44     		add	ip, ip, r7
- 804 03ac 6344     		add	r3, r3, ip
- 805 03ae 1800     		movs	r0, r3
- 806 03b0 FFF7FEFF 		bl	UART_UartPutString
- 238:main.c        ****             LED_GPIO0_Write(~LED_GPIO0_Read());
- 807              		.loc 1 238 0
- 808 03b4 FFF7FEFF 		bl	LED_GPIO0_Read
- 809 03b8 0300     		movs	r3, r0
- 810 03ba DB43     		mvns	r3, r3
- 811 03bc DBB2     		uxtb	r3, r3
- 812 03be 1800     		movs	r0, r3
- 813 03c0 FFF7FEFF 		bl	LED_GPIO0_Write
- 239:main.c        ****             boSW0 = false;            
- 814              		.loc 1 239 0
- 815 03c4 4C4B     		ldr	r3, .L32+12
- 816 03c6 0022     		movs	r2, #0
- 817 03c8 1A70     		strb	r2, [r3]
- 818              	.L25:
- 240:main.c        ****         }
- 241:main.c        ****         
- 242:main.c        ****         /* Tick status fires only once every millisecond. */
- 243:main.c        ****         if(boSW1 != 0u && boStart == true)
- 819              		.loc 1 243 0
- 820 03ca 4F4B     		ldr	r3, .L32+28
- 821 03cc 1B78     		ldrb	r3, [r3]
- 822 03ce DBB2     		uxtb	r3, r3
- 823 03d0 002B     		cmp	r3, #0
- 824 03d2 29D0     		beq	.L26
- 825              		.loc 1 243 0 is_stmt 0 discriminator 1
- 826 03d4 A623     		movs	r3, #166
- 827 03d6 1022     		movs	r2, #16
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 20
+ 820 02f4 1423     		movs	r3, #20
+ 821 02f6 FB18     		adds	r3, r7, r3
+ 822 02f8 1100     		movs	r1, r2
+ 823 02fa 1800     		movs	r0, r3
+ 824 02fc FFF7FEFF 		bl	strcpy
+ 250:main.c        ****             if (strcmp ("start",buffer) == 0){
+ 825              		.loc 1 250 0
+ 826 0300 1423     		movs	r3, #20
+ 827 0302 FA18     		adds	r2, r7, r3
+ 828 0304 B24B     		ldr	r3, .L40
+ 829 0306 1100     		movs	r1, r2
+ 830 0308 1800     		movs	r0, r3
+ 831 030a FFF7FEFF 		bl	strcmp
+ 832 030e 031E     		subs	r3, r0, #0
+ 833 0310 1AD1     		bne	.L29
+ 251:main.c        ****                 boStart = true;
+ 834              		.loc 1 251 0
+ 835 0312 A623     		movs	r3, #166
+ 836 0314 1022     		movs	r2, #16
+ 837 0316 9446     		mov	ip, r2
+ 838 0318 BC44     		add	ip, ip, r7
+ 839 031a 6344     		add	r3, r3, ip
+ 840 031c 0122     		movs	r2, #1
+ 841 031e 1A70     		strb	r2, [r3]
+ 252:main.c        ****                 msCount = 0;
+ 842              		.loc 1 252 0
+ 843 0320 AC4B     		ldr	r3, .L40+4
+ 844 0322 0022     		movs	r2, #0
+ 845 0324 1A60     		str	r2, [r3]
+ 253:main.c        ****                 CySysTickEnable();
+ 846              		.loc 1 253 0
+ 847 0326 FFF7FEFF 		bl	CySysTickEnable
+ 254:main.c        ****                 isr_GPIO_0_Enable();
+ 848              		.loc 1 254 0
+ 849 032a FFF7FEFF 		bl	isr_GPIO_0_Enable
+ 255:main.c        ****                 isr_GPIO_1_Enable();
+ 850              		.loc 1 255 0
+ 851 032e FFF7FEFF 		bl	isr_GPIO_1_Enable
+ 256:main.c        ****                 isr_GPIO_2_Enable();
+ 852              		.loc 1 256 0
+ 853 0332 FFF7FEFF 		bl	isr_GPIO_2_Enable
+ 257:main.c        ****                 isr_GPIO_3_Enable();
+ 854              		.loc 1 257 0
+ 855 0336 FFF7FEFF 		bl	isr_GPIO_3_Enable
+ 258:main.c        ****                 isr_GPIO_4_Enable();
+ 856              		.loc 1 258 0
+ 857 033a FFF7FEFF 		bl	isr_GPIO_4_Enable
+ 259:main.c        ****                 isr_GPIO_5_Enable();
+ 858              		.loc 1 259 0
+ 859 033e FFF7FEFF 		bl	isr_GPIO_5_Enable
+ 260:main.c        ****                 LED_Write(LIGHT_ON);
+ 860              		.loc 1 260 0
+ 861 0342 0120     		movs	r0, #1
+ 862 0344 FFF7FEFF 		bl	LED_Write
+ 863              	.L29:
+ 261:main.c        ****             }
+ 262:main.c        ****             if (strcmp ("stop",buffer) == 0){
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 21
 
 
- 828 03d8 9446     		mov	ip, r2
- 829 03da BC44     		add	ip, ip, r7
- 830 03dc 6344     		add	r3, r3, ip
- 831 03de 1B78     		ldrb	r3, [r3]
- 832 03e0 002B     		cmp	r3, #0
- 833 03e2 21D0     		beq	.L26
- 244:main.c        ****         {
- 245:main.c        ****             UART_UartPutString("Input1;");
- 834              		.loc 1 245 0 is_stmt 1
- 835 03e4 494B     		ldr	r3, .L32+32
- 836 03e6 1800     		movs	r0, r3
- 837 03e8 FFF7FEFF 		bl	UART_UartPutString
- 246:main.c        ****             sprintf(time, "%lu\r\n", intSW1);
- 838              		.loc 1 246 0
- 839 03ec 484B     		ldr	r3, .L32+36
- 840 03ee 1A68     		ldr	r2, [r3]
- 841 03f0 4449     		ldr	r1, .L32+24
- 842 03f2 8423     		movs	r3, #132
- 843 03f4 1020     		movs	r0, #16
- 844 03f6 8446     		mov	ip, r0
- 845 03f8 BC44     		add	ip, ip, r7
- 846 03fa 6344     		add	r3, r3, ip
- 847 03fc 1800     		movs	r0, r3
- 848 03fe FFF7FEFF 		bl	sprintf
- 247:main.c        ****             UART_UartPutString(time);
- 849              		.loc 1 247 0
- 850 0402 8423     		movs	r3, #132
- 851 0404 1022     		movs	r2, #16
- 852 0406 9446     		mov	ip, r2
- 853 0408 BC44     		add	ip, ip, r7
- 854 040a 6344     		add	r3, r3, ip
- 855 040c 1800     		movs	r0, r3
- 856 040e FFF7FEFF 		bl	UART_UartPutString
- 248:main.c        ****             LED_GPIO1_Write(~LED_GPIO1_Read());
- 857              		.loc 1 248 0
- 858 0412 FFF7FEFF 		bl	LED_GPIO1_Read
- 859 0416 0300     		movs	r3, r0
- 860 0418 DB43     		mvns	r3, r3
- 861 041a DBB2     		uxtb	r3, r3
- 862 041c 1800     		movs	r0, r3
- 863 041e FFF7FEFF 		bl	LED_GPIO1_Write
- 249:main.c        ****             boSW1 = false;            
- 864              		.loc 1 249 0
- 865 0422 394B     		ldr	r3, .L32+28
- 866 0424 0022     		movs	r2, #0
- 867 0426 1A70     		strb	r2, [r3]
- 868              	.L26:
- 250:main.c        ****         }
- 251:main.c        ****         
- 252:main.c        ****         /* Tick status fires only once every millisecond. */
- 253:main.c        ****         if(boSW2 != 0u && boStart == true)
- 869              		.loc 1 253 0
- 870 0428 3A4B     		ldr	r3, .L32+40
- 871 042a 1B78     		ldrb	r3, [r3]
- 872 042c DBB2     		uxtb	r3, r3
- 873 042e 002B     		cmp	r3, #0
- 874 0430 29D0     		beq	.L27
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 21
-
-
- 875              		.loc 1 253 0 is_stmt 0 discriminator 1
- 876 0432 A623     		movs	r3, #166
- 877 0434 1022     		movs	r2, #16
- 878 0436 9446     		mov	ip, r2
- 879 0438 BC44     		add	ip, ip, r7
- 880 043a 6344     		add	r3, r3, ip
- 881 043c 1B78     		ldrb	r3, [r3]
- 882 043e 002B     		cmp	r3, #0
- 883 0440 21D0     		beq	.L27
- 254:main.c        ****         {
- 255:main.c        ****             UART_UartPutString("Input2;");
- 884              		.loc 1 255 0 is_stmt 1
- 885 0442 354B     		ldr	r3, .L32+44
- 886 0444 1800     		movs	r0, r3
- 887 0446 FFF7FEFF 		bl	UART_UartPutString
- 256:main.c        ****             sprintf(time, "%lu\r\n", intSW2);
- 888              		.loc 1 256 0
- 889 044a 344B     		ldr	r3, .L32+48
- 890 044c 1A68     		ldr	r2, [r3]
- 891 044e 2D49     		ldr	r1, .L32+24
- 892 0450 8423     		movs	r3, #132
- 893 0452 1020     		movs	r0, #16
- 894 0454 8446     		mov	ip, r0
- 895 0456 BC44     		add	ip, ip, r7
- 896 0458 6344     		add	r3, r3, ip
- 897 045a 1800     		movs	r0, r3
- 898 045c FFF7FEFF 		bl	sprintf
- 257:main.c        ****             UART_UartPutString(time);
- 899              		.loc 1 257 0
- 900 0460 8423     		movs	r3, #132
- 901 0462 1022     		movs	r2, #16
- 902 0464 9446     		mov	ip, r2
- 903 0466 BC44     		add	ip, ip, r7
- 904 0468 6344     		add	r3, r3, ip
- 905 046a 1800     		movs	r0, r3
- 906 046c FFF7FEFF 		bl	UART_UartPutString
- 258:main.c        ****             LED_GPIO2_Write(~LED_GPIO2_Read());
- 907              		.loc 1 258 0
- 908 0470 FFF7FEFF 		bl	LED_GPIO2_Read
- 909 0474 0300     		movs	r3, r0
- 910 0476 DB43     		mvns	r3, r3
- 911 0478 DBB2     		uxtb	r3, r3
- 912 047a 1800     		movs	r0, r3
- 913 047c FFF7FEFF 		bl	LED_GPIO2_Write
- 259:main.c        ****             boSW2 = false;            
- 914              		.loc 1 259 0
- 915 0480 244B     		ldr	r3, .L32+40
- 916 0482 0022     		movs	r2, #0
- 917 0484 1A70     		strb	r2, [r3]
- 918              	.L27:
- 260:main.c        ****         }
- 261:main.c        ****         
- 262:main.c        ****         /* Tick status fires only once every millisecond. */
- 263:main.c        ****         if(boSW3 != 0u && boStart == true)
- 919              		.loc 1 263 0
- 920 0486 264B     		ldr	r3, .L32+52
- 921 0488 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 22
-
-
- 922 048a DBB2     		uxtb	r3, r3
- 923 048c 002B     		cmp	r3, #0
- 924 048e 00D1     		bne	.LCB729
- 925 0490 87E6     		b	.L29	@long jump
- 926              	.LCB729:
- 927              		.loc 1 263 0 is_stmt 0 discriminator 1
- 928 0492 A623     		movs	r3, #166
- 929 0494 1022     		movs	r2, #16
- 930 0496 9446     		mov	ip, r2
- 931 0498 BC44     		add	ip, ip, r7
- 932 049a 6344     		add	r3, r3, ip
- 933 049c 1B78     		ldrb	r3, [r3]
- 934 049e 002B     		cmp	r3, #0
- 935 04a0 00D1     		bne	.LCB737
- 936 04a2 7EE6     		b	.L29	@long jump
- 937              	.LCB737:
- 264:main.c        ****         {
- 265:main.c        ****             UART_UartPutString("Input3;");
- 938              		.loc 1 265 0 is_stmt 1
- 939 04a4 1F4B     		ldr	r3, .L32+56
- 940 04a6 1800     		movs	r0, r3
- 941 04a8 FFF7FEFF 		bl	UART_UartPutString
- 266:main.c        ****             sprintf(time, "%lu\r\n", intSW3);
- 942              		.loc 1 266 0
- 943 04ac 1E4B     		ldr	r3, .L32+60
- 944 04ae 1A68     		ldr	r2, [r3]
- 945 04b0 1449     		ldr	r1, .L32+24
- 946 04b2 8423     		movs	r3, #132
- 947 04b4 1020     		movs	r0, #16
- 948 04b6 8446     		mov	ip, r0
- 949 04b8 BC44     		add	ip, ip, r7
- 950 04ba 6344     		add	r3, r3, ip
- 951 04bc 1800     		movs	r0, r3
- 952 04be FFF7FEFF 		bl	sprintf
- 267:main.c        ****             UART_UartPutString(time);
- 953              		.loc 1 267 0
- 954 04c2 8423     		movs	r3, #132
- 955 04c4 1022     		movs	r2, #16
- 956 04c6 9446     		mov	ip, r2
- 957 04c8 BC44     		add	ip, ip, r7
- 958 04ca 6344     		add	r3, r3, ip
- 959 04cc 1800     		movs	r0, r3
- 960 04ce FFF7FEFF 		bl	UART_UartPutString
- 268:main.c        ****             LED_GPIO3_Write(~LED_GPIO3_Read());
- 961              		.loc 1 268 0
- 962 04d2 FFF7FEFF 		bl	LED_GPIO3_Read
- 963 04d6 0300     		movs	r3, r0
- 964 04d8 DB43     		mvns	r3, r3
- 965 04da DBB2     		uxtb	r3, r3
- 966 04dc 1800     		movs	r0, r3
- 967 04de FFF7FEFF 		bl	LED_GPIO3_Write
- 269:main.c        ****             boSW3 = false;            
- 968              		.loc 1 269 0
- 969 04e2 0F4B     		ldr	r3, .L32+52
- 970 04e4 0022     		movs	r2, #0
- 971 04e6 1A70     		strb	r2, [r3]
- 270:main.c        ****         }
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 23
-
-
- 271:main.c        ****     }
- 972              		.loc 1 271 0
- 973 04e8 5BE6     		b	.L29
- 974              	.L33:
- 975 04ea C046     		.align	2
- 976              	.L32:
- 977 04ec 10000000 		.word	.LC25
- 978 04f0 18000000 		.word	.LC27
- 979 04f4 00000000 		.word	msCount
- 980 04f8 00000000 		.word	boSW0
- 981 04fc 20000000 		.word	.LC29
- 982 0500 00000000 		.word	intSW0
- 983 0504 28000000 		.word	.LC31
- 984 0508 00000000 		.word	boSW1
- 985 050c 30000000 		.word	.LC34
- 986 0510 00000000 		.word	intSW1
- 987 0514 00000000 		.word	boSW2
- 988 0518 38000000 		.word	.LC37
- 989 051c 00000000 		.word	intSW2
- 990 0520 00000000 		.word	boSW3
- 991 0524 40000000 		.word	.LC40
- 992 0528 00000000 		.word	intSW3
- 993              		.cfi_endproc
- 994              	.LFE39:
- 995              		.size	main, .-main
- 996              		.section	.text.SysTickISRCallback,"ax",%progbits
- 997              		.align	2
- 998              		.global	SysTickISRCallback
- 999              		.code	16
- 1000              		.thumb_func
- 1001              		.type	SysTickISRCallback, %function
- 1002              	SysTickISRCallback:
- 1003              	.LFB40:
- 272:main.c        **** }
+ 864              		.loc 1 262 0
+ 865 0348 1423     		movs	r3, #20
+ 866 034a FA18     		adds	r2, r7, r3
+ 867 034c A24B     		ldr	r3, .L40+8
+ 868 034e 1100     		movs	r1, r2
+ 869 0350 1800     		movs	r0, r3
+ 870 0352 FFF7FEFF 		bl	strcmp
+ 871 0356 031E     		subs	r3, r0, #0
+ 872 0358 17D1     		bne	.L30
+ 263:main.c        ****                 boStart = false;
+ 873              		.loc 1 263 0
+ 874 035a A623     		movs	r3, #166
+ 875 035c 1022     		movs	r2, #16
+ 876 035e 9446     		mov	ip, r2
+ 877 0360 BC44     		add	ip, ip, r7
+ 878 0362 6344     		add	r3, r3, ip
+ 879 0364 0022     		movs	r2, #0
+ 880 0366 1A70     		strb	r2, [r3]
+ 264:main.c        ****                 CySysTickStop();
+ 881              		.loc 1 264 0
+ 882 0368 FFF7FEFF 		bl	CySysTickStop
+ 265:main.c        ****                 isr_GPIO_0_Disable();
+ 883              		.loc 1 265 0
+ 884 036c FFF7FEFF 		bl	isr_GPIO_0_Disable
+ 266:main.c        ****                 isr_GPIO_1_Disable();
+ 885              		.loc 1 266 0
+ 886 0370 FFF7FEFF 		bl	isr_GPIO_1_Disable
+ 267:main.c        ****                 isr_GPIO_2_Disable();
+ 887              		.loc 1 267 0
+ 888 0374 FFF7FEFF 		bl	isr_GPIO_2_Disable
+ 268:main.c        ****                 isr_GPIO_3_Disable();
+ 889              		.loc 1 268 0
+ 890 0378 FFF7FEFF 		bl	isr_GPIO_3_Disable
+ 269:main.c        ****                 isr_GPIO_4_Disable();
+ 891              		.loc 1 269 0
+ 892 037c FFF7FEFF 		bl	isr_GPIO_4_Disable
+ 270:main.c        ****                 isr_GPIO_5_Disable();
+ 893              		.loc 1 270 0
+ 894 0380 FFF7FEFF 		bl	isr_GPIO_5_Disable
+ 271:main.c        ****                 LED_Write(LIGHT_OFF);
+ 895              		.loc 1 271 0
+ 896 0384 0020     		movs	r0, #0
+ 897 0386 FFF7FEFF 		bl	LED_Write
+ 898              	.L30:
+ 272:main.c        ****             }
  273:main.c        **** 
- 274:main.c        **** void SysTickISRCallback(void)
- 275:main.c        **** {
- 1004              		.loc 1 275 0
- 1005              		.cfi_startproc
- 1006              		@ args = 0, pretend = 0, frame = 0
- 1007              		@ frame_needed = 1, uses_anonymous_args = 0
- 1008 0000 80B5     		push	{r7, lr}
- 1009              		.cfi_def_cfa_offset 8
- 1010              		.cfi_offset 7, -8
- 1011              		.cfi_offset 14, -4
- 1012 0002 00AF     		add	r7, sp, #0
- 1013              		.cfi_def_cfa_register 7
- 276:main.c        ****     msCount++;
- 1014              		.loc 1 276 0
- 1015 0004 034B     		ldr	r3, .L35
- 1016 0006 1B68     		ldr	r3, [r3]
- 1017 0008 5A1C     		adds	r2, r3, #1
- 1018 000a 024B     		ldr	r3, .L35
- 1019 000c 1A60     		str	r2, [r3]
- 277:main.c        **** }
- 1020              		.loc 1 277 0
- 1021 000e C046     		nop
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 24
+ 274:main.c        ****             UART_UartPutString(buffer); 
+ 899              		.loc 1 274 0
+ 900 038a 1423     		movs	r3, #20
+ 901 038c FB18     		adds	r3, r7, r3
+ 902 038e 1800     		movs	r0, r3
+ 903 0390 FFF7FEFF 		bl	UART_UartPutString
+ 904              	.L28:
+ 275:main.c        ****         }
+ 276:main.c        ****         
+ 277:main.c        ****         /* Tick status fires only once every millisecond. */
+ 278:main.c        ****         if(boSW0 != 0u && boStart == true)
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 22
 
 
- 1022 0010 BD46     		mov	sp, r7
- 1023              		@ sp needed
- 1024 0012 80BD     		pop	{r7, pc}
- 1025              	.L36:
- 1026              		.align	2
- 1027              	.L35:
- 1028 0014 00000000 		.word	msCount
- 1029              		.cfi_endproc
- 1030              	.LFE40:
- 1031              		.size	SysTickISRCallback, .-SysTickISRCallback
- 1032              		.text
- 1033              	.Letext0:
- 1034              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
- 1035              		.section	.debug_info,"",%progbits
- 1036              	.Ldebug_info0:
- 1037 0000 6E020000 		.4byte	0x26e
- 1038 0004 0400     		.2byte	0x4
- 1039 0006 00000000 		.4byte	.Ldebug_abbrev0
- 1040 000a 04       		.byte	0x4
- 1041 000b 01       		.uleb128 0x1
- 1042 000c F1000000 		.4byte	.LASF37
- 1043 0010 0C       		.byte	0xc
- 1044 0011 09020000 		.4byte	.LASF38
- 1045 0015 1D000000 		.4byte	.LASF39
- 1046 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 1047 001d 00000000 		.4byte	0
- 1048 0021 00000000 		.4byte	.Ldebug_line0
- 1049 0025 02       		.uleb128 0x2
- 1050 0026 01       		.byte	0x1
- 1051 0027 06       		.byte	0x6
- 1052 0028 57020000 		.4byte	.LASF0
- 1053 002c 02       		.uleb128 0x2
- 1054 002d 01       		.byte	0x1
- 1055 002e 08       		.byte	0x8
- 1056 002f AC000000 		.4byte	.LASF1
- 1057 0033 02       		.uleb128 0x2
- 1058 0034 02       		.byte	0x2
- 1059 0035 05       		.byte	0x5
- 1060 0036 15020000 		.4byte	.LASF2
- 1061 003a 02       		.uleb128 0x2
- 1062 003b 02       		.byte	0x2
- 1063 003c 07       		.byte	0x7
- 1064 003d 72000000 		.4byte	.LASF3
- 1065 0041 02       		.uleb128 0x2
- 1066 0042 04       		.byte	0x4
- 1067 0043 05       		.byte	0x5
- 1068 0044 42020000 		.4byte	.LASF4
- 1069 0048 02       		.uleb128 0x2
- 1070 0049 04       		.byte	0x4
- 1071 004a 07       		.byte	0x7
- 1072 004b D2000000 		.4byte	.LASF5
- 1073 004f 02       		.uleb128 0x2
- 1074 0050 08       		.byte	0x8
- 1075 0051 05       		.byte	0x5
- 1076 0052 FB010000 		.4byte	.LASF6
- 1077 0056 02       		.uleb128 0x2
- 1078 0057 08       		.byte	0x8
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 25
+ 905              		.loc 1 278 0
+ 906 0394 914B     		ldr	r3, .L40+12
+ 907 0396 1B78     		ldrb	r3, [r3]
+ 908 0398 DBB2     		uxtb	r3, r3
+ 909 039a 002B     		cmp	r3, #0
+ 910 039c 29D0     		beq	.L31
+ 911              		.loc 1 278 0 is_stmt 0 discriminator 1
+ 912 039e A623     		movs	r3, #166
+ 913 03a0 1022     		movs	r2, #16
+ 914 03a2 9446     		mov	ip, r2
+ 915 03a4 BC44     		add	ip, ip, r7
+ 916 03a6 6344     		add	r3, r3, ip
+ 917 03a8 1B78     		ldrb	r3, [r3]
+ 918 03aa 002B     		cmp	r3, #0
+ 919 03ac 21D0     		beq	.L31
+ 279:main.c        ****         {
+ 280:main.c        ****             UART_UartPutString("Input0;");
+ 920              		.loc 1 280 0 is_stmt 1
+ 921 03ae 8C4B     		ldr	r3, .L40+16
+ 922 03b0 1800     		movs	r0, r3
+ 923 03b2 FFF7FEFF 		bl	UART_UartPutString
+ 281:main.c        ****             sprintf(time, "%lu\r\n", intSW0);
+ 924              		.loc 1 281 0
+ 925 03b6 8B4B     		ldr	r3, .L40+20
+ 926 03b8 1A68     		ldr	r2, [r3]
+ 927 03ba 8B49     		ldr	r1, .L40+24
+ 928 03bc 8423     		movs	r3, #132
+ 929 03be 1020     		movs	r0, #16
+ 930 03c0 8446     		mov	ip, r0
+ 931 03c2 BC44     		add	ip, ip, r7
+ 932 03c4 6344     		add	r3, r3, ip
+ 933 03c6 1800     		movs	r0, r3
+ 934 03c8 FFF7FEFF 		bl	sprintf
+ 282:main.c        ****             UART_UartPutString(time);
+ 935              		.loc 1 282 0
+ 936 03cc 8423     		movs	r3, #132
+ 937 03ce 1022     		movs	r2, #16
+ 938 03d0 9446     		mov	ip, r2
+ 939 03d2 BC44     		add	ip, ip, r7
+ 940 03d4 6344     		add	r3, r3, ip
+ 941 03d6 1800     		movs	r0, r3
+ 942 03d8 FFF7FEFF 		bl	UART_UartPutString
+ 283:main.c        ****             LED_GPIO0_Write(~LED_GPIO0_Read());
+ 943              		.loc 1 283 0
+ 944 03dc FFF7FEFF 		bl	LED_GPIO0_Read
+ 945 03e0 0300     		movs	r3, r0
+ 946 03e2 DB43     		mvns	r3, r3
+ 947 03e4 DBB2     		uxtb	r3, r3
+ 948 03e6 1800     		movs	r0, r3
+ 949 03e8 FFF7FEFF 		bl	LED_GPIO0_Write
+ 284:main.c        ****             boSW0 = false;            
+ 950              		.loc 1 284 0
+ 951 03ec 7B4B     		ldr	r3, .L40+12
+ 952 03ee 0022     		movs	r2, #0
+ 953 03f0 1A70     		strb	r2, [r3]
+ 954              	.L31:
+ 285:main.c        ****         }
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 23
 
 
- 1079 0058 07       		.byte	0x7
- 1080 0059 D6010000 		.4byte	.LASF7
- 1081 005d 03       		.uleb128 0x3
- 1082 005e 04       		.byte	0x4
- 1083 005f 05       		.byte	0x5
- 1084 0060 696E7400 		.ascii	"int\000"
- 1085 0064 02       		.uleb128 0x2
- 1086 0065 04       		.byte	0x4
- 1087 0066 07       		.byte	0x7
- 1088 0067 C9010000 		.4byte	.LASF8
- 1089 006b 04       		.uleb128 0x4
- 1090 006c B2010000 		.4byte	.LASF40
- 1091 0070 02       		.byte	0x2
- 1092 0071 D401     		.2byte	0x1d4
- 1093 0073 48000000 		.4byte	0x48
- 1094 0077 02       		.uleb128 0x2
- 1095 0078 04       		.byte	0x4
- 1096 0079 04       		.byte	0x4
- 1097 007a 9D000000 		.4byte	.LASF9
- 1098 007e 02       		.uleb128 0x2
- 1099 007f 08       		.byte	0x8
- 1100 0080 04       		.byte	0x4
- 1101 0081 9E010000 		.4byte	.LASF10
- 1102 0085 02       		.uleb128 0x2
- 1103 0086 01       		.byte	0x1
- 1104 0087 08       		.byte	0x8
- 1105 0088 10020000 		.4byte	.LASF11
- 1106 008c 05       		.uleb128 0x5
- 1107 008d 6B000000 		.4byte	0x6b
- 1108 0091 02       		.uleb128 0x2
- 1109 0092 08       		.byte	0x8
- 1110 0093 04       		.byte	0x4
- 1111 0094 4B020000 		.4byte	.LASF12
- 1112 0098 02       		.uleb128 0x2
- 1113 0099 04       		.byte	0x4
- 1114 009a 07       		.byte	0x7
- 1115 009b F2010000 		.4byte	.LASF13
- 1116 009f 06       		.uleb128 0x6
- 1117 00a0 04       		.byte	0x4
- 1118 00a1 85000000 		.4byte	0x85
- 1119 00a5 07       		.uleb128 0x7
- 1120 00a6 63020000 		.4byte	.LASF14
- 1121 00aa 01       		.byte	0x1
- 1122 00ab 30       		.byte	0x30
- 1123 00ac 00000000 		.4byte	.LFB35
- 1124 00b0 2C000000 		.4byte	.LFE35-.LFB35
- 1125 00b4 01       		.uleb128 0x1
- 1126 00b5 9C       		.byte	0x9c
- 1127 00b6 07       		.uleb128 0x7
- 1128 00b7 B9010000 		.4byte	.LASF15
- 1129 00bb 01       		.byte	0x1
- 1130 00bc 3C       		.byte	0x3c
- 1131 00bd 00000000 		.4byte	.LFB36
- 1132 00c1 2C000000 		.4byte	.LFE36-.LFB36
- 1133 00c5 01       		.uleb128 0x1
- 1134 00c6 9C       		.byte	0x9c
- 1135 00c7 07       		.uleb128 0x7
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 26
+ 286:main.c        ****         
+ 287:main.c        ****         /* Tick status fires only once every millisecond. */
+ 288:main.c        ****         if(boSW1 != 0u && boStart == true)
+ 955              		.loc 1 288 0
+ 956 03f2 7E4B     		ldr	r3, .L40+28
+ 957 03f4 1B78     		ldrb	r3, [r3]
+ 958 03f6 DBB2     		uxtb	r3, r3
+ 959 03f8 002B     		cmp	r3, #0
+ 960 03fa 29D0     		beq	.L32
+ 961              		.loc 1 288 0 is_stmt 0 discriminator 1
+ 962 03fc A623     		movs	r3, #166
+ 963 03fe 1022     		movs	r2, #16
+ 964 0400 9446     		mov	ip, r2
+ 965 0402 BC44     		add	ip, ip, r7
+ 966 0404 6344     		add	r3, r3, ip
+ 967 0406 1B78     		ldrb	r3, [r3]
+ 968 0408 002B     		cmp	r3, #0
+ 969 040a 21D0     		beq	.L32
+ 289:main.c        ****         {
+ 290:main.c        ****             UART_UartPutString("Input1;");
+ 970              		.loc 1 290 0 is_stmt 1
+ 971 040c 784B     		ldr	r3, .L40+32
+ 972 040e 1800     		movs	r0, r3
+ 973 0410 FFF7FEFF 		bl	UART_UartPutString
+ 291:main.c        ****             sprintf(time, "%lu\r\n", intSW1);
+ 974              		.loc 1 291 0
+ 975 0414 774B     		ldr	r3, .L40+36
+ 976 0416 1A68     		ldr	r2, [r3]
+ 977 0418 7349     		ldr	r1, .L40+24
+ 978 041a 8423     		movs	r3, #132
+ 979 041c 1020     		movs	r0, #16
+ 980 041e 8446     		mov	ip, r0
+ 981 0420 BC44     		add	ip, ip, r7
+ 982 0422 6344     		add	r3, r3, ip
+ 983 0424 1800     		movs	r0, r3
+ 984 0426 FFF7FEFF 		bl	sprintf
+ 292:main.c        ****             UART_UartPutString(time);
+ 985              		.loc 1 292 0
+ 986 042a 8423     		movs	r3, #132
+ 987 042c 1022     		movs	r2, #16
+ 988 042e 9446     		mov	ip, r2
+ 989 0430 BC44     		add	ip, ip, r7
+ 990 0432 6344     		add	r3, r3, ip
+ 991 0434 1800     		movs	r0, r3
+ 992 0436 FFF7FEFF 		bl	UART_UartPutString
+ 293:main.c        ****             LED_GPIO1_Write(~LED_GPIO1_Read());
+ 993              		.loc 1 293 0
+ 994 043a FFF7FEFF 		bl	LED_GPIO1_Read
+ 995 043e 0300     		movs	r3, r0
+ 996 0440 DB43     		mvns	r3, r3
+ 997 0442 DBB2     		uxtb	r3, r3
+ 998 0444 1800     		movs	r0, r3
+ 999 0446 FFF7FEFF 		bl	LED_GPIO1_Write
+ 294:main.c        ****             boSW1 = false;            
+ 1000              		.loc 1 294 0
+ 1001 044a 684B     		ldr	r3, .L40+28
+ 1002 044c 0022     		movs	r2, #0
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 24
 
 
- 1136 00c8 BA000000 		.4byte	.LASF16
- 1137 00cc 01       		.byte	0x1
- 1138 00cd 48       		.byte	0x48
- 1139 00ce 00000000 		.4byte	.LFB37
- 1140 00d2 2C000000 		.4byte	.LFE37-.LFB37
- 1141 00d6 01       		.uleb128 0x1
- 1142 00d7 9C       		.byte	0x9c
- 1143 00d8 07       		.uleb128 0x7
- 1144 00d9 00000000 		.4byte	.LASF17
- 1145 00dd 01       		.byte	0x1
- 1146 00de 54       		.byte	0x54
- 1147 00df 00000000 		.4byte	.LFB38
- 1148 00e3 2C000000 		.4byte	.LFE38-.LFB38
- 1149 00e7 01       		.uleb128 0x1
- 1150 00e8 9C       		.byte	0x9c
- 1151 00e9 08       		.uleb128 0x8
- 1152 00ea A5010000 		.4byte	.LASF41
- 1153 00ee 01       		.byte	0x1
- 1154 00ef 71       		.byte	0x71
- 1155 00f0 5D000000 		.4byte	0x5d
- 1156 00f4 00000000 		.4byte	.LFB39
- 1157 00f8 2C050000 		.4byte	.LFE39-.LFB39
- 1158 00fc 01       		.uleb128 0x1
- 1159 00fd 9C       		.byte	0x9c
- 1160 00fe 82010000 		.4byte	0x182
- 1161 0102 09       		.uleb128 0x9
- 1162 0103 ED010000 		.4byte	.LASF18
- 1163 0107 01       		.byte	0x1
- 1164 0108 73       		.byte	0x73
- 1165 0109 82010000 		.4byte	0x182
- 1166 010d 03       		.uleb128 0x3
- 1167 010e 91       		.byte	0x91
- 1168 010f BC7F     		.sleb128 -68
- 1169 0111 09       		.uleb128 0x9
- 1170 0112 1F020000 		.4byte	.LASF19
- 1171 0116 01       		.byte	0x1
- 1172 0117 74       		.byte	0x74
- 1173 0118 92010000 		.4byte	0x192
- 1174 011c 03       		.uleb128 0x3
- 1175 011d 91       		.byte	0x91
- 1176 011e BC7E     		.sleb128 -196
- 1177 0120 09       		.uleb128 0x9
- 1178 0121 85000000 		.4byte	.LASF20
- 1179 0125 01       		.byte	0x1
- 1180 0126 75       		.byte	0x75
- 1181 0127 6B000000 		.4byte	0x6b
- 1182 012b 02       		.uleb128 0x2
- 1183 012c 91       		.byte	0x91
- 1184 012d 64       		.sleb128 -28
- 1185 012e 0A       		.uleb128 0xa
- 1186 012f 6900     		.ascii	"i\000"
- 1187 0131 01       		.byte	0x1
- 1188 0132 75       		.byte	0x75
- 1189 0133 6B000000 		.4byte	0x6b
- 1190 0137 02       		.uleb128 0x2
- 1191 0138 91       		.byte	0x91
- 1192 0139 60       		.sleb128 -32
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 27
+ 1003 044e 1A70     		strb	r2, [r3]
+ 1004              	.L32:
+ 295:main.c        ****         }
+ 296:main.c        ****         
+ 297:main.c        ****         /* Tick status fires only once every millisecond. */
+ 298:main.c        ****         if(boSW2 != 0u && boStart == true)
+ 1005              		.loc 1 298 0
+ 1006 0450 694B     		ldr	r3, .L40+40
+ 1007 0452 1B78     		ldrb	r3, [r3]
+ 1008 0454 DBB2     		uxtb	r3, r3
+ 1009 0456 002B     		cmp	r3, #0
+ 1010 0458 29D0     		beq	.L33
+ 1011              		.loc 1 298 0 is_stmt 0 discriminator 1
+ 1012 045a A623     		movs	r3, #166
+ 1013 045c 1022     		movs	r2, #16
+ 1014 045e 9446     		mov	ip, r2
+ 1015 0460 BC44     		add	ip, ip, r7
+ 1016 0462 6344     		add	r3, r3, ip
+ 1017 0464 1B78     		ldrb	r3, [r3]
+ 1018 0466 002B     		cmp	r3, #0
+ 1019 0468 21D0     		beq	.L33
+ 299:main.c        ****         {
+ 300:main.c        ****             UART_UartPutString("Input2;");
+ 1020              		.loc 1 300 0 is_stmt 1
+ 1021 046a 644B     		ldr	r3, .L40+44
+ 1022 046c 1800     		movs	r0, r3
+ 1023 046e FFF7FEFF 		bl	UART_UartPutString
+ 301:main.c        ****             sprintf(time, "%lu\r\n", intSW2);
+ 1024              		.loc 1 301 0
+ 1025 0472 634B     		ldr	r3, .L40+48
+ 1026 0474 1A68     		ldr	r2, [r3]
+ 1027 0476 5C49     		ldr	r1, .L40+24
+ 1028 0478 8423     		movs	r3, #132
+ 1029 047a 1020     		movs	r0, #16
+ 1030 047c 8446     		mov	ip, r0
+ 1031 047e BC44     		add	ip, ip, r7
+ 1032 0480 6344     		add	r3, r3, ip
+ 1033 0482 1800     		movs	r0, r3
+ 1034 0484 FFF7FEFF 		bl	sprintf
+ 302:main.c        ****             UART_UartPutString(time);
+ 1035              		.loc 1 302 0
+ 1036 0488 8423     		movs	r3, #132
+ 1037 048a 1022     		movs	r2, #16
+ 1038 048c 9446     		mov	ip, r2
+ 1039 048e BC44     		add	ip, ip, r7
+ 1040 0490 6344     		add	r3, r3, ip
+ 1041 0492 1800     		movs	r0, r3
+ 1042 0494 FFF7FEFF 		bl	UART_UartPutString
+ 303:main.c        ****             LED_GPIO2_Write(~LED_GPIO2_Read());
+ 1043              		.loc 1 303 0
+ 1044 0498 FFF7FEFF 		bl	LED_GPIO2_Read
+ 1045 049c 0300     		movs	r3, r0
+ 1046 049e DB43     		mvns	r3, r3
+ 1047 04a0 DBB2     		uxtb	r3, r3
+ 1048 04a2 1800     		movs	r0, r3
+ 1049 04a4 FFF7FEFF 		bl	LED_GPIO2_Write
+ 304:main.c        ****             boSW2 = false;            
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 25
 
 
- 1193 013a 09       		.uleb128 0x9
- 1194 013b 97010000 		.4byte	.LASF21
- 1195 013f 01       		.byte	0x1
- 1196 0140 76       		.byte	0x76
- 1197 0141 A2010000 		.4byte	0x1a2
- 1198 0145 02       		.uleb128 0x2
- 1199 0146 91       		.byte	0x91
- 1200 0147 5F       		.sleb128 -33
- 1201 0148 09       		.uleb128 0x9
- 1202 0149 CA000000 		.4byte	.LASF22
- 1203 014d 01       		.byte	0x1
- 1204 014e 77       		.byte	0x77
- 1205 014f A2010000 		.4byte	0x1a2
- 1206 0153 02       		.uleb128 0x2
- 1207 0154 91       		.byte	0x91
- 1208 0155 5E       		.sleb128 -34
- 1209 0156 09       		.uleb128 0x9
- 1210 0157 E4000000 		.4byte	.LASF23
- 1211 015b 01       		.byte	0x1
- 1212 015c 7A       		.byte	0x7a
- 1213 015d A9010000 		.4byte	0x1a9
- 1214 0161 02       		.uleb128 0x2
- 1215 0162 91       		.byte	0x91
- 1216 0163 54       		.sleb128 -44
- 1217 0164 09       		.uleb128 0x9
- 1218 0165 A3000000 		.4byte	.LASF24
- 1219 0169 01       		.byte	0x1
- 1220 016a 7C       		.byte	0x7c
- 1221 016b AE010000 		.4byte	0x1ae
- 1222 016f 03       		.uleb128 0x3
- 1223 0170 91       		.byte	0x91
- 1224 0171 4C       		.sleb128 -52
- 1225 0172 06       		.byte	0x6
- 1226 0173 09       		.uleb128 0x9
- 1227 0174 10000000 		.4byte	.LASF25
- 1228 0178 01       		.byte	0x1
- 1229 0179 7D       		.byte	0x7d
- 1230 017a 9F000000 		.4byte	0x9f
- 1231 017e 02       		.uleb128 0x2
- 1232 017f 91       		.byte	0x91
- 1233 0180 58       		.sleb128 -40
- 1234 0181 00       		.byte	0
- 1235 0182 0B       		.uleb128 0xb
- 1236 0183 85000000 		.4byte	0x85
- 1237 0187 92010000 		.4byte	0x192
- 1238 018b 0C       		.uleb128 0xc
- 1239 018c 98000000 		.4byte	0x98
- 1240 0190 0F       		.byte	0xf
- 1241 0191 00       		.byte	0
- 1242 0192 0B       		.uleb128 0xb
- 1243 0193 85000000 		.4byte	0x85
- 1244 0197 A2010000 		.4byte	0x1a2
- 1245 019b 0C       		.uleb128 0xc
- 1246 019c 98000000 		.4byte	0x98
- 1247 01a0 7F       		.byte	0x7f
- 1248 01a1 00       		.byte	0
- 1249 01a2 02       		.uleb128 0x2
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 28
+ 1050              		.loc 1 304 0
+ 1051 04a8 534B     		ldr	r3, .L40+40
+ 1052 04aa 0022     		movs	r2, #0
+ 1053 04ac 1A70     		strb	r2, [r3]
+ 1054              	.L33:
+ 305:main.c        ****         }
+ 306:main.c        ****         
+ 307:main.c        ****         /* Tick status fires only once every millisecond. */
+ 308:main.c        ****         if(boSW3 != 0u && boStart == true)
+ 1055              		.loc 1 308 0
+ 1056 04ae 554B     		ldr	r3, .L40+52
+ 1057 04b0 1B78     		ldrb	r3, [r3]
+ 1058 04b2 DBB2     		uxtb	r3, r3
+ 1059 04b4 002B     		cmp	r3, #0
+ 1060 04b6 29D0     		beq	.L34
+ 1061              		.loc 1 308 0 is_stmt 0 discriminator 1
+ 1062 04b8 A623     		movs	r3, #166
+ 1063 04ba 1022     		movs	r2, #16
+ 1064 04bc 9446     		mov	ip, r2
+ 1065 04be BC44     		add	ip, ip, r7
+ 1066 04c0 6344     		add	r3, r3, ip
+ 1067 04c2 1B78     		ldrb	r3, [r3]
+ 1068 04c4 002B     		cmp	r3, #0
+ 1069 04c6 21D0     		beq	.L34
+ 309:main.c        ****         {
+ 310:main.c        ****             UART_UartPutString("Input3;");
+ 1070              		.loc 1 310 0 is_stmt 1
+ 1071 04c8 4F4B     		ldr	r3, .L40+56
+ 1072 04ca 1800     		movs	r0, r3
+ 1073 04cc FFF7FEFF 		bl	UART_UartPutString
+ 311:main.c        ****             sprintf(time, "%lu\r\n", intSW3);
+ 1074              		.loc 1 311 0
+ 1075 04d0 4E4B     		ldr	r3, .L40+60
+ 1076 04d2 1A68     		ldr	r2, [r3]
+ 1077 04d4 4449     		ldr	r1, .L40+24
+ 1078 04d6 8423     		movs	r3, #132
+ 1079 04d8 1020     		movs	r0, #16
+ 1080 04da 8446     		mov	ip, r0
+ 1081 04dc BC44     		add	ip, ip, r7
+ 1082 04de 6344     		add	r3, r3, ip
+ 1083 04e0 1800     		movs	r0, r3
+ 1084 04e2 FFF7FEFF 		bl	sprintf
+ 312:main.c        ****             UART_UartPutString(time);
+ 1085              		.loc 1 312 0
+ 1086 04e6 8423     		movs	r3, #132
+ 1087 04e8 1022     		movs	r2, #16
+ 1088 04ea 9446     		mov	ip, r2
+ 1089 04ec BC44     		add	ip, ip, r7
+ 1090 04ee 6344     		add	r3, r3, ip
+ 1091 04f0 1800     		movs	r0, r3
+ 1092 04f2 FFF7FEFF 		bl	UART_UartPutString
+ 313:main.c        ****             LED_GPIO3_Write(~LED_GPIO3_Read());
+ 1093              		.loc 1 313 0
+ 1094 04f6 FFF7FEFF 		bl	LED_GPIO3_Read
+ 1095 04fa 0300     		movs	r3, r0
+ 1096 04fc DB43     		mvns	r3, r3
+ 1097 04fe DBB2     		uxtb	r3, r3
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 26
 
 
- 1250 01a3 01       		.byte	0x1
- 1251 01a4 02       		.byte	0x2
- 1252 01a5 73020000 		.4byte	.LASF26
- 1253 01a9 0D       		.uleb128 0xd
- 1254 01aa 5D000000 		.4byte	0x5d
- 1255 01ae 0B       		.uleb128 0xb
- 1256 01af 85000000 		.4byte	0x85
- 1257 01b3 C1010000 		.4byte	0x1c1
- 1258 01b7 0E       		.uleb128 0xe
- 1259 01b8 98000000 		.4byte	0x98
- 1260 01bc 03       		.uleb128 0x3
- 1261 01bd 91       		.byte	0x91
- 1262 01be 50       		.sleb128 -48
- 1263 01bf 06       		.byte	0x6
- 1264 01c0 00       		.byte	0
- 1265 01c1 0F       		.uleb128 0xf
- 1266 01c2 8A000000 		.4byte	.LASF27
- 1267 01c6 01       		.byte	0x1
- 1268 01c7 1201     		.2byte	0x112
- 1269 01c9 00000000 		.4byte	.LFB40
- 1270 01cd 18000000 		.4byte	.LFE40-.LFB40
- 1271 01d1 01       		.uleb128 0x1
- 1272 01d2 9C       		.byte	0x9c
- 1273 01d3 10       		.uleb128 0x10
- 1274 01d4 AA010000 		.4byte	.LASF28
- 1275 01d8 01       		.byte	0x1
- 1276 01d9 22       		.byte	0x22
- 1277 01da 6B000000 		.4byte	0x6b
- 1278 01de 05       		.uleb128 0x5
- 1279 01df 03       		.byte	0x3
- 1280 01e0 00000000 		.4byte	msCount
- 1281 01e4 10       		.uleb128 0x10
- 1282 01e5 26020000 		.4byte	.LASF29
- 1283 01e9 01       		.byte	0x1
- 1284 01ea 23       		.byte	0x23
- 1285 01eb 8C000000 		.4byte	0x8c
- 1286 01ef 05       		.uleb128 0x5
- 1287 01f0 03       		.byte	0x3
- 1288 01f1 00000000 		.4byte	intSW0
- 1289 01f5 10       		.uleb128 0x10
- 1290 01f6 2D020000 		.4byte	.LASF30
- 1291 01fa 01       		.byte	0x1
- 1292 01fb 24       		.byte	0x24
- 1293 01fc 8C000000 		.4byte	0x8c
- 1294 0200 05       		.uleb128 0x5
- 1295 0201 03       		.byte	0x3
- 1296 0202 00000000 		.4byte	intSW1
- 1297 0206 10       		.uleb128 0x10
- 1298 0207 34020000 		.4byte	.LASF31
- 1299 020b 01       		.byte	0x1
- 1300 020c 25       		.byte	0x25
- 1301 020d 8C000000 		.4byte	0x8c
- 1302 0211 05       		.uleb128 0x5
- 1303 0212 03       		.byte	0x3
- 1304 0213 00000000 		.4byte	intSW2
- 1305 0217 10       		.uleb128 0x10
- 1306 0218 3B020000 		.4byte	.LASF32
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 29
+ 1098 0500 1800     		movs	r0, r3
+ 1099 0502 FFF7FEFF 		bl	LED_GPIO3_Write
+ 314:main.c        ****             boSW3 = false;            
+ 1100              		.loc 1 314 0
+ 1101 0506 3F4B     		ldr	r3, .L40+52
+ 1102 0508 0022     		movs	r2, #0
+ 1103 050a 1A70     		strb	r2, [r3]
+ 1104              	.L34:
+ 315:main.c        ****         }
+ 316:main.c        ****         
+ 317:main.c        ****         /* Tick status fires only once every millisecond. */
+ 318:main.c        ****         if(boSW4 != 0u && boStart == true)
+ 1105              		.loc 1 318 0
+ 1106 050c 404B     		ldr	r3, .L40+64
+ 1107 050e 1B78     		ldrb	r3, [r3]
+ 1108 0510 DBB2     		uxtb	r3, r3
+ 1109 0512 002B     		cmp	r3, #0
+ 1110 0514 29D0     		beq	.L35
+ 1111              		.loc 1 318 0 is_stmt 0 discriminator 1
+ 1112 0516 A623     		movs	r3, #166
+ 1113 0518 1022     		movs	r2, #16
+ 1114 051a 9446     		mov	ip, r2
+ 1115 051c BC44     		add	ip, ip, r7
+ 1116 051e 6344     		add	r3, r3, ip
+ 1117 0520 1B78     		ldrb	r3, [r3]
+ 1118 0522 002B     		cmp	r3, #0
+ 1119 0524 21D0     		beq	.L35
+ 319:main.c        ****         {
+ 320:main.c        ****             UART_UartPutString("Input4;");
+ 1120              		.loc 1 320 0 is_stmt 1
+ 1121 0526 3B4B     		ldr	r3, .L40+68
+ 1122 0528 1800     		movs	r0, r3
+ 1123 052a FFF7FEFF 		bl	UART_UartPutString
+ 321:main.c        ****             sprintf(time, "%lu\r\n", intSW4);
+ 1124              		.loc 1 321 0
+ 1125 052e 3A4B     		ldr	r3, .L40+72
+ 1126 0530 1A68     		ldr	r2, [r3]
+ 1127 0532 2D49     		ldr	r1, .L40+24
+ 1128 0534 8423     		movs	r3, #132
+ 1129 0536 1020     		movs	r0, #16
+ 1130 0538 8446     		mov	ip, r0
+ 1131 053a BC44     		add	ip, ip, r7
+ 1132 053c 6344     		add	r3, r3, ip
+ 1133 053e 1800     		movs	r0, r3
+ 1134 0540 FFF7FEFF 		bl	sprintf
+ 322:main.c        ****             UART_UartPutString(time);
+ 1135              		.loc 1 322 0
+ 1136 0544 8423     		movs	r3, #132
+ 1137 0546 1022     		movs	r2, #16
+ 1138 0548 9446     		mov	ip, r2
+ 1139 054a BC44     		add	ip, ip, r7
+ 1140 054c 6344     		add	r3, r3, ip
+ 1141 054e 1800     		movs	r0, r3
+ 1142 0550 FFF7FEFF 		bl	UART_UartPutString
+ 323:main.c        ****             LED_GPIO4_Write(~LED_GPIO4_Read());
+ 1143              		.loc 1 323 0
+ 1144 0554 FFF7FEFF 		bl	LED_GPIO4_Read
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 27
 
 
- 1307 021c 01       		.byte	0x1
- 1308 021d 26       		.byte	0x26
- 1309 021e 8C000000 		.4byte	0x8c
- 1310 0222 05       		.uleb128 0x5
- 1311 0223 03       		.byte	0x3
- 1312 0224 00000000 		.4byte	intSW3
- 1313 0228 10       		.uleb128 0x10
- 1314 0229 7F010000 		.4byte	.LASF33
- 1315 022d 01       		.byte	0x1
- 1316 022e 28       		.byte	0x28
- 1317 022f 39020000 		.4byte	0x239
- 1318 0233 05       		.uleb128 0x5
- 1319 0234 03       		.byte	0x3
- 1320 0235 00000000 		.4byte	boSW0
- 1321 0239 05       		.uleb128 0x5
- 1322 023a A2010000 		.4byte	0x1a2
- 1323 023e 10       		.uleb128 0x10
- 1324 023f 85010000 		.4byte	.LASF34
- 1325 0243 01       		.byte	0x1
- 1326 0244 29       		.byte	0x29
- 1327 0245 39020000 		.4byte	0x239
- 1328 0249 05       		.uleb128 0x5
- 1329 024a 03       		.byte	0x3
- 1330 024b 00000000 		.4byte	boSW1
- 1331 024f 10       		.uleb128 0x10
- 1332 0250 8B010000 		.4byte	.LASF35
- 1333 0254 01       		.byte	0x1
- 1334 0255 2A       		.byte	0x2a
- 1335 0256 39020000 		.4byte	0x239
- 1336 025a 05       		.uleb128 0x5
- 1337 025b 03       		.byte	0x3
- 1338 025c 00000000 		.4byte	boSW2
- 1339 0260 10       		.uleb128 0x10
- 1340 0261 91010000 		.4byte	.LASF36
- 1341 0265 01       		.byte	0x1
- 1342 0266 2B       		.byte	0x2b
- 1343 0267 39020000 		.4byte	0x239
- 1344 026b 05       		.uleb128 0x5
- 1345 026c 03       		.byte	0x3
- 1346 026d 00000000 		.4byte	boSW3
- 1347 0271 00       		.byte	0
- 1348              		.section	.debug_abbrev,"",%progbits
- 1349              	.Ldebug_abbrev0:
- 1350 0000 01       		.uleb128 0x1
- 1351 0001 11       		.uleb128 0x11
- 1352 0002 01       		.byte	0x1
- 1353 0003 25       		.uleb128 0x25
- 1354 0004 0E       		.uleb128 0xe
- 1355 0005 13       		.uleb128 0x13
- 1356 0006 0B       		.uleb128 0xb
- 1357 0007 03       		.uleb128 0x3
- 1358 0008 0E       		.uleb128 0xe
- 1359 0009 1B       		.uleb128 0x1b
- 1360 000a 0E       		.uleb128 0xe
- 1361 000b 55       		.uleb128 0x55
- 1362 000c 17       		.uleb128 0x17
- 1363 000d 11       		.uleb128 0x11
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 30
+ 1145 0558 0300     		movs	r3, r0
+ 1146 055a DB43     		mvns	r3, r3
+ 1147 055c DBB2     		uxtb	r3, r3
+ 1148 055e 1800     		movs	r0, r3
+ 1149 0560 FFF7FEFF 		bl	LED_GPIO4_Write
+ 324:main.c        ****             boSW4 = false;            
+ 1150              		.loc 1 324 0
+ 1151 0564 2A4B     		ldr	r3, .L40+64
+ 1152 0566 0022     		movs	r2, #0
+ 1153 0568 1A70     		strb	r2, [r3]
+ 1154              	.L35:
+ 325:main.c        ****         }
+ 326:main.c        ****         
+ 327:main.c        ****         /* Tick status fires only once every millisecond. */
+ 328:main.c        ****         if(boSW5 != 0u && boStart == true)
+ 1155              		.loc 1 328 0
+ 1156 056a 2C4B     		ldr	r3, .L40+76
+ 1157 056c 1B78     		ldrb	r3, [r3]
+ 1158 056e DBB2     		uxtb	r3, r3
+ 1159 0570 002B     		cmp	r3, #0
+ 1160 0572 00D1     		bne	.LCB893
+ 1161 0574 17E6     		b	.L37	@long jump
+ 1162              	.LCB893:
+ 1163              		.loc 1 328 0 is_stmt 0 discriminator 1
+ 1164 0576 A623     		movs	r3, #166
+ 1165 0578 1022     		movs	r2, #16
+ 1166 057a 9446     		mov	ip, r2
+ 1167 057c BC44     		add	ip, ip, r7
+ 1168 057e 6344     		add	r3, r3, ip
+ 1169 0580 1B78     		ldrb	r3, [r3]
+ 1170 0582 002B     		cmp	r3, #0
+ 1171 0584 00D1     		bne	.LCB901
+ 1172 0586 0EE6     		b	.L37	@long jump
+ 1173              	.LCB901:
+ 329:main.c        ****         {
+ 330:main.c        ****             UART_UartPutString("Input5;");
+ 1174              		.loc 1 330 0 is_stmt 1
+ 1175 0588 254B     		ldr	r3, .L40+80
+ 1176 058a 1800     		movs	r0, r3
+ 1177 058c FFF7FEFF 		bl	UART_UartPutString
+ 331:main.c        ****             sprintf(time, "%lu\r\n", intSW5);
+ 1178              		.loc 1 331 0
+ 1179 0590 244B     		ldr	r3, .L40+84
+ 1180 0592 1A68     		ldr	r2, [r3]
+ 1181 0594 1449     		ldr	r1, .L40+24
+ 1182 0596 8423     		movs	r3, #132
+ 1183 0598 1020     		movs	r0, #16
+ 1184 059a 8446     		mov	ip, r0
+ 1185 059c BC44     		add	ip, ip, r7
+ 1186 059e 6344     		add	r3, r3, ip
+ 1187 05a0 1800     		movs	r0, r3
+ 1188 05a2 FFF7FEFF 		bl	sprintf
+ 332:main.c        ****             UART_UartPutString(time);
+ 1189              		.loc 1 332 0
+ 1190 05a6 8423     		movs	r3, #132
+ 1191 05a8 1022     		movs	r2, #16
+ 1192 05aa 9446     		mov	ip, r2
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 28
 
 
- 1364 000e 01       		.uleb128 0x1
- 1365 000f 10       		.uleb128 0x10
- 1366 0010 17       		.uleb128 0x17
- 1367 0011 00       		.byte	0
- 1368 0012 00       		.byte	0
- 1369 0013 02       		.uleb128 0x2
- 1370 0014 24       		.uleb128 0x24
- 1371 0015 00       		.byte	0
- 1372 0016 0B       		.uleb128 0xb
- 1373 0017 0B       		.uleb128 0xb
- 1374 0018 3E       		.uleb128 0x3e
- 1375 0019 0B       		.uleb128 0xb
- 1376 001a 03       		.uleb128 0x3
- 1377 001b 0E       		.uleb128 0xe
- 1378 001c 00       		.byte	0
- 1379 001d 00       		.byte	0
- 1380 001e 03       		.uleb128 0x3
- 1381 001f 24       		.uleb128 0x24
- 1382 0020 00       		.byte	0
- 1383 0021 0B       		.uleb128 0xb
- 1384 0022 0B       		.uleb128 0xb
- 1385 0023 3E       		.uleb128 0x3e
- 1386 0024 0B       		.uleb128 0xb
- 1387 0025 03       		.uleb128 0x3
- 1388 0026 08       		.uleb128 0x8
- 1389 0027 00       		.byte	0
- 1390 0028 00       		.byte	0
- 1391 0029 04       		.uleb128 0x4
- 1392 002a 16       		.uleb128 0x16
- 1393 002b 00       		.byte	0
- 1394 002c 03       		.uleb128 0x3
- 1395 002d 0E       		.uleb128 0xe
- 1396 002e 3A       		.uleb128 0x3a
- 1397 002f 0B       		.uleb128 0xb
- 1398 0030 3B       		.uleb128 0x3b
- 1399 0031 05       		.uleb128 0x5
- 1400 0032 49       		.uleb128 0x49
- 1401 0033 13       		.uleb128 0x13
- 1402 0034 00       		.byte	0
- 1403 0035 00       		.byte	0
- 1404 0036 05       		.uleb128 0x5
- 1405 0037 35       		.uleb128 0x35
- 1406 0038 00       		.byte	0
- 1407 0039 49       		.uleb128 0x49
- 1408 003a 13       		.uleb128 0x13
- 1409 003b 00       		.byte	0
- 1410 003c 00       		.byte	0
- 1411 003d 06       		.uleb128 0x6
- 1412 003e 0F       		.uleb128 0xf
- 1413 003f 00       		.byte	0
- 1414 0040 0B       		.uleb128 0xb
- 1415 0041 0B       		.uleb128 0xb
- 1416 0042 49       		.uleb128 0x49
- 1417 0043 13       		.uleb128 0x13
- 1418 0044 00       		.byte	0
- 1419 0045 00       		.byte	0
- 1420 0046 07       		.uleb128 0x7
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 31
+ 1193 05ac BC44     		add	ip, ip, r7
+ 1194 05ae 6344     		add	r3, r3, ip
+ 1195 05b0 1800     		movs	r0, r3
+ 1196 05b2 FFF7FEFF 		bl	UART_UartPutString
+ 333:main.c        ****             LED_GPIO5_Write(~LED_GPIO5_Read());
+ 1197              		.loc 1 333 0
+ 1198 05b6 FFF7FEFF 		bl	LED_GPIO5_Read
+ 1199 05ba 0300     		movs	r3, r0
+ 1200 05bc DB43     		mvns	r3, r3
+ 1201 05be DBB2     		uxtb	r3, r3
+ 1202 05c0 1800     		movs	r0, r3
+ 1203 05c2 FFF7FEFF 		bl	LED_GPIO5_Write
+ 334:main.c        ****             boSW5 = false;            
+ 1204              		.loc 1 334 0
+ 1205 05c6 154B     		ldr	r3, .L40+76
+ 1206 05c8 0022     		movs	r2, #0
+ 1207 05ca 1A70     		strb	r2, [r3]
+ 335:main.c        ****         }
+ 336:main.c        ****     }
+ 1208              		.loc 1 336 0
+ 1209 05cc EBE5     		b	.L37
+ 1210              	.L41:
+ 1211 05ce C046     		.align	2
+ 1212              	.L40:
+ 1213 05d0 10000000 		.word	.LC28
+ 1214 05d4 00000000 		.word	msCount
+ 1215 05d8 18000000 		.word	.LC30
+ 1216 05dc 00000000 		.word	boSW0
+ 1217 05e0 20000000 		.word	.LC33
+ 1218 05e4 00000000 		.word	intSW0
+ 1219 05e8 28000000 		.word	.LC36
+ 1220 05ec 00000000 		.word	boSW1
+ 1221 05f0 30000000 		.word	.LC39
+ 1222 05f4 00000000 		.word	intSW1
+ 1223 05f8 00000000 		.word	boSW2
+ 1224 05fc 38000000 		.word	.LC43
+ 1225 0600 00000000 		.word	intSW2
+ 1226 0604 00000000 		.word	boSW3
+ 1227 0608 40000000 		.word	.LC47
+ 1228 060c 00000000 		.word	intSW3
+ 1229 0610 00000000 		.word	boSW4
+ 1230 0614 48000000 		.word	.LC51
+ 1231 0618 00000000 		.word	intSW4
+ 1232 061c 00000000 		.word	boSW5
+ 1233 0620 50000000 		.word	.LC55
+ 1234 0624 00000000 		.word	intSW5
+ 1235              		.cfi_endproc
+ 1236              	.LFE41:
+ 1237              		.size	main, .-main
+ 1238              		.section	.text.SysTickISRCallback,"ax",%progbits
+ 1239              		.align	2
+ 1240              		.global	SysTickISRCallback
+ 1241              		.code	16
+ 1242              		.thumb_func
+ 1243              		.type	SysTickISRCallback, %function
+ 1244              	SysTickISRCallback:
+ 1245              	.LFB42:
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 29
 
 
- 1421 0047 2E       		.uleb128 0x2e
- 1422 0048 00       		.byte	0
- 1423 0049 3F       		.uleb128 0x3f
- 1424 004a 19       		.uleb128 0x19
- 1425 004b 03       		.uleb128 0x3
- 1426 004c 0E       		.uleb128 0xe
- 1427 004d 3A       		.uleb128 0x3a
- 1428 004e 0B       		.uleb128 0xb
- 1429 004f 3B       		.uleb128 0x3b
- 1430 0050 0B       		.uleb128 0xb
- 1431 0051 27       		.uleb128 0x27
- 1432 0052 19       		.uleb128 0x19
- 1433 0053 11       		.uleb128 0x11
- 1434 0054 01       		.uleb128 0x1
- 1435 0055 12       		.uleb128 0x12
- 1436 0056 06       		.uleb128 0x6
- 1437 0057 40       		.uleb128 0x40
- 1438 0058 18       		.uleb128 0x18
- 1439 0059 9642     		.uleb128 0x2116
- 1440 005b 19       		.uleb128 0x19
- 1441 005c 00       		.byte	0
- 1442 005d 00       		.byte	0
- 1443 005e 08       		.uleb128 0x8
- 1444 005f 2E       		.uleb128 0x2e
- 1445 0060 01       		.byte	0x1
- 1446 0061 3F       		.uleb128 0x3f
- 1447 0062 19       		.uleb128 0x19
- 1448 0063 03       		.uleb128 0x3
- 1449 0064 0E       		.uleb128 0xe
- 1450 0065 3A       		.uleb128 0x3a
- 1451 0066 0B       		.uleb128 0xb
- 1452 0067 3B       		.uleb128 0x3b
- 1453 0068 0B       		.uleb128 0xb
- 1454 0069 49       		.uleb128 0x49
- 1455 006a 13       		.uleb128 0x13
- 1456 006b 11       		.uleb128 0x11
- 1457 006c 01       		.uleb128 0x1
- 1458 006d 12       		.uleb128 0x12
- 1459 006e 06       		.uleb128 0x6
- 1460 006f 40       		.uleb128 0x40
- 1461 0070 18       		.uleb128 0x18
- 1462 0071 9642     		.uleb128 0x2116
- 1463 0073 19       		.uleb128 0x19
- 1464 0074 01       		.uleb128 0x1
- 1465 0075 13       		.uleb128 0x13
- 1466 0076 00       		.byte	0
- 1467 0077 00       		.byte	0
- 1468 0078 09       		.uleb128 0x9
- 1469 0079 34       		.uleb128 0x34
- 1470 007a 00       		.byte	0
- 1471 007b 03       		.uleb128 0x3
- 1472 007c 0E       		.uleb128 0xe
- 1473 007d 3A       		.uleb128 0x3a
- 1474 007e 0B       		.uleb128 0xb
- 1475 007f 3B       		.uleb128 0x3b
- 1476 0080 0B       		.uleb128 0xb
- 1477 0081 49       		.uleb128 0x49
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 32
+ 337:main.c        **** }
+ 338:main.c        **** 
+ 339:main.c        **** void SysTickISRCallback(void)
+ 340:main.c        **** {
+ 1246              		.loc 1 340 0
+ 1247              		.cfi_startproc
+ 1248              		@ args = 0, pretend = 0, frame = 0
+ 1249              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1250 0000 80B5     		push	{r7, lr}
+ 1251              		.cfi_def_cfa_offset 8
+ 1252              		.cfi_offset 7, -8
+ 1253              		.cfi_offset 14, -4
+ 1254 0002 00AF     		add	r7, sp, #0
+ 1255              		.cfi_def_cfa_register 7
+ 341:main.c        ****     msCount++;
+ 1256              		.loc 1 341 0
+ 1257 0004 034B     		ldr	r3, .L43
+ 1258 0006 1B68     		ldr	r3, [r3]
+ 1259 0008 5A1C     		adds	r2, r3, #1
+ 1260 000a 024B     		ldr	r3, .L43
+ 1261 000c 1A60     		str	r2, [r3]
+ 342:main.c        **** }
+ 1262              		.loc 1 342 0
+ 1263 000e C046     		nop
+ 1264 0010 BD46     		mov	sp, r7
+ 1265              		@ sp needed
+ 1266 0012 80BD     		pop	{r7, pc}
+ 1267              	.L44:
+ 1268              		.align	2
+ 1269              	.L43:
+ 1270 0014 00000000 		.word	msCount
+ 1271              		.cfi_endproc
+ 1272              	.LFE42:
+ 1273              		.size	SysTickISRCallback, .-SysTickISRCallback
+ 1274              		.text
+ 1275              	.Letext0:
+ 1276              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 1277              		.section	.debug_info,"",%progbits
+ 1278              	.Ldebug_info0:
+ 1279 0000 D4020000 		.4byte	0x2d4
+ 1280 0004 0400     		.2byte	0x4
+ 1281 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1282 000a 04       		.byte	0x4
+ 1283 000b 01       		.uleb128 0x1
+ 1284 000c E8000000 		.4byte	.LASF43
+ 1285 0010 0C       		.byte	0xc
+ 1286 0011 0F020000 		.4byte	.LASF44
+ 1287 0015 1D000000 		.4byte	.LASF45
+ 1288 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 1289 001d 00000000 		.4byte	0
+ 1290 0021 00000000 		.4byte	.Ldebug_line0
+ 1291 0025 02       		.uleb128 0x2
+ 1292 0026 01       		.byte	0x1
+ 1293 0027 06       		.byte	0x6
+ 1294 0028 91000000 		.4byte	.LASF0
+ 1295 002c 02       		.uleb128 0x2
+ 1296 002d 01       		.byte	0x1
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 30
 
 
- 1478 0082 13       		.uleb128 0x13
- 1479 0083 02       		.uleb128 0x2
- 1480 0084 18       		.uleb128 0x18
- 1481 0085 00       		.byte	0
- 1482 0086 00       		.byte	0
- 1483 0087 0A       		.uleb128 0xa
- 1484 0088 34       		.uleb128 0x34
- 1485 0089 00       		.byte	0
- 1486 008a 03       		.uleb128 0x3
- 1487 008b 08       		.uleb128 0x8
- 1488 008c 3A       		.uleb128 0x3a
- 1489 008d 0B       		.uleb128 0xb
- 1490 008e 3B       		.uleb128 0x3b
- 1491 008f 0B       		.uleb128 0xb
- 1492 0090 49       		.uleb128 0x49
- 1493 0091 13       		.uleb128 0x13
- 1494 0092 02       		.uleb128 0x2
- 1495 0093 18       		.uleb128 0x18
- 1496 0094 00       		.byte	0
- 1497 0095 00       		.byte	0
- 1498 0096 0B       		.uleb128 0xb
- 1499 0097 01       		.uleb128 0x1
- 1500 0098 01       		.byte	0x1
- 1501 0099 49       		.uleb128 0x49
- 1502 009a 13       		.uleb128 0x13
- 1503 009b 01       		.uleb128 0x1
- 1504 009c 13       		.uleb128 0x13
- 1505 009d 00       		.byte	0
- 1506 009e 00       		.byte	0
- 1507 009f 0C       		.uleb128 0xc
- 1508 00a0 21       		.uleb128 0x21
- 1509 00a1 00       		.byte	0
- 1510 00a2 49       		.uleb128 0x49
- 1511 00a3 13       		.uleb128 0x13
- 1512 00a4 2F       		.uleb128 0x2f
- 1513 00a5 0B       		.uleb128 0xb
- 1514 00a6 00       		.byte	0
- 1515 00a7 00       		.byte	0
- 1516 00a8 0D       		.uleb128 0xd
- 1517 00a9 26       		.uleb128 0x26
- 1518 00aa 00       		.byte	0
- 1519 00ab 49       		.uleb128 0x49
- 1520 00ac 13       		.uleb128 0x13
- 1521 00ad 00       		.byte	0
- 1522 00ae 00       		.byte	0
- 1523 00af 0E       		.uleb128 0xe
- 1524 00b0 21       		.uleb128 0x21
- 1525 00b1 00       		.byte	0
- 1526 00b2 49       		.uleb128 0x49
- 1527 00b3 13       		.uleb128 0x13
- 1528 00b4 2F       		.uleb128 0x2f
- 1529 00b5 18       		.uleb128 0x18
- 1530 00b6 00       		.byte	0
- 1531 00b7 00       		.byte	0
- 1532 00b8 0F       		.uleb128 0xf
- 1533 00b9 2E       		.uleb128 0x2e
- 1534 00ba 00       		.byte	0
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 33
+ 1297 002e 08       		.byte	0x8
+ 1298 002f A3000000 		.4byte	.LASF1
+ 1299 0033 02       		.uleb128 0x2
+ 1300 0034 02       		.byte	0x2
+ 1301 0035 05       		.byte	0x5
+ 1302 0036 1B020000 		.4byte	.LASF2
+ 1303 003a 02       		.uleb128 0x2
+ 1304 003b 02       		.byte	0x2
+ 1305 003c 07       		.byte	0x7
+ 1306 003d 50000000 		.4byte	.LASF3
+ 1307 0041 02       		.uleb128 0x2
+ 1308 0042 04       		.byte	0x4
+ 1309 0043 05       		.byte	0x5
+ 1310 0044 56020000 		.4byte	.LASF4
+ 1311 0048 02       		.uleb128 0x2
+ 1312 0049 04       		.byte	0x4
+ 1313 004a 07       		.byte	0x7
+ 1314 004b C9000000 		.4byte	.LASF5
+ 1315 004f 02       		.uleb128 0x2
+ 1316 0050 08       		.byte	0x8
+ 1317 0051 05       		.byte	0x5
+ 1318 0052 01020000 		.4byte	.LASF6
+ 1319 0056 02       		.uleb128 0x2
+ 1320 0057 08       		.byte	0x8
+ 1321 0058 07       		.byte	0x7
+ 1322 0059 CC010000 		.4byte	.LASF7
+ 1323 005d 03       		.uleb128 0x3
+ 1324 005e 04       		.byte	0x4
+ 1325 005f 05       		.byte	0x5
+ 1326 0060 696E7400 		.ascii	"int\000"
+ 1327 0064 02       		.uleb128 0x2
+ 1328 0065 04       		.byte	0x4
+ 1329 0066 07       		.byte	0x7
+ 1330 0067 BF010000 		.4byte	.LASF8
+ 1331 006b 04       		.uleb128 0x4
+ 1332 006c A8010000 		.4byte	.LASF46
+ 1333 0070 02       		.byte	0x2
+ 1334 0071 D401     		.2byte	0x1d4
+ 1335 0073 48000000 		.4byte	0x48
+ 1336 0077 02       		.uleb128 0x2
+ 1337 0078 04       		.byte	0x4
+ 1338 0079 04       		.byte	0x4
+ 1339 007a 82000000 		.4byte	.LASF9
+ 1340 007e 02       		.uleb128 0x2
+ 1341 007f 08       		.byte	0x8
+ 1342 0080 04       		.byte	0x4
+ 1343 0081 63000000 		.4byte	.LASF10
+ 1344 0085 02       		.uleb128 0x2
+ 1345 0086 01       		.byte	0x1
+ 1346 0087 08       		.byte	0x8
+ 1347 0088 16020000 		.4byte	.LASF11
+ 1348 008c 05       		.uleb128 0x5
+ 1349 008d 6B000000 		.4byte	0x6b
+ 1350 0091 02       		.uleb128 0x2
+ 1351 0092 08       		.byte	0x8
+ 1352 0093 04       		.byte	0x4
+ 1353 0094 5F020000 		.4byte	.LASF12
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 31
 
 
- 1535 00bb 3F       		.uleb128 0x3f
- 1536 00bc 19       		.uleb128 0x19
- 1537 00bd 03       		.uleb128 0x3
- 1538 00be 0E       		.uleb128 0xe
- 1539 00bf 3A       		.uleb128 0x3a
- 1540 00c0 0B       		.uleb128 0xb
- 1541 00c1 3B       		.uleb128 0x3b
- 1542 00c2 05       		.uleb128 0x5
- 1543 00c3 27       		.uleb128 0x27
- 1544 00c4 19       		.uleb128 0x19
- 1545 00c5 11       		.uleb128 0x11
- 1546 00c6 01       		.uleb128 0x1
- 1547 00c7 12       		.uleb128 0x12
- 1548 00c8 06       		.uleb128 0x6
- 1549 00c9 40       		.uleb128 0x40
- 1550 00ca 18       		.uleb128 0x18
- 1551 00cb 9742     		.uleb128 0x2117
- 1552 00cd 19       		.uleb128 0x19
- 1553 00ce 00       		.byte	0
- 1554 00cf 00       		.byte	0
- 1555 00d0 10       		.uleb128 0x10
- 1556 00d1 34       		.uleb128 0x34
- 1557 00d2 00       		.byte	0
- 1558 00d3 03       		.uleb128 0x3
- 1559 00d4 0E       		.uleb128 0xe
- 1560 00d5 3A       		.uleb128 0x3a
- 1561 00d6 0B       		.uleb128 0xb
- 1562 00d7 3B       		.uleb128 0x3b
- 1563 00d8 0B       		.uleb128 0xb
- 1564 00d9 49       		.uleb128 0x49
- 1565 00da 13       		.uleb128 0x13
- 1566 00db 3F       		.uleb128 0x3f
- 1567 00dc 19       		.uleb128 0x19
- 1568 00dd 02       		.uleb128 0x2
- 1569 00de 18       		.uleb128 0x18
- 1570 00df 00       		.byte	0
- 1571 00e0 00       		.byte	0
- 1572 00e1 00       		.byte	0
- 1573              		.section	.debug_aranges,"",%progbits
- 1574 0000 44000000 		.4byte	0x44
- 1575 0004 0200     		.2byte	0x2
- 1576 0006 00000000 		.4byte	.Ldebug_info0
- 1577 000a 04       		.byte	0x4
- 1578 000b 00       		.byte	0
- 1579 000c 0000     		.2byte	0
- 1580 000e 0000     		.2byte	0
- 1581 0010 00000000 		.4byte	.LFB35
- 1582 0014 2C000000 		.4byte	.LFE35-.LFB35
- 1583 0018 00000000 		.4byte	.LFB36
- 1584 001c 2C000000 		.4byte	.LFE36-.LFB36
- 1585 0020 00000000 		.4byte	.LFB37
- 1586 0024 2C000000 		.4byte	.LFE37-.LFB37
- 1587 0028 00000000 		.4byte	.LFB38
- 1588 002c 2C000000 		.4byte	.LFE38-.LFB38
- 1589 0030 00000000 		.4byte	.LFB39
- 1590 0034 2C050000 		.4byte	.LFE39-.LFB39
- 1591 0038 00000000 		.4byte	.LFB40
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 34
+ 1354 0098 02       		.uleb128 0x2
+ 1355 0099 04       		.byte	0x4
+ 1356 009a 07       		.byte	0x7
+ 1357 009b F8010000 		.4byte	.LASF13
+ 1358 009f 06       		.uleb128 0x6
+ 1359 00a0 04       		.byte	0x4
+ 1360 00a1 85000000 		.4byte	0x85
+ 1361 00a5 07       		.uleb128 0x7
+ 1362 00a6 7B020000 		.4byte	.LASF14
+ 1363 00aa 01       		.byte	0x1
+ 1364 00ab 34       		.byte	0x34
+ 1365 00ac 00000000 		.4byte	.LFB35
+ 1366 00b0 2C000000 		.4byte	.LFE35-.LFB35
+ 1367 00b4 01       		.uleb128 0x1
+ 1368 00b5 9C       		.byte	0x9c
+ 1369 00b6 07       		.uleb128 0x7
+ 1370 00b7 AF010000 		.4byte	.LASF15
+ 1371 00bb 01       		.byte	0x1
+ 1372 00bc 40       		.byte	0x40
+ 1373 00bd 00000000 		.4byte	.LFB36
+ 1374 00c1 2C000000 		.4byte	.LFE36-.LFB36
+ 1375 00c5 01       		.uleb128 0x1
+ 1376 00c6 9C       		.byte	0x9c
+ 1377 00c7 07       		.uleb128 0x7
+ 1378 00c8 B1000000 		.4byte	.LASF16
+ 1379 00cc 01       		.byte	0x1
+ 1380 00cd 4C       		.byte	0x4c
+ 1381 00ce 00000000 		.4byte	.LFB37
+ 1382 00d2 2C000000 		.4byte	.LFE37-.LFB37
+ 1383 00d6 01       		.uleb128 0x1
+ 1384 00d7 9C       		.byte	0x9c
+ 1385 00d8 07       		.uleb128 0x7
+ 1386 00d9 00000000 		.4byte	.LASF17
+ 1387 00dd 01       		.byte	0x1
+ 1388 00de 58       		.byte	0x58
+ 1389 00df 00000000 		.4byte	.LFB38
+ 1390 00e3 2C000000 		.4byte	.LFE38-.LFB38
+ 1391 00e7 01       		.uleb128 0x1
+ 1392 00e8 9C       		.byte	0x9c
+ 1393 00e9 07       		.uleb128 0x7
+ 1394 00ea E3010000 		.4byte	.LASF18
+ 1395 00ee 01       		.byte	0x1
+ 1396 00ef 64       		.byte	0x64
+ 1397 00f0 00000000 		.4byte	.LFB39
+ 1398 00f4 2C000000 		.4byte	.LFE39-.LFB39
+ 1399 00f8 01       		.uleb128 0x1
+ 1400 00f9 9C       		.byte	0x9c
+ 1401 00fa 07       		.uleb128 0x7
+ 1402 00fb 6B020000 		.4byte	.LASF19
+ 1403 00ff 01       		.byte	0x1
+ 1404 0100 70       		.byte	0x70
+ 1405 0101 00000000 		.4byte	.LFB40
+ 1406 0105 2C000000 		.4byte	.LFE40-.LFB40
+ 1407 0109 01       		.uleb128 0x1
+ 1408 010a 9C       		.byte	0x9c
+ 1409 010b 08       		.uleb128 0x8
+ 1410 010c 9B010000 		.4byte	.LASF47
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 32
 
 
- 1592 003c 18000000 		.4byte	.LFE40-.LFB40
- 1593 0040 00000000 		.4byte	0
- 1594 0044 00000000 		.4byte	0
- 1595              		.section	.debug_ranges,"",%progbits
- 1596              	.Ldebug_ranges0:
- 1597 0000 00000000 		.4byte	.LFB35
- 1598 0004 2C000000 		.4byte	.LFE35
- 1599 0008 00000000 		.4byte	.LFB36
- 1600 000c 2C000000 		.4byte	.LFE36
- 1601 0010 00000000 		.4byte	.LFB37
- 1602 0014 2C000000 		.4byte	.LFE37
- 1603 0018 00000000 		.4byte	.LFB38
- 1604 001c 2C000000 		.4byte	.LFE38
- 1605 0020 00000000 		.4byte	.LFB39
- 1606 0024 2C050000 		.4byte	.LFE39
- 1607 0028 00000000 		.4byte	.LFB40
- 1608 002c 18000000 		.4byte	.LFE40
- 1609 0030 00000000 		.4byte	0
- 1610 0034 00000000 		.4byte	0
- 1611              		.section	.debug_line,"",%progbits
- 1612              	.Ldebug_line0:
- 1613 0000 4D010000 		.section	.debug_str,"MS",%progbits,1
- 1613      02004100 
- 1613      00000201 
- 1613      FB0E0D00 
- 1613      01010101 
- 1614              	.LASF17:
- 1615 0000 4750494F 		.ascii	"GPIO3IsrHandler\000"
- 1615      33497372 
- 1615      48616E64 
- 1615      6C657200 
- 1616              	.LASF25:
- 1617 0010 52785772 		.ascii	"RxWriteIndex\000"
- 1617      69746549 
- 1617      6E646578 
- 1617      00
- 1618              	.LASF39:
- 1619 001d 433A5C55 		.ascii	"C:\\Users\\LocalAdmin\\Documents\\PSoC Creator\\Sys"
- 1619      73657273 
- 1619      5C4C6F63 
- 1619      616C4164 
- 1619      6D696E5C 
- 1620 004b 5469636B 		.ascii	"Tick_Example01\\SysTick_Example02.cydsn\000"
- 1620      5F457861 
- 1620      6D706C65 
- 1620      30315C53 
- 1620      79735469 
- 1621              	.LASF3:
- 1622 0072 73686F72 		.ascii	"short unsigned int\000"
- 1622      7420756E 
- 1622      7369676E 
- 1622      65642069 
- 1622      6E7400
- 1623              	.LASF20:
- 1624 0085 62797465 		.ascii	"byte\000"
- 1624      00
- 1625              	.LASF27:
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 35
+ 1411 0110 01       		.byte	0x1
+ 1412 0111 8D       		.byte	0x8d
+ 1413 0112 5D000000 		.4byte	0x5d
+ 1414 0116 00000000 		.4byte	.LFB41
+ 1415 011a 28060000 		.4byte	.LFE41-.LFB41
+ 1416 011e 01       		.uleb128 0x1
+ 1417 011f 9C       		.byte	0x9c
+ 1418 0120 A4010000 		.4byte	0x1a4
+ 1419 0124 09       		.uleb128 0x9
+ 1420 0125 F3010000 		.4byte	.LASF20
+ 1421 0129 01       		.byte	0x1
+ 1422 012a 8F       		.byte	0x8f
+ 1423 012b A4010000 		.4byte	0x1a4
+ 1424 012f 03       		.uleb128 0x3
+ 1425 0130 91       		.byte	0x91
+ 1426 0131 BC7F     		.sleb128 -68
+ 1427 0133 09       		.uleb128 0x9
+ 1428 0134 25020000 		.4byte	.LASF21
+ 1429 0138 01       		.byte	0x1
+ 1430 0139 90       		.byte	0x90
+ 1431 013a B4010000 		.4byte	0x1b4
+ 1432 013e 03       		.uleb128 0x3
+ 1433 013f 91       		.byte	0x91
+ 1434 0140 BC7E     		.sleb128 -196
+ 1435 0142 09       		.uleb128 0x9
+ 1436 0143 6A000000 		.4byte	.LASF22
+ 1437 0147 01       		.byte	0x1
+ 1438 0148 91       		.byte	0x91
+ 1439 0149 6B000000 		.4byte	0x6b
+ 1440 014d 02       		.uleb128 0x2
+ 1441 014e 91       		.byte	0x91
+ 1442 014f 64       		.sleb128 -28
+ 1443 0150 0A       		.uleb128 0xa
+ 1444 0151 6900     		.ascii	"i\000"
+ 1445 0153 01       		.byte	0x1
+ 1446 0154 91       		.byte	0x91
+ 1447 0155 6B000000 		.4byte	0x6b
+ 1448 0159 02       		.uleb128 0x2
+ 1449 015a 91       		.byte	0x91
+ 1450 015b 60       		.sleb128 -32
+ 1451 015c 09       		.uleb128 0x9
+ 1452 015d 8E010000 		.4byte	.LASF23
+ 1453 0161 01       		.byte	0x1
+ 1454 0162 92       		.byte	0x92
+ 1455 0163 C4010000 		.4byte	0x1c4
+ 1456 0167 02       		.uleb128 0x2
+ 1457 0168 91       		.byte	0x91
+ 1458 0169 5F       		.sleb128 -33
+ 1459 016a 09       		.uleb128 0x9
+ 1460 016b C1000000 		.4byte	.LASF24
+ 1461 016f 01       		.byte	0x1
+ 1462 0170 93       		.byte	0x93
+ 1463 0171 C4010000 		.4byte	0x1c4
+ 1464 0175 02       		.uleb128 0x2
+ 1465 0176 91       		.byte	0x91
+ 1466 0177 5E       		.sleb128 -34
+ 1467 0178 09       		.uleb128 0x9
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 33
 
 
- 1626 008a 53797354 		.ascii	"SysTickISRCallback\000"
- 1626      69636B49 
- 1626      53524361 
- 1626      6C6C6261 
- 1626      636B00
- 1627              	.LASF9:
- 1628 009d 666C6F61 		.ascii	"float\000"
- 1628      7400
- 1629              	.LASF24:
- 1630 00a3 52784275 		.ascii	"RxBuffer\000"
- 1630      66666572 
- 1630      00
- 1631              	.LASF1:
- 1632 00ac 756E7369 		.ascii	"unsigned char\000"
- 1632      676E6564 
- 1632      20636861 
- 1632      7200
- 1633              	.LASF16:
- 1634 00ba 4750494F 		.ascii	"GPIO2IsrHandler\000"
- 1634      32497372 
- 1634      48616E64 
- 1634      6C657200 
- 1635              	.LASF22:
- 1636 00ca 626F5374 		.ascii	"boStart\000"
- 1636      61727400 
- 1637              	.LASF5:
- 1638 00d2 6C6F6E67 		.ascii	"long unsigned int\000"
- 1638      20756E73 
- 1638      69676E65 
- 1638      6420696E 
- 1638      7400
- 1639              	.LASF23:
- 1640 00e4 52784275 		.ascii	"RxBufferSize\000"
- 1640      66666572 
- 1640      53697A65 
- 1640      00
- 1641              	.LASF37:
- 1642 00f1 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1642      43313120 
- 1642      352E342E 
- 1642      31203230 
- 1642      31363036 
- 1643 0124 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 1643      20726576 
- 1643      6973696F 
- 1643      6E203233 
- 1643      37373135 
- 1644 0157 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 1644      66756E63 
- 1644      74696F6E 
- 1644      2D736563 
- 1644      74696F6E 
- 1645              	.LASF33:
- 1646 017f 626F5357 		.ascii	"boSW0\000"
- 1646      3000
- 1647              	.LASF34:
- 1648 0185 626F5357 		.ascii	"boSW1\000"
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 36
+ 1468 0179 DB000000 		.4byte	.LASF25
+ 1469 017d 01       		.byte	0x1
+ 1470 017e 96       		.byte	0x96
+ 1471 017f CB010000 		.4byte	0x1cb
+ 1472 0183 02       		.uleb128 0x2
+ 1473 0184 91       		.byte	0x91
+ 1474 0185 54       		.sleb128 -44
+ 1475 0186 09       		.uleb128 0x9
+ 1476 0187 88000000 		.4byte	.LASF26
+ 1477 018b 01       		.byte	0x1
+ 1478 018c 98       		.byte	0x98
+ 1479 018d D0010000 		.4byte	0x1d0
+ 1480 0191 03       		.uleb128 0x3
+ 1481 0192 91       		.byte	0x91
+ 1482 0193 4C       		.sleb128 -52
+ 1483 0194 06       		.byte	0x6
+ 1484 0195 09       		.uleb128 0x9
+ 1485 0196 10000000 		.4byte	.LASF27
+ 1486 019a 01       		.byte	0x1
+ 1487 019b 99       		.byte	0x99
+ 1488 019c 9F000000 		.4byte	0x9f
+ 1489 01a0 02       		.uleb128 0x2
+ 1490 01a1 91       		.byte	0x91
+ 1491 01a2 58       		.sleb128 -40
+ 1492 01a3 00       		.byte	0
+ 1493 01a4 0B       		.uleb128 0xb
+ 1494 01a5 85000000 		.4byte	0x85
+ 1495 01a9 B4010000 		.4byte	0x1b4
+ 1496 01ad 0C       		.uleb128 0xc
+ 1497 01ae 98000000 		.4byte	0x98
+ 1498 01b2 0F       		.byte	0xf
+ 1499 01b3 00       		.byte	0
+ 1500 01b4 0B       		.uleb128 0xb
+ 1501 01b5 85000000 		.4byte	0x85
+ 1502 01b9 C4010000 		.4byte	0x1c4
+ 1503 01bd 0C       		.uleb128 0xc
+ 1504 01be 98000000 		.4byte	0x98
+ 1505 01c2 7F       		.byte	0x7f
+ 1506 01c3 00       		.byte	0
+ 1507 01c4 02       		.uleb128 0x2
+ 1508 01c5 01       		.byte	0x1
+ 1509 01c6 02       		.byte	0x2
+ 1510 01c7 8B020000 		.4byte	.LASF28
+ 1511 01cb 0D       		.uleb128 0xd
+ 1512 01cc 5D000000 		.4byte	0x5d
+ 1513 01d0 0B       		.uleb128 0xb
+ 1514 01d1 85000000 		.4byte	0x85
+ 1515 01d5 E3010000 		.4byte	0x1e3
+ 1516 01d9 0E       		.uleb128 0xe
+ 1517 01da 98000000 		.4byte	0x98
+ 1518 01de 03       		.uleb128 0x3
+ 1519 01df 91       		.byte	0x91
+ 1520 01e0 50       		.sleb128 -48
+ 1521 01e1 06       		.byte	0x6
+ 1522 01e2 00       		.byte	0
+ 1523 01e3 0F       		.uleb128 0xf
+ 1524 01e4 6F000000 		.4byte	.LASF29
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 34
 
 
- 1648      3100
- 1649              	.LASF35:
- 1650 018b 626F5357 		.ascii	"boSW2\000"
- 1650      3200
- 1651              	.LASF36:
- 1652 0191 626F5357 		.ascii	"boSW3\000"
- 1652      3300
- 1653              	.LASF21:
- 1654 0197 626F4352 		.ascii	"boCRLF\000"
- 1654      4C4600
- 1655              	.LASF10:
- 1656 019e 646F7562 		.ascii	"double\000"
- 1656      6C6500
- 1657              	.LASF41:
- 1658 01a5 6D61696E 		.ascii	"main\000"
- 1658      00
- 1659              	.LASF28:
- 1660 01aa 6D73436F 		.ascii	"msCount\000"
- 1660      756E7400 
- 1661              	.LASF40:
- 1662 01b2 75696E74 		.ascii	"uint32\000"
- 1662      333200
- 1663              	.LASF15:
- 1664 01b9 4750494F 		.ascii	"GPIO1IsrHandler\000"
- 1664      31497372 
- 1664      48616E64 
- 1664      6C657200 
- 1665              	.LASF8:
- 1666 01c9 756E7369 		.ascii	"unsigned int\000"
- 1666      676E6564 
- 1666      20696E74 
- 1666      00
- 1667              	.LASF7:
- 1668 01d6 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1668      206C6F6E 
- 1668      6720756E 
- 1668      7369676E 
- 1668      65642069 
- 1669              	.LASF18:
- 1670 01ed 74696D65 		.ascii	"time\000"
- 1670      00
- 1671              	.LASF13:
- 1672 01f2 73697A65 		.ascii	"sizetype\000"
- 1672      74797065 
- 1672      00
- 1673              	.LASF6:
- 1674 01fb 6C6F6E67 		.ascii	"long long int\000"
- 1674      206C6F6E 
- 1674      6720696E 
- 1674      7400
- 1675              	.LASF38:
- 1676 0209 6D61696E 		.ascii	"main.c\000"
- 1676      2E6300
- 1677              	.LASF11:
- 1678 0210 63686172 		.ascii	"char\000"
- 1678      00
- 1679              	.LASF2:
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccxAbwo6.s 			page 37
+ 1525 01e8 01       		.byte	0x1
+ 1526 01e9 5301     		.2byte	0x153
+ 1527 01eb 00000000 		.4byte	.LFB42
+ 1528 01ef 18000000 		.4byte	.LFE42-.LFB42
+ 1529 01f3 01       		.uleb128 0x1
+ 1530 01f4 9C       		.byte	0x9c
+ 1531 01f5 10       		.uleb128 0x10
+ 1532 01f6 A0010000 		.4byte	.LASF30
+ 1533 01fa 01       		.byte	0x1
+ 1534 01fb 22       		.byte	0x22
+ 1535 01fc 6B000000 		.4byte	0x6b
+ 1536 0200 05       		.uleb128 0x5
+ 1537 0201 03       		.byte	0x3
+ 1538 0202 00000000 		.4byte	msCount
+ 1539 0206 10       		.uleb128 0x10
+ 1540 0207 2C020000 		.4byte	.LASF31
+ 1541 020b 01       		.byte	0x1
+ 1542 020c 23       		.byte	0x23
+ 1543 020d 8C000000 		.4byte	0x8c
+ 1544 0211 05       		.uleb128 0x5
+ 1545 0212 03       		.byte	0x3
+ 1546 0213 00000000 		.4byte	intSW0
+ 1547 0217 10       		.uleb128 0x10
+ 1548 0218 33020000 		.4byte	.LASF32
+ 1549 021c 01       		.byte	0x1
+ 1550 021d 24       		.byte	0x24
+ 1551 021e 8C000000 		.4byte	0x8c
+ 1552 0222 05       		.uleb128 0x5
+ 1553 0223 03       		.byte	0x3
+ 1554 0224 00000000 		.4byte	intSW1
+ 1555 0228 10       		.uleb128 0x10
+ 1556 0229 3A020000 		.4byte	.LASF33
+ 1557 022d 01       		.byte	0x1
+ 1558 022e 25       		.byte	0x25
+ 1559 022f 8C000000 		.4byte	0x8c
+ 1560 0233 05       		.uleb128 0x5
+ 1561 0234 03       		.byte	0x3
+ 1562 0235 00000000 		.4byte	intSW2
+ 1563 0239 10       		.uleb128 0x10
+ 1564 023a 41020000 		.4byte	.LASF34
+ 1565 023e 01       		.byte	0x1
+ 1566 023f 26       		.byte	0x26
+ 1567 0240 8C000000 		.4byte	0x8c
+ 1568 0244 05       		.uleb128 0x5
+ 1569 0245 03       		.byte	0x3
+ 1570 0246 00000000 		.4byte	intSW3
+ 1571 024a 10       		.uleb128 0x10
+ 1572 024b 48020000 		.4byte	.LASF35
+ 1573 024f 01       		.byte	0x1
+ 1574 0250 27       		.byte	0x27
+ 1575 0251 8C000000 		.4byte	0x8c
+ 1576 0255 05       		.uleb128 0x5
+ 1577 0256 03       		.byte	0x3
+ 1578 0257 00000000 		.4byte	intSW4
+ 1579 025b 10       		.uleb128 0x10
+ 1580 025c 4F020000 		.4byte	.LASF36
+ 1581 0260 01       		.byte	0x1
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 35
 
 
- 1680 0215 73686F72 		.ascii	"short int\000"
- 1680      7420696E 
- 1680      7400
- 1681              	.LASF19:
- 1682 021f 62756666 		.ascii	"buffer\000"
- 1682      657200
- 1683              	.LASF29:
- 1684 0226 696E7453 		.ascii	"intSW0\000"
- 1684      573000
- 1685              	.LASF30:
- 1686 022d 696E7453 		.ascii	"intSW1\000"
- 1686      573100
- 1687              	.LASF31:
- 1688 0234 696E7453 		.ascii	"intSW2\000"
- 1688      573200
- 1689              	.LASF32:
- 1690 023b 696E7453 		.ascii	"intSW3\000"
- 1690      573300
- 1691              	.LASF4:
- 1692 0242 6C6F6E67 		.ascii	"long int\000"
- 1692      20696E74 
- 1692      00
- 1693              	.LASF12:
- 1694 024b 6C6F6E67 		.ascii	"long double\000"
- 1694      20646F75 
- 1694      626C6500 
- 1695              	.LASF0:
- 1696 0257 7369676E 		.ascii	"signed char\000"
- 1696      65642063 
- 1696      68617200 
- 1697              	.LASF14:
- 1698 0263 4750494F 		.ascii	"GPIO0IsrHandler\000"
- 1698      30497372 
- 1698      48616E64 
- 1698      6C657200 
- 1699              	.LASF26:
- 1700 0273 5F426F6F 		.ascii	"_Bool\000"
- 1700      6C00
- 1701              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1582 0261 28       		.byte	0x28
+ 1583 0262 8C000000 		.4byte	0x8c
+ 1584 0266 05       		.uleb128 0x5
+ 1585 0267 03       		.byte	0x3
+ 1586 0268 00000000 		.4byte	intSW5
+ 1587 026c 10       		.uleb128 0x10
+ 1588 026d 76010000 		.4byte	.LASF37
+ 1589 0271 01       		.byte	0x1
+ 1590 0272 2A       		.byte	0x2a
+ 1591 0273 7D020000 		.4byte	0x27d
+ 1592 0277 05       		.uleb128 0x5
+ 1593 0278 03       		.byte	0x3
+ 1594 0279 00000000 		.4byte	boSW0
+ 1595 027d 05       		.uleb128 0x5
+ 1596 027e C4010000 		.4byte	0x1c4
+ 1597 0282 10       		.uleb128 0x10
+ 1598 0283 7C010000 		.4byte	.LASF38
+ 1599 0287 01       		.byte	0x1
+ 1600 0288 2B       		.byte	0x2b
+ 1601 0289 7D020000 		.4byte	0x27d
+ 1602 028d 05       		.uleb128 0x5
+ 1603 028e 03       		.byte	0x3
+ 1604 028f 00000000 		.4byte	boSW1
+ 1605 0293 10       		.uleb128 0x10
+ 1606 0294 82010000 		.4byte	.LASF39
+ 1607 0298 01       		.byte	0x1
+ 1608 0299 2C       		.byte	0x2c
+ 1609 029a 7D020000 		.4byte	0x27d
+ 1610 029e 05       		.uleb128 0x5
+ 1611 029f 03       		.byte	0x3
+ 1612 02a0 00000000 		.4byte	boSW2
+ 1613 02a4 10       		.uleb128 0x10
+ 1614 02a5 88010000 		.4byte	.LASF40
+ 1615 02a9 01       		.byte	0x1
+ 1616 02aa 2D       		.byte	0x2d
+ 1617 02ab 7D020000 		.4byte	0x27d
+ 1618 02af 05       		.uleb128 0x5
+ 1619 02b0 03       		.byte	0x3
+ 1620 02b1 00000000 		.4byte	boSW3
+ 1621 02b5 10       		.uleb128 0x10
+ 1622 02b6 9D000000 		.4byte	.LASF41
+ 1623 02ba 01       		.byte	0x1
+ 1624 02bb 2E       		.byte	0x2e
+ 1625 02bc 7D020000 		.4byte	0x27d
+ 1626 02c0 05       		.uleb128 0x5
+ 1627 02c1 03       		.byte	0x3
+ 1628 02c2 00000000 		.4byte	boSW4
+ 1629 02c6 10       		.uleb128 0x10
+ 1630 02c7 95010000 		.4byte	.LASF42
+ 1631 02cb 01       		.byte	0x1
+ 1632 02cc 2F       		.byte	0x2f
+ 1633 02cd 7D020000 		.4byte	0x27d
+ 1634 02d1 05       		.uleb128 0x5
+ 1635 02d2 03       		.byte	0x3
+ 1636 02d3 00000000 		.4byte	boSW5
+ 1637 02d7 00       		.byte	0
+ 1638              		.section	.debug_abbrev,"",%progbits
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 36
+
+
+ 1639              	.Ldebug_abbrev0:
+ 1640 0000 01       		.uleb128 0x1
+ 1641 0001 11       		.uleb128 0x11
+ 1642 0002 01       		.byte	0x1
+ 1643 0003 25       		.uleb128 0x25
+ 1644 0004 0E       		.uleb128 0xe
+ 1645 0005 13       		.uleb128 0x13
+ 1646 0006 0B       		.uleb128 0xb
+ 1647 0007 03       		.uleb128 0x3
+ 1648 0008 0E       		.uleb128 0xe
+ 1649 0009 1B       		.uleb128 0x1b
+ 1650 000a 0E       		.uleb128 0xe
+ 1651 000b 55       		.uleb128 0x55
+ 1652 000c 17       		.uleb128 0x17
+ 1653 000d 11       		.uleb128 0x11
+ 1654 000e 01       		.uleb128 0x1
+ 1655 000f 10       		.uleb128 0x10
+ 1656 0010 17       		.uleb128 0x17
+ 1657 0011 00       		.byte	0
+ 1658 0012 00       		.byte	0
+ 1659 0013 02       		.uleb128 0x2
+ 1660 0014 24       		.uleb128 0x24
+ 1661 0015 00       		.byte	0
+ 1662 0016 0B       		.uleb128 0xb
+ 1663 0017 0B       		.uleb128 0xb
+ 1664 0018 3E       		.uleb128 0x3e
+ 1665 0019 0B       		.uleb128 0xb
+ 1666 001a 03       		.uleb128 0x3
+ 1667 001b 0E       		.uleb128 0xe
+ 1668 001c 00       		.byte	0
+ 1669 001d 00       		.byte	0
+ 1670 001e 03       		.uleb128 0x3
+ 1671 001f 24       		.uleb128 0x24
+ 1672 0020 00       		.byte	0
+ 1673 0021 0B       		.uleb128 0xb
+ 1674 0022 0B       		.uleb128 0xb
+ 1675 0023 3E       		.uleb128 0x3e
+ 1676 0024 0B       		.uleb128 0xb
+ 1677 0025 03       		.uleb128 0x3
+ 1678 0026 08       		.uleb128 0x8
+ 1679 0027 00       		.byte	0
+ 1680 0028 00       		.byte	0
+ 1681 0029 04       		.uleb128 0x4
+ 1682 002a 16       		.uleb128 0x16
+ 1683 002b 00       		.byte	0
+ 1684 002c 03       		.uleb128 0x3
+ 1685 002d 0E       		.uleb128 0xe
+ 1686 002e 3A       		.uleb128 0x3a
+ 1687 002f 0B       		.uleb128 0xb
+ 1688 0030 3B       		.uleb128 0x3b
+ 1689 0031 05       		.uleb128 0x5
+ 1690 0032 49       		.uleb128 0x49
+ 1691 0033 13       		.uleb128 0x13
+ 1692 0034 00       		.byte	0
+ 1693 0035 00       		.byte	0
+ 1694 0036 05       		.uleb128 0x5
+ 1695 0037 35       		.uleb128 0x35
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 37
+
+
+ 1696 0038 00       		.byte	0
+ 1697 0039 49       		.uleb128 0x49
+ 1698 003a 13       		.uleb128 0x13
+ 1699 003b 00       		.byte	0
+ 1700 003c 00       		.byte	0
+ 1701 003d 06       		.uleb128 0x6
+ 1702 003e 0F       		.uleb128 0xf
+ 1703 003f 00       		.byte	0
+ 1704 0040 0B       		.uleb128 0xb
+ 1705 0041 0B       		.uleb128 0xb
+ 1706 0042 49       		.uleb128 0x49
+ 1707 0043 13       		.uleb128 0x13
+ 1708 0044 00       		.byte	0
+ 1709 0045 00       		.byte	0
+ 1710 0046 07       		.uleb128 0x7
+ 1711 0047 2E       		.uleb128 0x2e
+ 1712 0048 00       		.byte	0
+ 1713 0049 3F       		.uleb128 0x3f
+ 1714 004a 19       		.uleb128 0x19
+ 1715 004b 03       		.uleb128 0x3
+ 1716 004c 0E       		.uleb128 0xe
+ 1717 004d 3A       		.uleb128 0x3a
+ 1718 004e 0B       		.uleb128 0xb
+ 1719 004f 3B       		.uleb128 0x3b
+ 1720 0050 0B       		.uleb128 0xb
+ 1721 0051 27       		.uleb128 0x27
+ 1722 0052 19       		.uleb128 0x19
+ 1723 0053 11       		.uleb128 0x11
+ 1724 0054 01       		.uleb128 0x1
+ 1725 0055 12       		.uleb128 0x12
+ 1726 0056 06       		.uleb128 0x6
+ 1727 0057 40       		.uleb128 0x40
+ 1728 0058 18       		.uleb128 0x18
+ 1729 0059 9642     		.uleb128 0x2116
+ 1730 005b 19       		.uleb128 0x19
+ 1731 005c 00       		.byte	0
+ 1732 005d 00       		.byte	0
+ 1733 005e 08       		.uleb128 0x8
+ 1734 005f 2E       		.uleb128 0x2e
+ 1735 0060 01       		.byte	0x1
+ 1736 0061 3F       		.uleb128 0x3f
+ 1737 0062 19       		.uleb128 0x19
+ 1738 0063 03       		.uleb128 0x3
+ 1739 0064 0E       		.uleb128 0xe
+ 1740 0065 3A       		.uleb128 0x3a
+ 1741 0066 0B       		.uleb128 0xb
+ 1742 0067 3B       		.uleb128 0x3b
+ 1743 0068 0B       		.uleb128 0xb
+ 1744 0069 49       		.uleb128 0x49
+ 1745 006a 13       		.uleb128 0x13
+ 1746 006b 11       		.uleb128 0x11
+ 1747 006c 01       		.uleb128 0x1
+ 1748 006d 12       		.uleb128 0x12
+ 1749 006e 06       		.uleb128 0x6
+ 1750 006f 40       		.uleb128 0x40
+ 1751 0070 18       		.uleb128 0x18
+ 1752 0071 9642     		.uleb128 0x2116
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 38
+
+
+ 1753 0073 19       		.uleb128 0x19
+ 1754 0074 01       		.uleb128 0x1
+ 1755 0075 13       		.uleb128 0x13
+ 1756 0076 00       		.byte	0
+ 1757 0077 00       		.byte	0
+ 1758 0078 09       		.uleb128 0x9
+ 1759 0079 34       		.uleb128 0x34
+ 1760 007a 00       		.byte	0
+ 1761 007b 03       		.uleb128 0x3
+ 1762 007c 0E       		.uleb128 0xe
+ 1763 007d 3A       		.uleb128 0x3a
+ 1764 007e 0B       		.uleb128 0xb
+ 1765 007f 3B       		.uleb128 0x3b
+ 1766 0080 0B       		.uleb128 0xb
+ 1767 0081 49       		.uleb128 0x49
+ 1768 0082 13       		.uleb128 0x13
+ 1769 0083 02       		.uleb128 0x2
+ 1770 0084 18       		.uleb128 0x18
+ 1771 0085 00       		.byte	0
+ 1772 0086 00       		.byte	0
+ 1773 0087 0A       		.uleb128 0xa
+ 1774 0088 34       		.uleb128 0x34
+ 1775 0089 00       		.byte	0
+ 1776 008a 03       		.uleb128 0x3
+ 1777 008b 08       		.uleb128 0x8
+ 1778 008c 3A       		.uleb128 0x3a
+ 1779 008d 0B       		.uleb128 0xb
+ 1780 008e 3B       		.uleb128 0x3b
+ 1781 008f 0B       		.uleb128 0xb
+ 1782 0090 49       		.uleb128 0x49
+ 1783 0091 13       		.uleb128 0x13
+ 1784 0092 02       		.uleb128 0x2
+ 1785 0093 18       		.uleb128 0x18
+ 1786 0094 00       		.byte	0
+ 1787 0095 00       		.byte	0
+ 1788 0096 0B       		.uleb128 0xb
+ 1789 0097 01       		.uleb128 0x1
+ 1790 0098 01       		.byte	0x1
+ 1791 0099 49       		.uleb128 0x49
+ 1792 009a 13       		.uleb128 0x13
+ 1793 009b 01       		.uleb128 0x1
+ 1794 009c 13       		.uleb128 0x13
+ 1795 009d 00       		.byte	0
+ 1796 009e 00       		.byte	0
+ 1797 009f 0C       		.uleb128 0xc
+ 1798 00a0 21       		.uleb128 0x21
+ 1799 00a1 00       		.byte	0
+ 1800 00a2 49       		.uleb128 0x49
+ 1801 00a3 13       		.uleb128 0x13
+ 1802 00a4 2F       		.uleb128 0x2f
+ 1803 00a5 0B       		.uleb128 0xb
+ 1804 00a6 00       		.byte	0
+ 1805 00a7 00       		.byte	0
+ 1806 00a8 0D       		.uleb128 0xd
+ 1807 00a9 26       		.uleb128 0x26
+ 1808 00aa 00       		.byte	0
+ 1809 00ab 49       		.uleb128 0x49
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 39
+
+
+ 1810 00ac 13       		.uleb128 0x13
+ 1811 00ad 00       		.byte	0
+ 1812 00ae 00       		.byte	0
+ 1813 00af 0E       		.uleb128 0xe
+ 1814 00b0 21       		.uleb128 0x21
+ 1815 00b1 00       		.byte	0
+ 1816 00b2 49       		.uleb128 0x49
+ 1817 00b3 13       		.uleb128 0x13
+ 1818 00b4 2F       		.uleb128 0x2f
+ 1819 00b5 18       		.uleb128 0x18
+ 1820 00b6 00       		.byte	0
+ 1821 00b7 00       		.byte	0
+ 1822 00b8 0F       		.uleb128 0xf
+ 1823 00b9 2E       		.uleb128 0x2e
+ 1824 00ba 00       		.byte	0
+ 1825 00bb 3F       		.uleb128 0x3f
+ 1826 00bc 19       		.uleb128 0x19
+ 1827 00bd 03       		.uleb128 0x3
+ 1828 00be 0E       		.uleb128 0xe
+ 1829 00bf 3A       		.uleb128 0x3a
+ 1830 00c0 0B       		.uleb128 0xb
+ 1831 00c1 3B       		.uleb128 0x3b
+ 1832 00c2 05       		.uleb128 0x5
+ 1833 00c3 27       		.uleb128 0x27
+ 1834 00c4 19       		.uleb128 0x19
+ 1835 00c5 11       		.uleb128 0x11
+ 1836 00c6 01       		.uleb128 0x1
+ 1837 00c7 12       		.uleb128 0x12
+ 1838 00c8 06       		.uleb128 0x6
+ 1839 00c9 40       		.uleb128 0x40
+ 1840 00ca 18       		.uleb128 0x18
+ 1841 00cb 9742     		.uleb128 0x2117
+ 1842 00cd 19       		.uleb128 0x19
+ 1843 00ce 00       		.byte	0
+ 1844 00cf 00       		.byte	0
+ 1845 00d0 10       		.uleb128 0x10
+ 1846 00d1 34       		.uleb128 0x34
+ 1847 00d2 00       		.byte	0
+ 1848 00d3 03       		.uleb128 0x3
+ 1849 00d4 0E       		.uleb128 0xe
+ 1850 00d5 3A       		.uleb128 0x3a
+ 1851 00d6 0B       		.uleb128 0xb
+ 1852 00d7 3B       		.uleb128 0x3b
+ 1853 00d8 0B       		.uleb128 0xb
+ 1854 00d9 49       		.uleb128 0x49
+ 1855 00da 13       		.uleb128 0x13
+ 1856 00db 3F       		.uleb128 0x3f
+ 1857 00dc 19       		.uleb128 0x19
+ 1858 00dd 02       		.uleb128 0x2
+ 1859 00de 18       		.uleb128 0x18
+ 1860 00df 00       		.byte	0
+ 1861 00e0 00       		.byte	0
+ 1862 00e1 00       		.byte	0
+ 1863              		.section	.debug_aranges,"",%progbits
+ 1864 0000 54000000 		.4byte	0x54
+ 1865 0004 0200     		.2byte	0x2
+ 1866 0006 00000000 		.4byte	.Ldebug_info0
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 40
+
+
+ 1867 000a 04       		.byte	0x4
+ 1868 000b 00       		.byte	0
+ 1869 000c 0000     		.2byte	0
+ 1870 000e 0000     		.2byte	0
+ 1871 0010 00000000 		.4byte	.LFB35
+ 1872 0014 2C000000 		.4byte	.LFE35-.LFB35
+ 1873 0018 00000000 		.4byte	.LFB36
+ 1874 001c 2C000000 		.4byte	.LFE36-.LFB36
+ 1875 0020 00000000 		.4byte	.LFB37
+ 1876 0024 2C000000 		.4byte	.LFE37-.LFB37
+ 1877 0028 00000000 		.4byte	.LFB38
+ 1878 002c 2C000000 		.4byte	.LFE38-.LFB38
+ 1879 0030 00000000 		.4byte	.LFB39
+ 1880 0034 2C000000 		.4byte	.LFE39-.LFB39
+ 1881 0038 00000000 		.4byte	.LFB40
+ 1882 003c 2C000000 		.4byte	.LFE40-.LFB40
+ 1883 0040 00000000 		.4byte	.LFB41
+ 1884 0044 28060000 		.4byte	.LFE41-.LFB41
+ 1885 0048 00000000 		.4byte	.LFB42
+ 1886 004c 18000000 		.4byte	.LFE42-.LFB42
+ 1887 0050 00000000 		.4byte	0
+ 1888 0054 00000000 		.4byte	0
+ 1889              		.section	.debug_ranges,"",%progbits
+ 1890              	.Ldebug_ranges0:
+ 1891 0000 00000000 		.4byte	.LFB35
+ 1892 0004 2C000000 		.4byte	.LFE35
+ 1893 0008 00000000 		.4byte	.LFB36
+ 1894 000c 2C000000 		.4byte	.LFE36
+ 1895 0010 00000000 		.4byte	.LFB37
+ 1896 0014 2C000000 		.4byte	.LFE37
+ 1897 0018 00000000 		.4byte	.LFB38
+ 1898 001c 2C000000 		.4byte	.LFE38
+ 1899 0020 00000000 		.4byte	.LFB39
+ 1900 0024 2C000000 		.4byte	.LFE39
+ 1901 0028 00000000 		.4byte	.LFB40
+ 1902 002c 2C000000 		.4byte	.LFE40
+ 1903 0030 00000000 		.4byte	.LFB41
+ 1904 0034 28060000 		.4byte	.LFE41
+ 1905 0038 00000000 		.4byte	.LFB42
+ 1906 003c 18000000 		.4byte	.LFE42
+ 1907 0040 00000000 		.4byte	0
+ 1908 0044 00000000 		.4byte	0
+ 1909              		.section	.debug_line,"",%progbits
+ 1910              	.Ldebug_line0:
+ 1911 0000 9E010000 		.section	.debug_str,"MS",%progbits,1
+ 1911      02004100 
+ 1911      00000201 
+ 1911      FB0E0D00 
+ 1911      01010101 
+ 1912              	.LASF17:
+ 1913 0000 4750494F 		.ascii	"GPIO3IsrHandler\000"
+ 1913      33497372 
+ 1913      48616E64 
+ 1913      6C657200 
+ 1914              	.LASF27:
+ 1915 0010 52785772 		.ascii	"RxWriteIndex\000"
+ 1915      69746549 
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 41
+
+
+ 1915      6E646578 
+ 1915      00
+ 1916              	.LASF45:
+ 1917 001d 433A5C53 		.ascii	"C:\\SysTick_Example02.cydsn\\SysTick_Example02.cyds"
+ 1917      79735469 
+ 1917      636B5F45 
+ 1917      78616D70 
+ 1917      6C653032 
+ 1918 004e 6E00     		.ascii	"n\000"
+ 1919              	.LASF3:
+ 1920 0050 73686F72 		.ascii	"short unsigned int\000"
+ 1920      7420756E 
+ 1920      7369676E 
+ 1920      65642069 
+ 1920      6E7400
+ 1921              	.LASF10:
+ 1922 0063 646F7562 		.ascii	"double\000"
+ 1922      6C6500
+ 1923              	.LASF22:
+ 1924 006a 62797465 		.ascii	"byte\000"
+ 1924      00
+ 1925              	.LASF29:
+ 1926 006f 53797354 		.ascii	"SysTickISRCallback\000"
+ 1926      69636B49 
+ 1926      53524361 
+ 1926      6C6C6261 
+ 1926      636B00
+ 1927              	.LASF9:
+ 1928 0082 666C6F61 		.ascii	"float\000"
+ 1928      7400
+ 1929              	.LASF26:
+ 1930 0088 52784275 		.ascii	"RxBuffer\000"
+ 1930      66666572 
+ 1930      00
+ 1931              	.LASF0:
+ 1932 0091 7369676E 		.ascii	"signed char\000"
+ 1932      65642063 
+ 1932      68617200 
+ 1933              	.LASF41:
+ 1934 009d 626F5357 		.ascii	"boSW4\000"
+ 1934      3400
+ 1935              	.LASF1:
+ 1936 00a3 756E7369 		.ascii	"unsigned char\000"
+ 1936      676E6564 
+ 1936      20636861 
+ 1936      7200
+ 1937              	.LASF16:
+ 1938 00b1 4750494F 		.ascii	"GPIO2IsrHandler\000"
+ 1938      32497372 
+ 1938      48616E64 
+ 1938      6C657200 
+ 1939              	.LASF24:
+ 1940 00c1 626F5374 		.ascii	"boStart\000"
+ 1940      61727400 
+ 1941              	.LASF5:
+ 1942 00c9 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1942      20756E73 
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 42
+
+
+ 1942      69676E65 
+ 1942      6420696E 
+ 1942      7400
+ 1943              	.LASF25:
+ 1944 00db 52784275 		.ascii	"RxBufferSize\000"
+ 1944      66666572 
+ 1944      53697A65 
+ 1944      00
+ 1945              	.LASF43:
+ 1946 00e8 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1946      43313120 
+ 1946      352E342E 
+ 1946      31203230 
+ 1946      31363036 
+ 1947 011b 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1947      20726576 
+ 1947      6973696F 
+ 1947      6E203233 
+ 1947      37373135 
+ 1948 014e 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1948      66756E63 
+ 1948      74696F6E 
+ 1948      2D736563 
+ 1948      74696F6E 
+ 1949              	.LASF37:
+ 1950 0176 626F5357 		.ascii	"boSW0\000"
+ 1950      3000
+ 1951              	.LASF38:
+ 1952 017c 626F5357 		.ascii	"boSW1\000"
+ 1952      3100
+ 1953              	.LASF39:
+ 1954 0182 626F5357 		.ascii	"boSW2\000"
+ 1954      3200
+ 1955              	.LASF40:
+ 1956 0188 626F5357 		.ascii	"boSW3\000"
+ 1956      3300
+ 1957              	.LASF23:
+ 1958 018e 626F4352 		.ascii	"boCRLF\000"
+ 1958      4C4600
+ 1959              	.LASF42:
+ 1960 0195 626F5357 		.ascii	"boSW5\000"
+ 1960      3500
+ 1961              	.LASF47:
+ 1962 019b 6D61696E 		.ascii	"main\000"
+ 1962      00
+ 1963              	.LASF30:
+ 1964 01a0 6D73436F 		.ascii	"msCount\000"
+ 1964      756E7400 
+ 1965              	.LASF46:
+ 1966 01a8 75696E74 		.ascii	"uint32\000"
+ 1966      333200
+ 1967              	.LASF15:
+ 1968 01af 4750494F 		.ascii	"GPIO1IsrHandler\000"
+ 1968      31497372 
+ 1968      48616E64 
+ 1968      6C657200 
+ 1969              	.LASF8:
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 43
+
+
+ 1970 01bf 756E7369 		.ascii	"unsigned int\000"
+ 1970      676E6564 
+ 1970      20696E74 
+ 1970      00
+ 1971              	.LASF7:
+ 1972 01cc 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1972      206C6F6E 
+ 1972      6720756E 
+ 1972      7369676E 
+ 1972      65642069 
+ 1973              	.LASF18:
+ 1974 01e3 4750494F 		.ascii	"GPIO4IsrHandler\000"
+ 1974      34497372 
+ 1974      48616E64 
+ 1974      6C657200 
+ 1975              	.LASF20:
+ 1976 01f3 74696D65 		.ascii	"time\000"
+ 1976      00
+ 1977              	.LASF13:
+ 1978 01f8 73697A65 		.ascii	"sizetype\000"
+ 1978      74797065 
+ 1978      00
+ 1979              	.LASF6:
+ 1980 0201 6C6F6E67 		.ascii	"long long int\000"
+ 1980      206C6F6E 
+ 1980      6720696E 
+ 1980      7400
+ 1981              	.LASF44:
+ 1982 020f 6D61696E 		.ascii	"main.c\000"
+ 1982      2E6300
+ 1983              	.LASF11:
+ 1984 0216 63686172 		.ascii	"char\000"
+ 1984      00
+ 1985              	.LASF2:
+ 1986 021b 73686F72 		.ascii	"short int\000"
+ 1986      7420696E 
+ 1986      7400
+ 1987              	.LASF21:
+ 1988 0225 62756666 		.ascii	"buffer\000"
+ 1988      657200
+ 1989              	.LASF31:
+ 1990 022c 696E7453 		.ascii	"intSW0\000"
+ 1990      573000
+ 1991              	.LASF32:
+ 1992 0233 696E7453 		.ascii	"intSW1\000"
+ 1992      573100
+ 1993              	.LASF33:
+ 1994 023a 696E7453 		.ascii	"intSW2\000"
+ 1994      573200
+ 1995              	.LASF34:
+ 1996 0241 696E7453 		.ascii	"intSW3\000"
+ 1996      573300
+ 1997              	.LASF35:
+ 1998 0248 696E7453 		.ascii	"intSW4\000"
+ 1998      573400
+ 1999              	.LASF36:
+ 2000 024f 696E7453 		.ascii	"intSW5\000"
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccIJ94Qe.s 			page 44
+
+
+ 2000      573500
+ 2001              	.LASF4:
+ 2002 0256 6C6F6E67 		.ascii	"long int\000"
+ 2002      20696E74 
+ 2002      00
+ 2003              	.LASF12:
+ 2004 025f 6C6F6E67 		.ascii	"long double\000"
+ 2004      20646F75 
+ 2004      626C6500 
+ 2005              	.LASF19:
+ 2006 026b 4750494F 		.ascii	"GPIO5IsrHandler\000"
+ 2006      35497372 
+ 2006      48616E64 
+ 2006      6C657200 
+ 2007              	.LASF14:
+ 2008 027b 4750494F 		.ascii	"GPIO0IsrHandler\000"
+ 2008      30497372 
+ 2008      48616E64 
+ 2008      6C657200 
+ 2009              	.LASF28:
+ 2010 028b 5F426F6F 		.ascii	"_Bool\000"
+ 2010      6C00
+ 2011              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

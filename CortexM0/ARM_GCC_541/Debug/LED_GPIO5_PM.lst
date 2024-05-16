@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 1
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccMPXJeU.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 1
   22:Generated_Source\PSoC4/LED_GPIO5_PM.c **** 
   23:Generated_Source\PSoC4/LED_GPIO5_PM.c **** /*******************************************************************************
   24:Generated_Source\PSoC4/LED_GPIO5_PM.c **** * Function Name: LED_GPIO5_Sleep
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 2
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccMPXJeU.s 			page 2
 
 
   25:Generated_Source\PSoC4/LED_GPIO5_PM.c **** ****************************************************************************//**
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 1
   49 000e BD46     		mov	sp, r7
   50              		@ sp needed
   51 0010 80BD     		pop	{r7, pc}
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 3
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccMPXJeU.s 			page 3
 
 
   52              	.L3:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 1
   82 000a 1360     		str	r3, [r2]
   86:Generated_Source\PSoC4/LED_GPIO5_PM.c ****     #else
   87:Generated_Source\PSoC4/LED_GPIO5_PM.c ****         #if (CY_PSOC4_4200L)
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 4
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccMPXJeU.s 			page 4
 
 
   88:Generated_Source\PSoC4/LED_GPIO5_PM.c ****             /* Restore the regulator state and come out of suspend mode */
@@ -215,48 +215,48 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 1
  104 0006 00000000 		.4byte	.Ldebug_abbrev0
  105 000a 04       		.byte	0x4
  106 000b 01       		.uleb128 0x1
- 107 000c A4000000 		.4byte	.LASF20
+ 107 000c 71000000 		.4byte	.LASF20
  108 0010 0C       		.byte	0xc
- 109 0011 92010000 		.4byte	.LASF21
- 110 0015 20000000 		.4byte	.LASF22
+ 109 0011 5F010000 		.4byte	.LASF21
+ 110 0015 9E010000 		.4byte	.LASF22
  111 0019 00000000 		.4byte	.Ldebug_ranges0+0
  112 001d 00000000 		.4byte	0
  113 0021 00000000 		.4byte	.Ldebug_line0
  114 0025 02       		.uleb128 0x2
  115 0026 01       		.byte	0x1
  116 0027 06       		.byte	0x6
- 117 0028 D1010000 		.4byte	.LASF0
+ 117 0028 B9010000 		.4byte	.LASF0
  118 002c 02       		.uleb128 0x2
  119 002d 01       		.byte	0x1
  120 002e 08       		.byte	0x8
- 121 002f 59000000 		.4byte	.LASF1
+ 121 002f 26000000 		.4byte	.LASF1
  122 0033 02       		.uleb128 0x2
  123 0034 02       		.byte	0x2
  124 0035 05       		.byte	0x5
- 125 0036 80010000 		.4byte	.LASF2
+ 125 0036 4D010000 		.4byte	.LASF2
  126 003a 02       		.uleb128 0x2
  127 003b 02       		.byte	0x2
  128 003c 07       		.byte	0x7
- 129 003d 91000000 		.4byte	.LASF3
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 5
+ 129 003d 5E000000 		.4byte	.LASF3
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccMPXJeU.s 			page 5
 
 
  130 0041 02       		.uleb128 0x2
  131 0042 04       		.byte	0x4
  132 0043 05       		.byte	0x5
- 133 0044 C8010000 		.4byte	.LASF4
+ 133 0044 95010000 		.4byte	.LASF4
  134 0048 02       		.uleb128 0x2
  135 0049 04       		.byte	0x4
  136 004a 07       		.byte	0x7
- 137 004b 7F000000 		.4byte	.LASF5
+ 137 004b 4C000000 		.4byte	.LASF5
  138 004f 02       		.uleb128 0x2
  139 0050 08       		.byte	0x8
  140 0051 05       		.byte	0x5
- 141 0052 6D010000 		.4byte	.LASF6
+ 141 0052 3A010000 		.4byte	.LASF6
  142 0056 02       		.uleb128 0x2
  143 0057 08       		.byte	0x8
  144 0058 07       		.byte	0x7
- 145 0059 4D010000 		.4byte	.LASF7
+ 145 0059 1A010000 		.4byte	.LASF7
  146 005d 03       		.uleb128 0x3
  147 005e 04       		.byte	0x4
  148 005f 05       		.byte	0x5
@@ -264,24 +264,24 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 1
  150 0064 02       		.uleb128 0x2
  151 0065 04       		.byte	0x4
  152 0066 07       		.byte	0x7
- 153 0067 40010000 		.4byte	.LASF8
+ 153 0067 0D010000 		.4byte	.LASF8
  154 006b 04       		.uleb128 0x4
- 155 006c 39010000 		.4byte	.LASF12
+ 155 006c 06010000 		.4byte	.LASF12
  156 0070 02       		.byte	0x2
  157 0071 D401     		.2byte	0x1d4
  158 0073 48000000 		.4byte	0x48
  159 0077 02       		.uleb128 0x2
  160 0078 04       		.byte	0x4
  161 0079 04       		.byte	0x4
- 162 007a 53000000 		.4byte	.LASF9
+ 162 007a 20000000 		.4byte	.LASF9
  163 007e 02       		.uleb128 0x2
  164 007f 08       		.byte	0x8
  165 0080 04       		.byte	0x4
- 166 0081 32010000 		.4byte	.LASF10
+ 166 0081 FF000000 		.4byte	.LASF10
  167 0085 02       		.uleb128 0x2
  168 0086 01       		.byte	0x1
  169 0087 08       		.byte	0x8
- 170 0088 7B010000 		.4byte	.LASF11
+ 170 0088 48010000 		.4byte	.LASF11
  171 008c 04       		.uleb128 0x4
  172 008d 00000000 		.4byte	.LASF13
  173 0091 02       		.byte	0x2
@@ -295,16 +295,16 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 1
  181 00a0 21       		.byte	0x21
  182 00a1 CA000000 		.4byte	0xca
  183 00a5 07       		.uleb128 0x7
- 184 00a6 8A010000 		.4byte	.LASF14
+ 184 00a6 57010000 		.4byte	.LASF14
  185 00aa 03       		.byte	0x3
  186 00ab 23       		.byte	0x23
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 6
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccMPXJeU.s 			page 6
 
 
  187 00ac 6B000000 		.4byte	0x6b
  188 00b0 00       		.byte	0
  189 00b1 07       		.uleb128 0x7
- 190 00b2 64010000 		.4byte	.LASF15
+ 190 00b2 31010000 		.4byte	.LASF15
  191 00b6 03       		.byte	0x3
  192 00b7 24       		.byte	0x24
  193 00b8 6B000000 		.4byte	0x6b
@@ -317,12 +317,12 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 1
  200 00c8 08       		.byte	0x8
  201 00c9 00       		.byte	0
  202 00ca 08       		.uleb128 0x8
- 203 00cb 67000000 		.4byte	.LASF17
+ 203 00cb 34000000 		.4byte	.LASF17
  204 00cf 03       		.byte	0x3
  205 00d0 26       		.byte	0x26
  206 00d1 9D000000 		.4byte	0x9d
  207 00d5 09       		.uleb128 0x9
- 208 00d6 B8010000 		.4byte	.LASF18
+ 208 00d6 85010000 		.4byte	.LASF18
  209 00da 01       		.byte	0x1
  210 00db 2C       		.byte	0x2c
  211 00dc 00000000 		.4byte	.LFB0
@@ -338,7 +338,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 1
  221 00f5 01       		.uleb128 0x1
  222 00f6 9C       		.byte	0x9c
  223 00f7 0A       		.uleb128 0xa
- 224 00f8 DD010000 		.4byte	.LASF23
+ 224 00f8 C5010000 		.4byte	.LASF23
  225 00fc 01       		.byte	0x1
  226 00fd 14       		.byte	0x14
  227 00fe CA000000 		.4byte	0xca
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 1
  241 0007 03       		.uleb128 0x3
  242 0008 0E       		.uleb128 0xe
  243 0009 1B       		.uleb128 0x1b
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 7
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccMPXJeU.s 			page 7
 
 
  244 000a 0E       		.uleb128 0xe
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 1
  298 0040 0B       		.uleb128 0xb
  299 0041 0B       		.uleb128 0xb
  300 0042 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 8
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccMPXJeU.s 			page 8
 
 
  301 0043 0B       		.uleb128 0xb
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 1
  355 0079 9742     		.uleb128 0x2117
  356 007b 19       		.uleb128 0x19
  357 007c 00       		.byte	0
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 9
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccMPXJeU.s 			page 9
 
 
  358 007d 00       		.byte	0
@@ -538,122 +538,121 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 1
  403      00
  404              	.LASF16:
  405 0017 75736253 		.ascii	"usbState\000"
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 10
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccMPXJeU.s 			page 10
 
 
  405      74617465 
  405      00
- 406              	.LASF22:
- 407 0020 433A5C53 		.ascii	"C:\\SysTick_Example02.cydsn\\SysTick_Example02.cyds"
- 407      79735469 
- 407      636B5F45 
- 407      78616D70 
- 407      6C653032 
- 408 0051 6E00     		.ascii	"n\000"
- 409              	.LASF9:
- 410 0053 666C6F61 		.ascii	"float\000"
- 410      7400
- 411              	.LASF1:
- 412 0059 756E7369 		.ascii	"unsigned char\000"
- 412      676E6564 
- 412      20636861 
- 412      7200
- 413              	.LASF17:
- 414 0067 4C45445F 		.ascii	"LED_GPIO5_BACKUP_STRUCT\000"
- 414      4750494F 
- 414      355F4241 
- 414      434B5550 
- 414      5F535452 
- 415              	.LASF5:
- 416 007f 6C6F6E67 		.ascii	"long unsigned int\000"
- 416      20756E73 
- 416      69676E65 
- 416      6420696E 
- 416      7400
- 417              	.LASF3:
- 418 0091 73686F72 		.ascii	"short unsigned int\000"
- 418      7420756E 
- 418      7369676E 
- 418      65642069 
- 418      6E7400
- 419              	.LASF20:
- 420 00a4 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 420      43313120 
- 420      352E342E 
- 420      31203230 
- 420      31363036 
- 421 00d7 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 421      20726576 
- 421      6973696F 
- 421      6E203233 
- 421      37373135 
- 422 010a 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 422      66756E63 
- 422      74696F6E 
- 422      2D736563 
- 422      74696F6E 
- 423              	.LASF10:
- 424 0132 646F7562 		.ascii	"double\000"
- 424      6C6500
- 425              	.LASF12:
- 426 0139 75696E74 		.ascii	"uint32\000"
- 426      333200
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccaQSGSc.s 			page 11
+ 406              	.LASF9:
+ 407 0020 666C6F61 		.ascii	"float\000"
+ 407      7400
+ 408              	.LASF1:
+ 409 0026 756E7369 		.ascii	"unsigned char\000"
+ 409      676E6564 
+ 409      20636861 
+ 409      7200
+ 410              	.LASF17:
+ 411 0034 4C45445F 		.ascii	"LED_GPIO5_BACKUP_STRUCT\000"
+ 411      4750494F 
+ 411      355F4241 
+ 411      434B5550 
+ 411      5F535452 
+ 412              	.LASF5:
+ 413 004c 6C6F6E67 		.ascii	"long unsigned int\000"
+ 413      20756E73 
+ 413      69676E65 
+ 413      6420696E 
+ 413      7400
+ 414              	.LASF3:
+ 415 005e 73686F72 		.ascii	"short unsigned int\000"
+ 415      7420756E 
+ 415      7369676E 
+ 415      65642069 
+ 415      6E7400
+ 416              	.LASF20:
+ 417 0071 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 417      43313120 
+ 417      352E342E 
+ 417      31203230 
+ 417      31363036 
+ 418 00a4 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 418      20726576 
+ 418      6973696F 
+ 418      6E203233 
+ 418      37373135 
+ 419 00d7 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 419      66756E63 
+ 419      74696F6E 
+ 419      2D736563 
+ 419      74696F6E 
+ 420              	.LASF10:
+ 421 00ff 646F7562 		.ascii	"double\000"
+ 421      6C6500
+ 422              	.LASF12:
+ 423 0106 75696E74 		.ascii	"uint32\000"
+ 423      333200
+ 424              	.LASF8:
+ 425 010d 756E7369 		.ascii	"unsigned int\000"
+ 425      676E6564 
+ 425      20696E74 
+ 425      00
+ 426              	.LASF7:
+ 427 011a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccMPXJeU.s 			page 11
 
 
- 427              	.LASF8:
- 428 0140 756E7369 		.ascii	"unsigned int\000"
- 428      676E6564 
- 428      20696E74 
- 428      00
- 429              	.LASF7:
- 430 014d 6C6F6E67 		.ascii	"long long unsigned int\000"
- 430      206C6F6E 
- 430      6720756E 
- 430      7369676E 
- 430      65642069 
- 431              	.LASF15:
- 432 0164 73696F53 		.ascii	"sioState\000"
- 432      74617465 
- 432      00
- 433              	.LASF6:
- 434 016d 6C6F6E67 		.ascii	"long long int\000"
- 434      206C6F6E 
- 434      6720696E 
- 434      7400
- 435              	.LASF11:
- 436 017b 63686172 		.ascii	"char\000"
- 436      00
- 437              	.LASF2:
- 438 0180 73686F72 		.ascii	"short int\000"
- 438      7420696E 
- 438      7400
- 439              	.LASF14:
- 440 018a 70635374 		.ascii	"pcState\000"
- 440      61746500 
- 441              	.LASF21:
- 442 0192 47656E65 		.ascii	"Generated_Source\\PSoC4\\LED_GPIO5_PM.c\000"
- 442      72617465 
- 442      645F536F 
- 442      75726365 
- 442      5C50536F 
- 443              	.LASF18:
- 444 01b8 4C45445F 		.ascii	"LED_GPIO5_Sleep\000"
- 444      4750494F 
- 444      355F536C 
- 444      65657000 
- 445              	.LASF4:
- 446 01c8 6C6F6E67 		.ascii	"long int\000"
- 446      20696E74 
- 446      00
- 447              	.LASF0:
- 448 01d1 7369676E 		.ascii	"signed char\000"
- 448      65642063 
- 448      68617200 
- 449              	.LASF23:
- 450 01dd 4C45445F 		.ascii	"LED_GPIO5_backup\000"
- 450      4750494F 
- 450      355F6261 
- 450      636B7570 
- 450      00
- 451              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 427      206C6F6E 
+ 427      6720756E 
+ 427      7369676E 
+ 427      65642069 
+ 428              	.LASF15:
+ 429 0131 73696F53 		.ascii	"sioState\000"
+ 429      74617465 
+ 429      00
+ 430              	.LASF6:
+ 431 013a 6C6F6E67 		.ascii	"long long int\000"
+ 431      206C6F6E 
+ 431      6720696E 
+ 431      7400
+ 432              	.LASF11:
+ 433 0148 63686172 		.ascii	"char\000"
+ 433      00
+ 434              	.LASF2:
+ 435 014d 73686F72 		.ascii	"short int\000"
+ 435      7420696E 
+ 435      7400
+ 436              	.LASF14:
+ 437 0157 70635374 		.ascii	"pcState\000"
+ 437      61746500 
+ 438              	.LASF21:
+ 439 015f 47656E65 		.ascii	"Generated_Source\\PSoC4\\LED_GPIO5_PM.c\000"
+ 439      72617465 
+ 439      645F536F 
+ 439      75726365 
+ 439      5C50536F 
+ 440              	.LASF18:
+ 441 0185 4C45445F 		.ascii	"LED_GPIO5_Sleep\000"
+ 441      4750494F 
+ 441      355F536C 
+ 441      65657000 
+ 442              	.LASF4:
+ 443 0195 6C6F6E67 		.ascii	"long int\000"
+ 443      20696E74 
+ 443      00
+ 444              	.LASF22:
+ 445 019e 443A5C53 		.ascii	"D:\\SysTick_Example02.cydsn\000"
+ 445      79735469 
+ 445      636B5F45 
+ 445      78616D70 
+ 445      6C653032 
+ 446              	.LASF0:
+ 447 01b9 7369676E 		.ascii	"signed char\000"
+ 447      65642063 
+ 447      68617200 
+ 448              	.LASF23:
+ 449 01c5 4C45445F 		.ascii	"LED_GPIO5_backup\000"
+ 449      4750494F 
+ 449      355F6261 
+ 449      636B7570 
+ 449      00
+ 450              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

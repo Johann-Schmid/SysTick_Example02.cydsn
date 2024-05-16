@@ -1,142 +1,85 @@
-/*******************************************************************************
-* File: main.c
-*
-* Version: 1.0
-*
-* Description:
-*  This example project demonstrates the basic operation of the System Tick
-*  Timer: periodic LED triggering - every second and minute.
-*
-********************************************************************************
-* Copyright 2014-2015, Cypress Semiconductor Corporation. All rights reserved.
-* This software is owned by Cypress Semiconductor Corporation and is protected
-* by and subject to worldwide patent and copyright laws and treaties.
-* Therefore, you may use this software only as provided in the license agreement
-* accompanying the software package from which you obtained this software.
-* CYPRESS AND ITS SUPPLIERS MAKE NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-* WITH REGARD TO THIS SOFTWARE, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT,
-* IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-*******************************************************************************/
 #include <project.h>
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
 #include <stdlib.h>
 
-#define DEFAULT_PRIORITY                    (3u)
-#define LIGHT_OFF                       (0u)
-#define LIGHT_ON                        (1u)
-#define EOM_CR        0x0D    //message separator char (\r)
-#define EOM_LF        0x0A    //message separator char (\n)
-
+#define DEFAULT_PRIORITY (3u)
+#define LIGHT_OFF (0u)
+#define LIGHT_ON (1u)
+#define EOM_CR 0x0D // message separator char (\r)
+#define EOM_LF 0x0A // message separator char (\n)
 
 /* Global Variables */
 uint32 msCount;
-volatile uint32 intSW0 = 0;
-volatile uint32 intSW1 = 0;
-volatile uint32 intSW2 = 0;
-volatile uint32 intSW3 = 0;
-volatile uint32 intSW4 = 0;
-volatile uint32 intSW5 = 0;
-
-volatile bool boSW0 = false;
-volatile bool boSW1 = false;
-volatile bool boSW2 = false;
-volatile bool boSW3 = false;
-volatile bool boSW4 = false;
-volatile bool boSW5 = false;
+volatile uint32 intSW[6] = {0};
+volatile bool boSW[6] = {false};
+volatile bool boUART[6] = {false};
 
 /* Function Prototypes */
 void SysTickISRCallback(void);
+void HandleSwitch(uint8 switchIndex, char* buffer, char* time);
 
-CY_ISR(GPIO0IsrHandler)
-{
+CY_ISR(GPIO0IsrHandler) {     
     /* Clear pending Interrupt */
     isr_GPIO_0_ClearPending();
     
     /* Clear pin Interrupt */
     SW0_ClearInterrupt();
 
-    intSW0 = msCount;
-    boSW0 = true;
+    intSW[0] = msCount;
+    boSW[0] = true; 
 }
-
-CY_ISR(GPIO1IsrHandler)
-{
+CY_ISR(GPIO1IsrHandler) {     
     /* Clear pending Interrupt */
     isr_GPIO_1_ClearPending();
     
     /* Clear pin Interrupt */
     SW1_ClearInterrupt();
 
-    intSW1 = msCount;
-    boSW1 = true;
+    intSW[1] = msCount;
+    boSW[1] = true;  
 }
-
-CY_ISR(GPIO2IsrHandler)
-{
+CY_ISR(GPIO2IsrHandler) {     
     /* Clear pending Interrupt */
     isr_GPIO_2_ClearPending();
     
     /* Clear pin Interrupt */
     SW2_ClearInterrupt();
 
-    intSW2 = msCount;
-    boSW2 = true;
+    intSW[2] = msCount;
+    boSW[2] = true;  
 }
-
-CY_ISR(GPIO3IsrHandler)
-{
+CY_ISR(GPIO3IsrHandler) {     
     /* Clear pending Interrupt */
     isr_GPIO_3_ClearPending();
     
     /* Clear pin Interrupt */
     SW3_ClearInterrupt();
 
-    intSW3 = msCount;
-    boSW3 = true;
+    intSW[3] = msCount;
+    boSW[3] = true;   
 }
-
-CY_ISR(GPIO4IsrHandler)
-{
+CY_ISR(GPIO4IsrHandler) {     
     /* Clear pending Interrupt */
     isr_GPIO_4_ClearPending();
     
     /* Clear pin Interrupt */
     SW4_ClearInterrupt();
 
-    intSW4 = msCount;
-    boSW4 = true;
+    intSW[4] = msCount;
+    boSW[4] = true;   
 }
-
-CY_ISR(GPIO5IsrHandler)
-{
-    /* Clear pending Interrupt */
+CY_ISR(GPIO5IsrHandler) {     /* Clear pending Interrupt */
     isr_GPIO_5_ClearPending();
     
     /* Clear pin Interrupt */
     SW5_ClearInterrupt();
 
-    intSW5 = msCount;
-    boSW5 = true;
+    intSW[5] = msCount;
+    boSW[5] = true;   
 }
 
-/*******************************************************************************
-* Function Name: main
-********************************************************************************
-*
-* Summary:
-*  Starts the SysTick timer and sets the callback function that will be called
-*  on SysTick interrupt. Updates timing variables at one millisecond rate and
-*  prints the system time to the UART once every second in the main loop.
-*
-* Parameters:
-*  None
-*
-* Return:
-*  None
-*
-*******************************************************************************/
 int main()
 {
     char time[16u];
@@ -144,109 +87,72 @@ int main()
     uint32 byte, i;
     bool boCRLF;
     bool boStart;
-
     
     const int RxBufferSize = 128;
-    
-    char RxBuffer[RxBufferSize];     // Rx circular buffer to hold all incoming command
-    char *RxWriteIndex = RxBuffer;    // pointer to position in RxBuffer to read and process bytes
+    char RxBuffer[RxBufferSize];
+    char *RxWriteIndex = RxBuffer;
     
     boCRLF = false;
     boStart = false;
     
     msCount = 0u;
-    
-    /* Sets up the GPIO interrupt and enables it */
+
+    /* Initialize interrupts and set priorities */
     isr_GPIO_0_StartEx(GPIO0IsrHandler);
-
-    /* Changes initial priority for the GPIO interrupt */
-    isr_GPIO_0_SetPriority(DEFAULT_PRIORITY);
-    
-    /* Sets up the GPIO interrupt and enables it */
     isr_GPIO_1_StartEx(GPIO1IsrHandler);
-
-    /* Changes initial priority for the GPIO interrupt */
-    isr_GPIO_1_SetPriority(DEFAULT_PRIORITY);
-    
-    /* Sets up the GPIO interrupt and enables it */
     isr_GPIO_2_StartEx(GPIO2IsrHandler);
-
-    /* Changes initial priority for the GPIO interrupt */
-    isr_GPIO_2_SetPriority(DEFAULT_PRIORITY);
-    
-    /* Sets up the GPIO interrupt and enables it */
     isr_GPIO_3_StartEx(GPIO3IsrHandler);
-
-    /* Changes initial priority for the GPIO interrupt */
-    isr_GPIO_3_SetPriority(DEFAULT_PRIORITY);
-    
-    /* Sets up the GPIO interrupt and enables it */
     isr_GPIO_4_StartEx(GPIO4IsrHandler);
-
-    /* Changes initial priority for the GPIO interrupt */
-    isr_GPIO_4_SetPriority(DEFAULT_PRIORITY);
-    
-    /* Sets up the GPIO interrupt and enables it */
     isr_GPIO_5_StartEx(GPIO5IsrHandler);
 
-    /* Changes initial priority for the GPIO interrupt */
+    isr_GPIO_0_SetPriority(DEFAULT_PRIORITY);
+    isr_GPIO_1_SetPriority(DEFAULT_PRIORITY);
+    isr_GPIO_2_SetPriority(DEFAULT_PRIORITY);
+    isr_GPIO_3_SetPriority(DEFAULT_PRIORITY);
+    isr_GPIO_4_SetPriority(DEFAULT_PRIORITY);
     isr_GPIO_5_SetPriority(DEFAULT_PRIORITY);
 
-    /* Enable global interrupts. */
     CyGlobalIntEnable;
     
     LED_Write(LIGHT_OFF);
     UART_Start();
 
-    /* Configure the SysTick timer to generate interrupt every 1 ms
-    * and start its operation. Call the function before assigning the
-    * callbacks as it calls CySysTickInit() during first run that 
-    * re-initializes the callback addresses to the NULL pointers.
-    */
-    //CySysTickStart();
     CySysTickInit();
     
-    /* Find unused callback slot and assign the callback. */
     for (i = 0u; i < CY_SYS_SYST_NUM_OF_CALLBACKS; ++i)
     {
         if (CySysTickGetCallback(i) == NULL)
         {
-            /* Set callback */
             CySysTickSetCallback(i, SysTickISRCallback);
             break;
         }
     }
 
-    
     UART_UartPutString("BeeMill 2V0\r\n");
 
-    for(;;)
+    for (;;)
     {
-
-        while((byte = UART_UartGetChar()) !=0 )
+        while ((byte = UART_UartGetChar()) != 0)
         {
             if ((byte == EOM_CR) || (byte == EOM_LF))
             {
                 boCRLF = true;
                 byte = '\0';
             }
-            else
-            {
-                
-            }
             *RxWriteIndex = byte;
             RxWriteIndex = RxWriteIndex + 1;
             *RxWriteIndex = '\0';
-		    if (RxWriteIndex >= RxBuffer + RxBufferSize) RxWriteIndex = RxBuffer;    
-	    } 
-        
-        
-        if (boCRLF == true)
+            if (RxWriteIndex >= RxBuffer + RxBufferSize) RxWriteIndex = RxBuffer;
+        }
+
+        if (boCRLF)
         {
             boCRLF = false;
             RxWriteIndex = RxBuffer;
             sprintf(buffer, "%s", RxBuffer);
-            if (strcmp ("start",buffer) == 0){
+
+            if (strcmp("start", buffer) == 0)
+            {
                 boStart = true;
                 msCount = 0;
                 CySysTickEnable();
@@ -258,7 +164,8 @@ int main()
                 isr_GPIO_5_Enable();
                 LED_Write(LIGHT_ON);
             }
-            if (strcmp ("stop",buffer) == 0){
+            if (strcmp("stop", buffer) == 0)
+            {
                 boStart = false;
                 CySysTickStop();
                 isr_GPIO_0_Disable();
@@ -270,74 +177,46 @@ int main()
                 LED_Write(LIGHT_OFF);
             }
 
-            UART_UartPutString(buffer); 
+            UART_UartPutString(buffer);
         }
-        
-        /* Tick status fires only once every millisecond. */
-        if(boSW0 != 0u && boStart == true)
+
+        for (i = 0; i < 6; ++i)
         {
-            UART_UartPutString("Input0;");
-            sprintf(time, "%lu\r\n", intSW0);
-            UART_UartPutString(time);
-            LED_GPIO0_Write(~LED_GPIO0_Read());
-            boSW0 = false;            
-        }
-        
-        /* Tick status fires only once every millisecond. */
-        if(boSW1 != 0u && boStart == true)
-        {
-            UART_UartPutString("Input1;");
-            sprintf(time, "%lu\r\n", intSW1);
-            UART_UartPutString(time);
-            LED_GPIO1_Write(~LED_GPIO1_Read());
-            boSW1 = false;            
-        }
-        
-        /* Tick status fires only once every millisecond. */
-        if(boSW2 != 0u && boStart == true)
-        {
-            UART_UartPutString("Input2;");
-            sprintf(time, "%lu\r\n", intSW2);
-            UART_UartPutString(time);
-            LED_GPIO2_Write(~LED_GPIO2_Read());
-            boSW2 = false;            
-        }
-        
-        /* Tick status fires only once every millisecond. */
-        if(boSW3 != 0u && boStart == true)
-        {
-            UART_UartPutString("Input3;");
-            sprintf(time, "%lu\r\n", intSW3);
-            UART_UartPutString(time);
-            LED_GPIO3_Write(~LED_GPIO3_Read());
-            boSW3 = false;            
-        }
-        
-        /* Tick status fires only once every millisecond. */
-        if(boSW4 != 0u && boStart == true)
-        {
-            UART_UartPutString("Input4;");
-            sprintf(time, "%lu\r\n", intSW4);
-            UART_UartPutString(time);
-            LED_GPIO4_Write(~LED_GPIO4_Read());
-            boSW4 = false;            
-        }
-        
-        /* Tick status fires only once every millisecond. */
-        if(boSW5 != 0u && boStart == true)
-        {
-            UART_UartPutString("Input5;");
-            sprintf(time, "%lu\r\n", intSW5);
-            UART_UartPutString(time);
-            LED_GPIO5_Write(~LED_GPIO5_Read());
-            boSW5 = false;            
+            if (boSW[i] && boStart)
+            {
+                HandleSwitch(i, buffer, time);
+            }
         }
     }
+}
+
+void HandleSwitch(uint8 switchIndex, char* buffer, char* time)
+{
+    sprintf(buffer, "Input%u;", switchIndex);
+    UART_UartPutString(buffer);
+
+    sprintf(time, "%lu;", intSW[switchIndex]);
+    UART_UartPutString(time);
+
+    sprintf(buffer, "%u\r\n", boUART[switchIndex]);
+    UART_UartPutString(buffer);
+
+    // Toggle the LED based on switch index
+    switch (switchIndex)
+    {
+        case 0: LED_GPIO0_Write(~LED_GPIO0_Read()); break;
+        case 1: LED_GPIO1_Write(~LED_GPIO1_Read()); break;
+        case 2: LED_GPIO2_Write(~LED_GPIO2_Read()); break;
+        case 3: LED_GPIO3_Write(~LED_GPIO3_Read()); break;
+        case 4: LED_GPIO4_Write(~LED_GPIO4_Read()); break;
+        case 5: LED_GPIO5_Write(~LED_GPIO5_Read()); break;
+    }
+
+    boUART[switchIndex] = !boUART[switchIndex];
+    boSW[switchIndex] = false;
 }
 
 void SysTickISRCallback(void)
 {
     msCount++;
 }
-
-/* [] END OF FILE */

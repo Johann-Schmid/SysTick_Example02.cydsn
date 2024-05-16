@@ -1,6 +1,6 @@
 -- ======================================================================
 -- SysTick_Example02.ctl generated from SysTick_Example02
--- 05/14/2024 at 13:44
+-- 05/16/2024 at 13:57
 -- This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 -- ======================================================================
 

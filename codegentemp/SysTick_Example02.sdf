@@ -1,6 +1,6 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2024-05-14T11:44:11Z")
+ (DATE "2024-05-16T11:57:31Z")
  (DESIGN "SysTick_Example02")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")

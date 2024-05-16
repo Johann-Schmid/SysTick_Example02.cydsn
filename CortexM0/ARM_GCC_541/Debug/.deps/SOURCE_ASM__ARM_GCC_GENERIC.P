@@ -1,8 +1,8 @@
-C:/SysTick_Example02.cydsn/SysTick_Example02.cydsn/CortexM0/ARM_GCC_541/Debug/CyBootAsmGnu.o : C:/SysTick_Example02.cydsn/SysTick_Example02.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s C:/SysTick_Example02.cydsn/SysTick_Example02.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc C:/SysTick_Example02.cydsn/SysTick_Example02.cydsn/Generated_Source/PSoC4/cyfittergnu.inc 
+D:/SysTick_Example02.cydsn/CortexM0/ARM_GCC_541/Debug/CyBootAsmGnu.o : D:/SysTick_Example02.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s D:/SysTick_Example02.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc D:/SysTick_Example02.cydsn/Generated_Source/PSoC4/cyfittergnu.inc 
 
-C:/SysTick_Example02.cydsn/SysTick_Example02.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s : 
+D:/SysTick_Example02.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s : 
 
-C:/SysTick_Example02.cydsn/SysTick_Example02.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc : 
+D:/SysTick_Example02.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc : 
 
-C:/SysTick_Example02.cydsn/SysTick_Example02.cydsn/Generated_Source/PSoC4/cyfittergnu.inc : 
+D:/SysTick_Example02.cydsn/Generated_Source/PSoC4/cyfittergnu.inc : 
 

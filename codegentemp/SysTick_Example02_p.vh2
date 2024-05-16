@@ -1,5 +1,5 @@
 -- Project:   SysTick_Example02
--- Generated: 05/14/2024 13:44:11
+-- Generated: 05/16/2024 13:57:30
 -- PSoC Creator  4.4
 
 ENTITY SysTick_Example02 IS
@@ -87,12 +87,15 @@ ARCHITECTURE __DEFAULT__ OF SysTick_Example02 IS
     ATTRIBUTE GROUND OF zero : SIGNAL IS true;
     ATTRIBUTE Location OF ClockGenBlock : LABEL IS "F(CLK_GEN,0)";
     ATTRIBUTE lib_model OF SW2(0) : LABEL IS "iocell1";
+    ATTRIBUTE Location OF SW2(0) : LABEL IS "P3[0]";
     ATTRIBUTE lib_model OF SW0(0) : LABEL IS "iocell2";
-    ATTRIBUTE Location OF SW0(0) : LABEL IS "P0[0]";
+    ATTRIBUTE Location OF SW0(0) : LABEL IS "P0[7]";
     ATTRIBUTE lib_model OF LED(0) : LABEL IS "iocell3";
     ATTRIBUTE Location OF LED(0) : LABEL IS "P1[6]";
     ATTRIBUTE lib_model OF SW1(0) : LABEL IS "iocell4";
+    ATTRIBUTE Location OF SW1(0) : LABEL IS "P2[0]";
     ATTRIBUTE lib_model OF SW3(0) : LABEL IS "iocell5";
+    ATTRIBUTE Location OF SW3(0) : LABEL IS "P1[0]";
     ATTRIBUTE lib_model OF \UART:tx(0)\ : LABEL IS "iocell6";
     ATTRIBUTE Location OF \UART:tx(0)\ : LABEL IS "P7[1]";
     ATTRIBUTE lib_model OF \UART:rx(0)\ : LABEL IS "iocell7";
@@ -108,6 +111,7 @@ ARCHITECTURE __DEFAULT__ OF SysTick_Example02 IS
     ATTRIBUTE lib_model OF SW4(0) : LABEL IS "iocell12";
     ATTRIBUTE Location OF SW4(0) : LABEL IS "P4[0]";
     ATTRIBUTE lib_model OF SW5(0) : LABEL IS "iocell13";
+    ATTRIBUTE Location OF SW5(0) : LABEL IS "P5[0]";
     ATTRIBUTE lib_model OF LED_GPIO4(0) : LABEL IS "iocell14";
     ATTRIBUTE Location OF LED_GPIO4(0) : LABEL IS "P2[1]";
     ATTRIBUTE lib_model OF LED_GPIO5(0) : LABEL IS "iocell15";

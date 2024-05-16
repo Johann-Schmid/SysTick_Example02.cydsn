@@ -10366,13 +10366,13 @@ ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  453              	.set SW0__0__DR_INV, CYREG_GPIO_PRT0_DR_INV
  454              	.set SW0__0__DR_SET, CYREG_GPIO_PRT0_DR_SET
  455              	.set SW0__0__HSIOM, CYREG_HSIOM_PORT_SEL0
- 456              	.set SW0__0__HSIOM_MASK, 0x0000000F
- 457              	.set SW0__0__HSIOM_SHIFT, 0
+ 456              	.set SW0__0__HSIOM_MASK, 0xF0000000
+ 457              	.set SW0__0__HSIOM_SHIFT, 28
  458              	.set SW0__0__INTCFG, CYREG_GPIO_PRT0_INTR_CFG
  459              	.set SW0__0__INTR, CYREG_GPIO_PRT0_INTR
  460              	.set SW0__0__INTR_CFG, CYREG_GPIO_PRT0_INTR_CFG
  461              	.set SW0__0__INTSTAT, CYREG_GPIO_PRT0_INTR
- 462              	.set SW0__0__MASK, 0x01
+ 462              	.set SW0__0__MASK, 0x80
  463              	.set SW0__0__PA__CFG0, CYREG_UDB_PA0_CFG0
  464              	.set SW0__0__PA__CFG1, CYREG_UDB_PA0_CFG1
  465              	.set SW0__0__PA__CFG10, CYREG_UDB_PA0_CFG10
@@ -10395,7 +10395,7 @@ ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  479              	.set SW0__0__PC2, CYREG_GPIO_PRT0_PC2
  480              	.set SW0__0__PORT, 0
  481              	.set SW0__0__PS, CYREG_GPIO_PRT0_PS
- 482              	.set SW0__0__SHIFT, 0
+ 482              	.set SW0__0__SHIFT, 7
  483              	.set SW0__DR, CYREG_GPIO_PRT0_DR
  484              	.set SW0__DR_CLR, CYREG_GPIO_PRT0_DR_CLR
  485              	.set SW0__DR_INV, CYREG_GPIO_PRT0_DR_INV
@@ -10404,7 +10404,7 @@ ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  488              	.set SW0__INTR, CYREG_GPIO_PRT0_INTR
  489              	.set SW0__INTR_CFG, CYREG_GPIO_PRT0_INTR_CFG
  490              	.set SW0__INTSTAT, CYREG_GPIO_PRT0_INTR
- 491              	.set SW0__MASK, 0x01
+ 491              	.set SW0__MASK, 0x80
  492              	.set SW0__PA__CFG0, CYREG_UDB_PA0_CFG0
  493              	.set SW0__PA__CFG1, CYREG_UDB_PA0_CFG1
  494              	.set SW0__PA__CFG10, CYREG_UDB_PA0_CFG10
@@ -10424,283 +10424,283 @@ ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  508              	.set SW0__PC2, CYREG_GPIO_PRT0_PC2
  509              	.set SW0__PORT, 0
  510              	.set SW0__PS, CYREG_GPIO_PRT0_PS
- 511              	.set SW0__SHIFT, 0
+ 511              	.set SW0__SHIFT, 7
  512              	.set SW0__SNAP, CYREG_GPIO_PRT0_INTR
  513              	
  514              	/* SW1 */
- 515              	.set SW1__0__DR, CYREG_GPIO_PRT3_DR
- 516              	.set SW1__0__DR_CLR, CYREG_GPIO_PRT3_DR_CLR
- 517              	.set SW1__0__DR_INV, CYREG_GPIO_PRT3_DR_INV
- 518              	.set SW1__0__DR_SET, CYREG_GPIO_PRT3_DR_SET
- 519              	.set SW1__0__HSIOM, CYREG_HSIOM_PORT_SEL3
+ 515              	.set SW1__0__DR, CYREG_GPIO_PRT2_DR
+ 516              	.set SW1__0__DR_CLR, CYREG_GPIO_PRT2_DR_CLR
+ 517              	.set SW1__0__DR_INV, CYREG_GPIO_PRT2_DR_INV
+ 518              	.set SW1__0__DR_SET, CYREG_GPIO_PRT2_DR_SET
+ 519              	.set SW1__0__HSIOM, CYREG_HSIOM_PORT_SEL2
  520              	.set SW1__0__HSIOM_MASK, 0x0000000F
  521              	.set SW1__0__HSIOM_SHIFT, 0
- 522              	.set SW1__0__INTCFG, CYREG_GPIO_PRT3_INTR_CFG
- 523              	.set SW1__0__INTR, CYREG_GPIO_PRT3_INTR
- 524              	.set SW1__0__INTR_CFG, CYREG_GPIO_PRT3_INTR_CFG
+ 522              	.set SW1__0__INTCFG, CYREG_GPIO_PRT2_INTR_CFG
+ 523              	.set SW1__0__INTR, CYREG_GPIO_PRT2_INTR
+ 524              	.set SW1__0__INTR_CFG, CYREG_GPIO_PRT2_INTR_CFG
 ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 175
 
 
- 525              	.set SW1__0__INTSTAT, CYREG_GPIO_PRT3_INTR
+ 525              	.set SW1__0__INTSTAT, CYREG_GPIO_PRT2_INTR
  526              	.set SW1__0__MASK, 0x01
- 527              	.set SW1__0__PA__CFG0, CYREG_UDB_PA3_CFG0
- 528              	.set SW1__0__PA__CFG1, CYREG_UDB_PA3_CFG1
- 529              	.set SW1__0__PA__CFG10, CYREG_UDB_PA3_CFG10
- 530              	.set SW1__0__PA__CFG11, CYREG_UDB_PA3_CFG11
- 531              	.set SW1__0__PA__CFG12, CYREG_UDB_PA3_CFG12
- 532              	.set SW1__0__PA__CFG13, CYREG_UDB_PA3_CFG13
- 533              	.set SW1__0__PA__CFG14, CYREG_UDB_PA3_CFG14
- 534              	.set SW1__0__PA__CFG2, CYREG_UDB_PA3_CFG2
- 535              	.set SW1__0__PA__CFG3, CYREG_UDB_PA3_CFG3
- 536              	.set SW1__0__PA__CFG4, CYREG_UDB_PA3_CFG4
- 537              	.set SW1__0__PA__CFG5, CYREG_UDB_PA3_CFG5
- 538              	.set SW1__0__PA__CFG6, CYREG_UDB_PA3_CFG6
- 539              	.set SW1__0__PA__CFG7, CYREG_UDB_PA3_CFG7
- 540              	.set SW1__0__PA__CFG8, CYREG_UDB_PA3_CFG8
- 541              	.set SW1__0__PA__CFG9, CYREG_UDB_PA3_CFG9
- 542              	.set SW1__0__PC, CYREG_GPIO_PRT3_PC
- 543              	.set SW1__0__PC2, CYREG_GPIO_PRT3_PC2
- 544              	.set SW1__0__PORT, 3
- 545              	.set SW1__0__PS, CYREG_GPIO_PRT3_PS
+ 527              	.set SW1__0__PA__CFG0, CYREG_UDB_PA2_CFG0
+ 528              	.set SW1__0__PA__CFG1, CYREG_UDB_PA2_CFG1
+ 529              	.set SW1__0__PA__CFG10, CYREG_UDB_PA2_CFG10
+ 530              	.set SW1__0__PA__CFG11, CYREG_UDB_PA2_CFG11
+ 531              	.set SW1__0__PA__CFG12, CYREG_UDB_PA2_CFG12
+ 532              	.set SW1__0__PA__CFG13, CYREG_UDB_PA2_CFG13
+ 533              	.set SW1__0__PA__CFG14, CYREG_UDB_PA2_CFG14
+ 534              	.set SW1__0__PA__CFG2, CYREG_UDB_PA2_CFG2
+ 535              	.set SW1__0__PA__CFG3, CYREG_UDB_PA2_CFG3
+ 536              	.set SW1__0__PA__CFG4, CYREG_UDB_PA2_CFG4
+ 537              	.set SW1__0__PA__CFG5, CYREG_UDB_PA2_CFG5
+ 538              	.set SW1__0__PA__CFG6, CYREG_UDB_PA2_CFG6
+ 539              	.set SW1__0__PA__CFG7, CYREG_UDB_PA2_CFG7
+ 540              	.set SW1__0__PA__CFG8, CYREG_UDB_PA2_CFG8
+ 541              	.set SW1__0__PA__CFG9, CYREG_UDB_PA2_CFG9
+ 542              	.set SW1__0__PC, CYREG_GPIO_PRT2_PC
+ 543              	.set SW1__0__PC2, CYREG_GPIO_PRT2_PC2
+ 544              	.set SW1__0__PORT, 2
+ 545              	.set SW1__0__PS, CYREG_GPIO_PRT2_PS
  546              	.set SW1__0__SHIFT, 0
- 547              	.set SW1__DR, CYREG_GPIO_PRT3_DR
- 548              	.set SW1__DR_CLR, CYREG_GPIO_PRT3_DR_CLR
- 549              	.set SW1__DR_INV, CYREG_GPIO_PRT3_DR_INV
- 550              	.set SW1__DR_SET, CYREG_GPIO_PRT3_DR_SET
- 551              	.set SW1__INTCFG, CYREG_GPIO_PRT3_INTR_CFG
- 552              	.set SW1__INTR, CYREG_GPIO_PRT3_INTR
- 553              	.set SW1__INTR_CFG, CYREG_GPIO_PRT3_INTR_CFG
- 554              	.set SW1__INTSTAT, CYREG_GPIO_PRT3_INTR
+ 547              	.set SW1__DR, CYREG_GPIO_PRT2_DR
+ 548              	.set SW1__DR_CLR, CYREG_GPIO_PRT2_DR_CLR
+ 549              	.set SW1__DR_INV, CYREG_GPIO_PRT2_DR_INV
+ 550              	.set SW1__DR_SET, CYREG_GPIO_PRT2_DR_SET
+ 551              	.set SW1__INTCFG, CYREG_GPIO_PRT2_INTR_CFG
+ 552              	.set SW1__INTR, CYREG_GPIO_PRT2_INTR
+ 553              	.set SW1__INTR_CFG, CYREG_GPIO_PRT2_INTR_CFG
+ 554              	.set SW1__INTSTAT, CYREG_GPIO_PRT2_INTR
  555              	.set SW1__MASK, 0x01
- 556              	.set SW1__PA__CFG0, CYREG_UDB_PA3_CFG0
- 557              	.set SW1__PA__CFG1, CYREG_UDB_PA3_CFG1
- 558              	.set SW1__PA__CFG10, CYREG_UDB_PA3_CFG10
- 559              	.set SW1__PA__CFG11, CYREG_UDB_PA3_CFG11
- 560              	.set SW1__PA__CFG12, CYREG_UDB_PA3_CFG12
- 561              	.set SW1__PA__CFG13, CYREG_UDB_PA3_CFG13
- 562              	.set SW1__PA__CFG14, CYREG_UDB_PA3_CFG14
- 563              	.set SW1__PA__CFG2, CYREG_UDB_PA3_CFG2
- 564              	.set SW1__PA__CFG3, CYREG_UDB_PA3_CFG3
- 565              	.set SW1__PA__CFG4, CYREG_UDB_PA3_CFG4
- 566              	.set SW1__PA__CFG5, CYREG_UDB_PA3_CFG5
- 567              	.set SW1__PA__CFG6, CYREG_UDB_PA3_CFG6
- 568              	.set SW1__PA__CFG7, CYREG_UDB_PA3_CFG7
- 569              	.set SW1__PA__CFG8, CYREG_UDB_PA3_CFG8
- 570              	.set SW1__PA__CFG9, CYREG_UDB_PA3_CFG9
- 571              	.set SW1__PC, CYREG_GPIO_PRT3_PC
- 572              	.set SW1__PC2, CYREG_GPIO_PRT3_PC2
- 573              	.set SW1__PORT, 3
- 574              	.set SW1__PS, CYREG_GPIO_PRT3_PS
+ 556              	.set SW1__PA__CFG0, CYREG_UDB_PA2_CFG0
+ 557              	.set SW1__PA__CFG1, CYREG_UDB_PA2_CFG1
+ 558              	.set SW1__PA__CFG10, CYREG_UDB_PA2_CFG10
+ 559              	.set SW1__PA__CFG11, CYREG_UDB_PA2_CFG11
+ 560              	.set SW1__PA__CFG12, CYREG_UDB_PA2_CFG12
+ 561              	.set SW1__PA__CFG13, CYREG_UDB_PA2_CFG13
+ 562              	.set SW1__PA__CFG14, CYREG_UDB_PA2_CFG14
+ 563              	.set SW1__PA__CFG2, CYREG_UDB_PA2_CFG2
+ 564              	.set SW1__PA__CFG3, CYREG_UDB_PA2_CFG3
+ 565              	.set SW1__PA__CFG4, CYREG_UDB_PA2_CFG4
+ 566              	.set SW1__PA__CFG5, CYREG_UDB_PA2_CFG5
+ 567              	.set SW1__PA__CFG6, CYREG_UDB_PA2_CFG6
+ 568              	.set SW1__PA__CFG7, CYREG_UDB_PA2_CFG7
+ 569              	.set SW1__PA__CFG8, CYREG_UDB_PA2_CFG8
+ 570              	.set SW1__PA__CFG9, CYREG_UDB_PA2_CFG9
+ 571              	.set SW1__PC, CYREG_GPIO_PRT2_PC
+ 572              	.set SW1__PC2, CYREG_GPIO_PRT2_PC2
+ 573              	.set SW1__PORT, 2
+ 574              	.set SW1__PS, CYREG_GPIO_PRT2_PS
  575              	.set SW1__SHIFT, 0
- 576              	.set SW1__SNAP, CYREG_GPIO_PRT3_INTR
+ 576              	.set SW1__SNAP, CYREG_GPIO_PRT2_INTR
  577              	
  578              	/* SW2 */
- 579              	.set SW2__0__DR, CYREG_GPIO_PRT5_DR
- 580              	.set SW2__0__DR_CLR, CYREG_GPIO_PRT5_DR_CLR
- 581              	.set SW2__0__DR_INV, CYREG_GPIO_PRT5_DR_INV
+ 579              	.set SW2__0__DR, CYREG_GPIO_PRT3_DR
+ 580              	.set SW2__0__DR_CLR, CYREG_GPIO_PRT3_DR_CLR
+ 581              	.set SW2__0__DR_INV, CYREG_GPIO_PRT3_DR_INV
 ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 176
 
 
- 582              	.set SW2__0__DR_SET, CYREG_GPIO_PRT5_DR_SET
- 583              	.set SW2__0__HSIOM, CYREG_HSIOM_PORT_SEL5
+ 582              	.set SW2__0__DR_SET, CYREG_GPIO_PRT3_DR_SET
+ 583              	.set SW2__0__HSIOM, CYREG_HSIOM_PORT_SEL3
  584              	.set SW2__0__HSIOM_MASK, 0x0000000F
  585              	.set SW2__0__HSIOM_SHIFT, 0
- 586              	.set SW2__0__INTCFG, CYREG_GPIO_PRT5_INTR_CFG
- 587              	.set SW2__0__INTR, CYREG_GPIO_PRT5_INTR
- 588              	.set SW2__0__INTR_CFG, CYREG_GPIO_PRT5_INTR_CFG
- 589              	.set SW2__0__INTSTAT, CYREG_GPIO_PRT5_INTR
+ 586              	.set SW2__0__INTCFG, CYREG_GPIO_PRT3_INTR_CFG
+ 587              	.set SW2__0__INTR, CYREG_GPIO_PRT3_INTR
+ 588              	.set SW2__0__INTR_CFG, CYREG_GPIO_PRT3_INTR_CFG
+ 589              	.set SW2__0__INTSTAT, CYREG_GPIO_PRT3_INTR
  590              	.set SW2__0__MASK, 0x01
- 591              	.set SW2__0__PC, CYREG_GPIO_PRT5_PC
- 592              	.set SW2__0__PC2, CYREG_GPIO_PRT5_PC2
- 593              	.set SW2__0__PORT, 5
- 594              	.set SW2__0__PS, CYREG_GPIO_PRT5_PS
- 595              	.set SW2__0__SHIFT, 0
- 596              	.set SW2__DR, CYREG_GPIO_PRT5_DR
- 597              	.set SW2__DR_CLR, CYREG_GPIO_PRT5_DR_CLR
- 598              	.set SW2__DR_INV, CYREG_GPIO_PRT5_DR_INV
- 599              	.set SW2__DR_SET, CYREG_GPIO_PRT5_DR_SET
- 600              	.set SW2__INTCFG, CYREG_GPIO_PRT5_INTR_CFG
- 601              	.set SW2__INTR, CYREG_GPIO_PRT5_INTR
- 602              	.set SW2__INTR_CFG, CYREG_GPIO_PRT5_INTR_CFG
- 603              	.set SW2__INTSTAT, CYREG_GPIO_PRT5_INTR
- 604              	.set SW2__MASK, 0x01
- 605              	.set SW2__PC, CYREG_GPIO_PRT5_PC
- 606              	.set SW2__PC2, CYREG_GPIO_PRT5_PC2
- 607              	.set SW2__PORT, 5
- 608              	.set SW2__PS, CYREG_GPIO_PRT5_PS
- 609              	.set SW2__SHIFT, 0
- 610              	.set SW2__SNAP, CYREG_GPIO_PRT5_INTR
- 611              	
- 612              	/* SW3 */
- 613              	.set SW3__0__DR, CYREG_GPIO_PRT1_DR
- 614              	.set SW3__0__DR_CLR, CYREG_GPIO_PRT1_DR_CLR
- 615              	.set SW3__0__DR_INV, CYREG_GPIO_PRT1_DR_INV
- 616              	.set SW3__0__DR_SET, CYREG_GPIO_PRT1_DR_SET
- 617              	.set SW3__0__HSIOM, CYREG_HSIOM_PORT_SEL1
- 618              	.set SW3__0__HSIOM_MASK, 0x0000000F
- 619              	.set SW3__0__HSIOM_SHIFT, 0
- 620              	.set SW3__0__INTCFG, CYREG_GPIO_PRT1_INTR_CFG
- 621              	.set SW3__0__INTR, CYREG_GPIO_PRT1_INTR
- 622              	.set SW3__0__INTR_CFG, CYREG_GPIO_PRT1_INTR_CFG
- 623              	.set SW3__0__INTSTAT, CYREG_GPIO_PRT1_INTR
- 624              	.set SW3__0__MASK, 0x01
- 625              	.set SW3__0__PA__CFG0, CYREG_UDB_PA1_CFG0
- 626              	.set SW3__0__PA__CFG1, CYREG_UDB_PA1_CFG1
- 627              	.set SW3__0__PA__CFG10, CYREG_UDB_PA1_CFG10
- 628              	.set SW3__0__PA__CFG11, CYREG_UDB_PA1_CFG11
- 629              	.set SW3__0__PA__CFG12, CYREG_UDB_PA1_CFG12
- 630              	.set SW3__0__PA__CFG13, CYREG_UDB_PA1_CFG13
- 631              	.set SW3__0__PA__CFG14, CYREG_UDB_PA1_CFG14
- 632              	.set SW3__0__PA__CFG2, CYREG_UDB_PA1_CFG2
- 633              	.set SW3__0__PA__CFG3, CYREG_UDB_PA1_CFG3
- 634              	.set SW3__0__PA__CFG4, CYREG_UDB_PA1_CFG4
- 635              	.set SW3__0__PA__CFG5, CYREG_UDB_PA1_CFG5
- 636              	.set SW3__0__PA__CFG6, CYREG_UDB_PA1_CFG6
- 637              	.set SW3__0__PA__CFG7, CYREG_UDB_PA1_CFG7
- 638              	.set SW3__0__PA__CFG8, CYREG_UDB_PA1_CFG8
+ 591              	.set SW2__0__PA__CFG0, CYREG_UDB_PA3_CFG0
+ 592              	.set SW2__0__PA__CFG1, CYREG_UDB_PA3_CFG1
+ 593              	.set SW2__0__PA__CFG10, CYREG_UDB_PA3_CFG10
+ 594              	.set SW2__0__PA__CFG11, CYREG_UDB_PA3_CFG11
+ 595              	.set SW2__0__PA__CFG12, CYREG_UDB_PA3_CFG12
+ 596              	.set SW2__0__PA__CFG13, CYREG_UDB_PA3_CFG13
+ 597              	.set SW2__0__PA__CFG14, CYREG_UDB_PA3_CFG14
+ 598              	.set SW2__0__PA__CFG2, CYREG_UDB_PA3_CFG2
+ 599              	.set SW2__0__PA__CFG3, CYREG_UDB_PA3_CFG3
+ 600              	.set SW2__0__PA__CFG4, CYREG_UDB_PA3_CFG4
+ 601              	.set SW2__0__PA__CFG5, CYREG_UDB_PA3_CFG5
+ 602              	.set SW2__0__PA__CFG6, CYREG_UDB_PA3_CFG6
+ 603              	.set SW2__0__PA__CFG7, CYREG_UDB_PA3_CFG7
+ 604              	.set SW2__0__PA__CFG8, CYREG_UDB_PA3_CFG8
+ 605              	.set SW2__0__PA__CFG9, CYREG_UDB_PA3_CFG9
+ 606              	.set SW2__0__PC, CYREG_GPIO_PRT3_PC
+ 607              	.set SW2__0__PC2, CYREG_GPIO_PRT3_PC2
+ 608              	.set SW2__0__PORT, 3
+ 609              	.set SW2__0__PS, CYREG_GPIO_PRT3_PS
+ 610              	.set SW2__0__SHIFT, 0
+ 611              	.set SW2__DR, CYREG_GPIO_PRT3_DR
+ 612              	.set SW2__DR_CLR, CYREG_GPIO_PRT3_DR_CLR
+ 613              	.set SW2__DR_INV, CYREG_GPIO_PRT3_DR_INV
+ 614              	.set SW2__DR_SET, CYREG_GPIO_PRT3_DR_SET
+ 615              	.set SW2__INTCFG, CYREG_GPIO_PRT3_INTR_CFG
+ 616              	.set SW2__INTR, CYREG_GPIO_PRT3_INTR
+ 617              	.set SW2__INTR_CFG, CYREG_GPIO_PRT3_INTR_CFG
+ 618              	.set SW2__INTSTAT, CYREG_GPIO_PRT3_INTR
+ 619              	.set SW2__MASK, 0x01
+ 620              	.set SW2__PA__CFG0, CYREG_UDB_PA3_CFG0
+ 621              	.set SW2__PA__CFG1, CYREG_UDB_PA3_CFG1
+ 622              	.set SW2__PA__CFG10, CYREG_UDB_PA3_CFG10
+ 623              	.set SW2__PA__CFG11, CYREG_UDB_PA3_CFG11
+ 624              	.set SW2__PA__CFG12, CYREG_UDB_PA3_CFG12
+ 625              	.set SW2__PA__CFG13, CYREG_UDB_PA3_CFG13
+ 626              	.set SW2__PA__CFG14, CYREG_UDB_PA3_CFG14
+ 627              	.set SW2__PA__CFG2, CYREG_UDB_PA3_CFG2
+ 628              	.set SW2__PA__CFG3, CYREG_UDB_PA3_CFG3
+ 629              	.set SW2__PA__CFG4, CYREG_UDB_PA3_CFG4
+ 630              	.set SW2__PA__CFG5, CYREG_UDB_PA3_CFG5
+ 631              	.set SW2__PA__CFG6, CYREG_UDB_PA3_CFG6
+ 632              	.set SW2__PA__CFG7, CYREG_UDB_PA3_CFG7
+ 633              	.set SW2__PA__CFG8, CYREG_UDB_PA3_CFG8
+ 634              	.set SW2__PA__CFG9, CYREG_UDB_PA3_CFG9
+ 635              	.set SW2__PC, CYREG_GPIO_PRT3_PC
+ 636              	.set SW2__PC2, CYREG_GPIO_PRT3_PC2
+ 637              	.set SW2__PORT, 3
+ 638              	.set SW2__PS, CYREG_GPIO_PRT3_PS
 ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 177
 
 
- 639              	.set SW3__0__PA__CFG9, CYREG_UDB_PA1_CFG9
- 640              	.set SW3__0__PC, CYREG_GPIO_PRT1_PC
- 641              	.set SW3__0__PC2, CYREG_GPIO_PRT1_PC2
- 642              	.set SW3__0__PORT, 1
- 643              	.set SW3__0__PS, CYREG_GPIO_PRT1_PS
- 644              	.set SW3__0__SHIFT, 0
- 645              	.set SW3__DR, CYREG_GPIO_PRT1_DR
- 646              	.set SW3__DR_CLR, CYREG_GPIO_PRT1_DR_CLR
- 647              	.set SW3__DR_INV, CYREG_GPIO_PRT1_DR_INV
- 648              	.set SW3__DR_SET, CYREG_GPIO_PRT1_DR_SET
- 649              	.set SW3__INTCFG, CYREG_GPIO_PRT1_INTR_CFG
- 650              	.set SW3__INTR, CYREG_GPIO_PRT1_INTR
- 651              	.set SW3__INTR_CFG, CYREG_GPIO_PRT1_INTR_CFG
- 652              	.set SW3__INTSTAT, CYREG_GPIO_PRT1_INTR
- 653              	.set SW3__MASK, 0x01
- 654              	.set SW3__PA__CFG0, CYREG_UDB_PA1_CFG0
- 655              	.set SW3__PA__CFG1, CYREG_UDB_PA1_CFG1
- 656              	.set SW3__PA__CFG10, CYREG_UDB_PA1_CFG10
- 657              	.set SW3__PA__CFG11, CYREG_UDB_PA1_CFG11
- 658              	.set SW3__PA__CFG12, CYREG_UDB_PA1_CFG12
- 659              	.set SW3__PA__CFG13, CYREG_UDB_PA1_CFG13
- 660              	.set SW3__PA__CFG14, CYREG_UDB_PA1_CFG14
- 661              	.set SW3__PA__CFG2, CYREG_UDB_PA1_CFG2
- 662              	.set SW3__PA__CFG3, CYREG_UDB_PA1_CFG3
- 663              	.set SW3__PA__CFG4, CYREG_UDB_PA1_CFG4
- 664              	.set SW3__PA__CFG5, CYREG_UDB_PA1_CFG5
- 665              	.set SW3__PA__CFG6, CYREG_UDB_PA1_CFG6
- 666              	.set SW3__PA__CFG7, CYREG_UDB_PA1_CFG7
- 667              	.set SW3__PA__CFG8, CYREG_UDB_PA1_CFG8
- 668              	.set SW3__PA__CFG9, CYREG_UDB_PA1_CFG9
- 669              	.set SW3__PC, CYREG_GPIO_PRT1_PC
- 670              	.set SW3__PC2, CYREG_GPIO_PRT1_PC2
- 671              	.set SW3__PORT, 1
- 672              	.set SW3__PS, CYREG_GPIO_PRT1_PS
- 673              	.set SW3__SHIFT, 0
- 674              	.set SW3__SNAP, CYREG_GPIO_PRT1_INTR
- 675              	
- 676              	/* SW4 */
- 677              	.set SW4__0__DR, CYREG_GPIO_PRT4_DR
- 678              	.set SW4__0__DR_CLR, CYREG_GPIO_PRT4_DR_CLR
- 679              	.set SW4__0__DR_INV, CYREG_GPIO_PRT4_DR_INV
- 680              	.set SW4__0__DR_SET, CYREG_GPIO_PRT4_DR_SET
- 681              	.set SW4__0__HSIOM, CYREG_HSIOM_PORT_SEL4
- 682              	.set SW4__0__HSIOM_MASK, 0x0000000F
- 683              	.set SW4__0__HSIOM_SHIFT, 0
- 684              	.set SW4__0__INTCFG, CYREG_GPIO_PRT4_INTR_CFG
- 685              	.set SW4__0__INTR, CYREG_GPIO_PRT4_INTR
- 686              	.set SW4__0__INTR_CFG, CYREG_GPIO_PRT4_INTR_CFG
- 687              	.set SW4__0__INTSTAT, CYREG_GPIO_PRT4_INTR
- 688              	.set SW4__0__MASK, 0x01
- 689              	.set SW4__0__PC, CYREG_GPIO_PRT4_PC
- 690              	.set SW4__0__PC2, CYREG_GPIO_PRT4_PC2
- 691              	.set SW4__0__PORT, 4
- 692              	.set SW4__0__PS, CYREG_GPIO_PRT4_PS
- 693              	.set SW4__0__SHIFT, 0
- 694              	.set SW4__DR, CYREG_GPIO_PRT4_DR
- 695              	.set SW4__DR_CLR, CYREG_GPIO_PRT4_DR_CLR
+ 639              	.set SW2__SHIFT, 0
+ 640              	.set SW2__SNAP, CYREG_GPIO_PRT3_INTR
+ 641              	
+ 642              	/* SW3 */
+ 643              	.set SW3__0__DR, CYREG_GPIO_PRT1_DR
+ 644              	.set SW3__0__DR_CLR, CYREG_GPIO_PRT1_DR_CLR
+ 645              	.set SW3__0__DR_INV, CYREG_GPIO_PRT1_DR_INV
+ 646              	.set SW3__0__DR_SET, CYREG_GPIO_PRT1_DR_SET
+ 647              	.set SW3__0__HSIOM, CYREG_HSIOM_PORT_SEL1
+ 648              	.set SW3__0__HSIOM_MASK, 0x0000000F
+ 649              	.set SW3__0__HSIOM_SHIFT, 0
+ 650              	.set SW3__0__INTCFG, CYREG_GPIO_PRT1_INTR_CFG
+ 651              	.set SW3__0__INTR, CYREG_GPIO_PRT1_INTR
+ 652              	.set SW3__0__INTR_CFG, CYREG_GPIO_PRT1_INTR_CFG
+ 653              	.set SW3__0__INTSTAT, CYREG_GPIO_PRT1_INTR
+ 654              	.set SW3__0__MASK, 0x01
+ 655              	.set SW3__0__PA__CFG0, CYREG_UDB_PA1_CFG0
+ 656              	.set SW3__0__PA__CFG1, CYREG_UDB_PA1_CFG1
+ 657              	.set SW3__0__PA__CFG10, CYREG_UDB_PA1_CFG10
+ 658              	.set SW3__0__PA__CFG11, CYREG_UDB_PA1_CFG11
+ 659              	.set SW3__0__PA__CFG12, CYREG_UDB_PA1_CFG12
+ 660              	.set SW3__0__PA__CFG13, CYREG_UDB_PA1_CFG13
+ 661              	.set SW3__0__PA__CFG14, CYREG_UDB_PA1_CFG14
+ 662              	.set SW3__0__PA__CFG2, CYREG_UDB_PA1_CFG2
+ 663              	.set SW3__0__PA__CFG3, CYREG_UDB_PA1_CFG3
+ 664              	.set SW3__0__PA__CFG4, CYREG_UDB_PA1_CFG4
+ 665              	.set SW3__0__PA__CFG5, CYREG_UDB_PA1_CFG5
+ 666              	.set SW3__0__PA__CFG6, CYREG_UDB_PA1_CFG6
+ 667              	.set SW3__0__PA__CFG7, CYREG_UDB_PA1_CFG7
+ 668              	.set SW3__0__PA__CFG8, CYREG_UDB_PA1_CFG8
+ 669              	.set SW3__0__PA__CFG9, CYREG_UDB_PA1_CFG9
+ 670              	.set SW3__0__PC, CYREG_GPIO_PRT1_PC
+ 671              	.set SW3__0__PC2, CYREG_GPIO_PRT1_PC2
+ 672              	.set SW3__0__PORT, 1
+ 673              	.set SW3__0__PS, CYREG_GPIO_PRT1_PS
+ 674              	.set SW3__0__SHIFT, 0
+ 675              	.set SW3__DR, CYREG_GPIO_PRT1_DR
+ 676              	.set SW3__DR_CLR, CYREG_GPIO_PRT1_DR_CLR
+ 677              	.set SW3__DR_INV, CYREG_GPIO_PRT1_DR_INV
+ 678              	.set SW3__DR_SET, CYREG_GPIO_PRT1_DR_SET
+ 679              	.set SW3__INTCFG, CYREG_GPIO_PRT1_INTR_CFG
+ 680              	.set SW3__INTR, CYREG_GPIO_PRT1_INTR
+ 681              	.set SW3__INTR_CFG, CYREG_GPIO_PRT1_INTR_CFG
+ 682              	.set SW3__INTSTAT, CYREG_GPIO_PRT1_INTR
+ 683              	.set SW3__MASK, 0x01
+ 684              	.set SW3__PA__CFG0, CYREG_UDB_PA1_CFG0
+ 685              	.set SW3__PA__CFG1, CYREG_UDB_PA1_CFG1
+ 686              	.set SW3__PA__CFG10, CYREG_UDB_PA1_CFG10
+ 687              	.set SW3__PA__CFG11, CYREG_UDB_PA1_CFG11
+ 688              	.set SW3__PA__CFG12, CYREG_UDB_PA1_CFG12
+ 689              	.set SW3__PA__CFG13, CYREG_UDB_PA1_CFG13
+ 690              	.set SW3__PA__CFG14, CYREG_UDB_PA1_CFG14
+ 691              	.set SW3__PA__CFG2, CYREG_UDB_PA1_CFG2
+ 692              	.set SW3__PA__CFG3, CYREG_UDB_PA1_CFG3
+ 693              	.set SW3__PA__CFG4, CYREG_UDB_PA1_CFG4
+ 694              	.set SW3__PA__CFG5, CYREG_UDB_PA1_CFG5
+ 695              	.set SW3__PA__CFG6, CYREG_UDB_PA1_CFG6
 ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 178
 
 
- 696              	.set SW4__DR_INV, CYREG_GPIO_PRT4_DR_INV
- 697              	.set SW4__DR_SET, CYREG_GPIO_PRT4_DR_SET
- 698              	.set SW4__INTCFG, CYREG_GPIO_PRT4_INTR_CFG
- 699              	.set SW4__INTR, CYREG_GPIO_PRT4_INTR
- 700              	.set SW4__INTR_CFG, CYREG_GPIO_PRT4_INTR_CFG
- 701              	.set SW4__INTSTAT, CYREG_GPIO_PRT4_INTR
- 702              	.set SW4__MASK, 0x01
- 703              	.set SW4__PC, CYREG_GPIO_PRT4_PC
- 704              	.set SW4__PC2, CYREG_GPIO_PRT4_PC2
- 705              	.set SW4__PORT, 4
- 706              	.set SW4__PS, CYREG_GPIO_PRT4_PS
- 707              	.set SW4__SHIFT, 0
- 708              	.set SW4__SNAP, CYREG_GPIO_PRT4_INTR
- 709              	
- 710              	/* SW5 */
- 711              	.set SW5__0__DR, CYREG_GPIO_PRT2_DR
- 712              	.set SW5__0__DR_CLR, CYREG_GPIO_PRT2_DR_CLR
- 713              	.set SW5__0__DR_INV, CYREG_GPIO_PRT2_DR_INV
- 714              	.set SW5__0__DR_SET, CYREG_GPIO_PRT2_DR_SET
- 715              	.set SW5__0__HSIOM, CYREG_HSIOM_PORT_SEL2
- 716              	.set SW5__0__HSIOM_MASK, 0x0000000F
- 717              	.set SW5__0__HSIOM_SHIFT, 0
- 718              	.set SW5__0__INTCFG, CYREG_GPIO_PRT2_INTR_CFG
- 719              	.set SW5__0__INTR, CYREG_GPIO_PRT2_INTR
- 720              	.set SW5__0__INTR_CFG, CYREG_GPIO_PRT2_INTR_CFG
- 721              	.set SW5__0__INTSTAT, CYREG_GPIO_PRT2_INTR
- 722              	.set SW5__0__MASK, 0x01
- 723              	.set SW5__0__PA__CFG0, CYREG_UDB_PA2_CFG0
- 724              	.set SW5__0__PA__CFG1, CYREG_UDB_PA2_CFG1
- 725              	.set SW5__0__PA__CFG10, CYREG_UDB_PA2_CFG10
- 726              	.set SW5__0__PA__CFG11, CYREG_UDB_PA2_CFG11
- 727              	.set SW5__0__PA__CFG12, CYREG_UDB_PA2_CFG12
- 728              	.set SW5__0__PA__CFG13, CYREG_UDB_PA2_CFG13
- 729              	.set SW5__0__PA__CFG14, CYREG_UDB_PA2_CFG14
- 730              	.set SW5__0__PA__CFG2, CYREG_UDB_PA2_CFG2
- 731              	.set SW5__0__PA__CFG3, CYREG_UDB_PA2_CFG3
- 732              	.set SW5__0__PA__CFG4, CYREG_UDB_PA2_CFG4
- 733              	.set SW5__0__PA__CFG5, CYREG_UDB_PA2_CFG5
- 734              	.set SW5__0__PA__CFG6, CYREG_UDB_PA2_CFG6
- 735              	.set SW5__0__PA__CFG7, CYREG_UDB_PA2_CFG7
- 736              	.set SW5__0__PA__CFG8, CYREG_UDB_PA2_CFG8
- 737              	.set SW5__0__PA__CFG9, CYREG_UDB_PA2_CFG9
- 738              	.set SW5__0__PC, CYREG_GPIO_PRT2_PC
- 739              	.set SW5__0__PC2, CYREG_GPIO_PRT2_PC2
- 740              	.set SW5__0__PORT, 2
- 741              	.set SW5__0__PS, CYREG_GPIO_PRT2_PS
- 742              	.set SW5__0__SHIFT, 0
- 743              	.set SW5__DR, CYREG_GPIO_PRT2_DR
- 744              	.set SW5__DR_CLR, CYREG_GPIO_PRT2_DR_CLR
- 745              	.set SW5__DR_INV, CYREG_GPIO_PRT2_DR_INV
- 746              	.set SW5__DR_SET, CYREG_GPIO_PRT2_DR_SET
- 747              	.set SW5__INTCFG, CYREG_GPIO_PRT2_INTR_CFG
- 748              	.set SW5__INTR, CYREG_GPIO_PRT2_INTR
- 749              	.set SW5__INTR_CFG, CYREG_GPIO_PRT2_INTR_CFG
- 750              	.set SW5__INTSTAT, CYREG_GPIO_PRT2_INTR
- 751              	.set SW5__MASK, 0x01
- 752              	.set SW5__PA__CFG0, CYREG_UDB_PA2_CFG0
+ 696              	.set SW3__PA__CFG7, CYREG_UDB_PA1_CFG7
+ 697              	.set SW3__PA__CFG8, CYREG_UDB_PA1_CFG8
+ 698              	.set SW3__PA__CFG9, CYREG_UDB_PA1_CFG9
+ 699              	.set SW3__PC, CYREG_GPIO_PRT1_PC
+ 700              	.set SW3__PC2, CYREG_GPIO_PRT1_PC2
+ 701              	.set SW3__PORT, 1
+ 702              	.set SW3__PS, CYREG_GPIO_PRT1_PS
+ 703              	.set SW3__SHIFT, 0
+ 704              	.set SW3__SNAP, CYREG_GPIO_PRT1_INTR
+ 705              	
+ 706              	/* SW4 */
+ 707              	.set SW4__0__DR, CYREG_GPIO_PRT4_DR
+ 708              	.set SW4__0__DR_CLR, CYREG_GPIO_PRT4_DR_CLR
+ 709              	.set SW4__0__DR_INV, CYREG_GPIO_PRT4_DR_INV
+ 710              	.set SW4__0__DR_SET, CYREG_GPIO_PRT4_DR_SET
+ 711              	.set SW4__0__HSIOM, CYREG_HSIOM_PORT_SEL4
+ 712              	.set SW4__0__HSIOM_MASK, 0x0000000F
+ 713              	.set SW4__0__HSIOM_SHIFT, 0
+ 714              	.set SW4__0__INTCFG, CYREG_GPIO_PRT4_INTR_CFG
+ 715              	.set SW4__0__INTR, CYREG_GPIO_PRT4_INTR
+ 716              	.set SW4__0__INTR_CFG, CYREG_GPIO_PRT4_INTR_CFG
+ 717              	.set SW4__0__INTSTAT, CYREG_GPIO_PRT4_INTR
+ 718              	.set SW4__0__MASK, 0x01
+ 719              	.set SW4__0__PC, CYREG_GPIO_PRT4_PC
+ 720              	.set SW4__0__PC2, CYREG_GPIO_PRT4_PC2
+ 721              	.set SW4__0__PORT, 4
+ 722              	.set SW4__0__PS, CYREG_GPIO_PRT4_PS
+ 723              	.set SW4__0__SHIFT, 0
+ 724              	.set SW4__DR, CYREG_GPIO_PRT4_DR
+ 725              	.set SW4__DR_CLR, CYREG_GPIO_PRT4_DR_CLR
+ 726              	.set SW4__DR_INV, CYREG_GPIO_PRT4_DR_INV
+ 727              	.set SW4__DR_SET, CYREG_GPIO_PRT4_DR_SET
+ 728              	.set SW4__INTCFG, CYREG_GPIO_PRT4_INTR_CFG
+ 729              	.set SW4__INTR, CYREG_GPIO_PRT4_INTR
+ 730              	.set SW4__INTR_CFG, CYREG_GPIO_PRT4_INTR_CFG
+ 731              	.set SW4__INTSTAT, CYREG_GPIO_PRT4_INTR
+ 732              	.set SW4__MASK, 0x01
+ 733              	.set SW4__PC, CYREG_GPIO_PRT4_PC
+ 734              	.set SW4__PC2, CYREG_GPIO_PRT4_PC2
+ 735              	.set SW4__PORT, 4
+ 736              	.set SW4__PS, CYREG_GPIO_PRT4_PS
+ 737              	.set SW4__SHIFT, 0
+ 738              	.set SW4__SNAP, CYREG_GPIO_PRT4_INTR
+ 739              	
+ 740              	/* SW5 */
+ 741              	.set SW5__0__DR, CYREG_GPIO_PRT5_DR
+ 742              	.set SW5__0__DR_CLR, CYREG_GPIO_PRT5_DR_CLR
+ 743              	.set SW5__0__DR_INV, CYREG_GPIO_PRT5_DR_INV
+ 744              	.set SW5__0__DR_SET, CYREG_GPIO_PRT5_DR_SET
+ 745              	.set SW5__0__HSIOM, CYREG_HSIOM_PORT_SEL5
+ 746              	.set SW5__0__HSIOM_MASK, 0x0000000F
+ 747              	.set SW5__0__HSIOM_SHIFT, 0
+ 748              	.set SW5__0__INTCFG, CYREG_GPIO_PRT5_INTR_CFG
+ 749              	.set SW5__0__INTR, CYREG_GPIO_PRT5_INTR
+ 750              	.set SW5__0__INTR_CFG, CYREG_GPIO_PRT5_INTR_CFG
+ 751              	.set SW5__0__INTSTAT, CYREG_GPIO_PRT5_INTR
+ 752              	.set SW5__0__MASK, 0x01
 ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 179
 
 
- 753              	.set SW5__PA__CFG1, CYREG_UDB_PA2_CFG1
- 754              	.set SW5__PA__CFG10, CYREG_UDB_PA2_CFG10
- 755              	.set SW5__PA__CFG11, CYREG_UDB_PA2_CFG11
- 756              	.set SW5__PA__CFG12, CYREG_UDB_PA2_CFG12
- 757              	.set SW5__PA__CFG13, CYREG_UDB_PA2_CFG13
- 758              	.set SW5__PA__CFG14, CYREG_UDB_PA2_CFG14
- 759              	.set SW5__PA__CFG2, CYREG_UDB_PA2_CFG2
- 760              	.set SW5__PA__CFG3, CYREG_UDB_PA2_CFG3
- 761              	.set SW5__PA__CFG4, CYREG_UDB_PA2_CFG4
- 762              	.set SW5__PA__CFG5, CYREG_UDB_PA2_CFG5
- 763              	.set SW5__PA__CFG6, CYREG_UDB_PA2_CFG6
- 764              	.set SW5__PA__CFG7, CYREG_UDB_PA2_CFG7
- 765              	.set SW5__PA__CFG8, CYREG_UDB_PA2_CFG8
- 766              	.set SW5__PA__CFG9, CYREG_UDB_PA2_CFG9
- 767              	.set SW5__PC, CYREG_GPIO_PRT2_PC
- 768              	.set SW5__PC2, CYREG_GPIO_PRT2_PC2
- 769              	.set SW5__PORT, 2
- 770              	.set SW5__PS, CYREG_GPIO_PRT2_PS
+ 753              	.set SW5__0__PC, CYREG_GPIO_PRT5_PC
+ 754              	.set SW5__0__PC2, CYREG_GPIO_PRT5_PC2
+ 755              	.set SW5__0__PORT, 5
+ 756              	.set SW5__0__PS, CYREG_GPIO_PRT5_PS
+ 757              	.set SW5__0__SHIFT, 0
+ 758              	.set SW5__DR, CYREG_GPIO_PRT5_DR
+ 759              	.set SW5__DR_CLR, CYREG_GPIO_PRT5_DR_CLR
+ 760              	.set SW5__DR_INV, CYREG_GPIO_PRT5_DR_INV
+ 761              	.set SW5__DR_SET, CYREG_GPIO_PRT5_DR_SET
+ 762              	.set SW5__INTCFG, CYREG_GPIO_PRT5_INTR_CFG
+ 763              	.set SW5__INTR, CYREG_GPIO_PRT5_INTR
+ 764              	.set SW5__INTR_CFG, CYREG_GPIO_PRT5_INTR_CFG
+ 765              	.set SW5__INTSTAT, CYREG_GPIO_PRT5_INTR
+ 766              	.set SW5__MASK, 0x01
+ 767              	.set SW5__PC, CYREG_GPIO_PRT5_PC
+ 768              	.set SW5__PC2, CYREG_GPIO_PRT5_PC2
+ 769              	.set SW5__PORT, 5
+ 770              	.set SW5__PS, CYREG_GPIO_PRT5_PS
  771              	.set SW5__SHIFT, 0
- 772              	.set SW5__SNAP, CYREG_GPIO_PRT2_INTR
+ 772              	.set SW5__SNAP, CYREG_GPIO_PRT5_INTR
  773              	
  774              	/* UART_rx */
  775              	.set UART_rx__0__DR, CYREG_GPIO_PRT7_DR

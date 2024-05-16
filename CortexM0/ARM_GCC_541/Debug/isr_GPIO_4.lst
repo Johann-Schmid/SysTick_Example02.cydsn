@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
   28:Generated_Source\PSoC4/isr_GPIO_4.c **** ********************************************************************************/
   29:Generated_Source\PSoC4/isr_GPIO_4.c **** /* `#START isr_GPIO_4_intc` */
   30:Generated_Source\PSoC4/isr_GPIO_4.c **** 
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 2
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 2
 
 
   31:Generated_Source\PSoC4/isr_GPIO_4.c **** /* `#END` */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
   66:Generated_Source\PSoC4/isr_GPIO_4.c **** 
   67:Generated_Source\PSoC4/isr_GPIO_4.c ****     /* Enable it. */
   68:Generated_Source\PSoC4/isr_GPIO_4.c ****     isr_GPIO_4_Enable();
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 3
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 3
 
 
   47              		.loc 1 68 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
   69              		.loc 1 100 0
   70              		.cfi_startproc
   71              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 4
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 4
 
 
   72              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  117:Generated_Source\PSoC4/isr_GPIO_4.c **** ********************************************************************************
  118:Generated_Source\PSoC4/isr_GPIO_4.c **** *
  119:Generated_Source\PSoC4/isr_GPIO_4.c **** * Summary:
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 5
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 5
 
 
  120:Generated_Source\PSoC4/isr_GPIO_4.c **** *   Disables and removes the interrupt.
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  138:Generated_Source\PSoC4/isr_GPIO_4.c **** 
  139:Generated_Source\PSoC4/isr_GPIO_4.c **** /*******************************************************************************
  140:Generated_Source\PSoC4/isr_GPIO_4.c **** * Function Name: isr_GPIO_4_Interrupt
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 6
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 6
 
 
  141:Generated_Source\PSoC4/isr_GPIO_4.c **** ********************************************************************************
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  171              	.LFB5:
  170:Generated_Source\PSoC4/isr_GPIO_4.c **** 
  171:Generated_Source\PSoC4/isr_GPIO_4.c **** 
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 7
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 7
 
 
  172:Generated_Source\PSoC4/isr_GPIO_4.c **** /*******************************************************************************
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  195              	.L11:
  196 0016 C046     		.align	2
  197              	.L10:
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 8
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 8
 
 
  198 0018 00000000 		.word	CyRamVectors
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  232              		.cfi_endproc
  233              	.LFE6:
  234              		.size	isr_GPIO_4_GetVector, .-isr_GPIO_4_GetVector
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 9
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 9
 
 
  235              		.section	.text.isr_GPIO_4_SetPriority,"ax",%progbits
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  259              		.loc 1 252 0
  260 000c 0623     		movs	r3, #6
  261 000e FB60     		str	r3, [r7, #12]
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 10
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 10
 
 
  253:Generated_Source\PSoC4/isr_GPIO_4.c ****     
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  309              	isr_GPIO_4_GetPriority:
  310              	.LFB8:
  259:Generated_Source\PSoC4/isr_GPIO_4.c **** 
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 11
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 11
 
 
  260:Generated_Source\PSoC4/isr_GPIO_4.c **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  339 001e 1800     		movs	r0, r3
  340 0020 BD46     		mov	sp, r7
  341 0022 02B0     		add	sp, sp, #8
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 12
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 12
 
 
  342              		@ sp needed
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  373              		.loc 1 308 0
  374 000a C046     		nop
  375 000c BD46     		mov	sp, r7
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 13
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 13
 
 
  376              		@ sp needed
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  410 000e 0123     		movs	r3, #1
  411 0010 00E0     		b	.L28
  412              	.L27:
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 14
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 14
 
 
  413              		.loc 1 328 0 discriminator 2
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  446              		.loc 1 349 0
  447 0004 024B     		ldr	r3, .L33
  448 0006 1022     		movs	r2, #16
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 15
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 15
 
 
  449 0008 1A60     		str	r2, [r3]
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  478 0002 00AF     		add	r7, sp, #0
  479              		.cfi_def_cfa_register 7
  375:Generated_Source\PSoC4/isr_GPIO_4.c ****     *isr_GPIO_4_INTC_SET_PD = isr_GPIO_4__INTC_MASK;
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 16
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 16
 
 
  480              		.loc 1 375 0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  510              		.cfi_offset 7, -8
  511              		.cfi_offset 14, -4
  512 0002 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 17
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 17
 
 
  513              		.cfi_def_cfa_register 7
@@ -990,48 +990,48 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  537 0006 00000000 		.4byte	.Ldebug_abbrev0
  538 000a 04       		.byte	0x4
  539 000b 01       		.uleb128 0x1
- 540 000c 14010000 		.4byte	.LASF34
+ 540 000c E1000000 		.4byte	.LASF34
  541 0010 0C       		.byte	0xc
- 542 0011 D0020000 		.4byte	.LASF35
- 543 0015 1B000000 		.4byte	.LASF36
+ 542 0011 B8020000 		.4byte	.LASF35
+ 543 0015 85020000 		.4byte	.LASF36
  544 0019 00000000 		.4byte	.Ldebug_ranges0+0
  545 001d 00000000 		.4byte	0
  546 0021 00000000 		.4byte	.Ldebug_line0
  547 0025 02       		.uleb128 0x2
  548 0026 01       		.byte	0x1
  549 0027 06       		.byte	0x6
- 550 0028 C4020000 		.4byte	.LASF0
+ 550 0028 AC020000 		.4byte	.LASF0
  551 002c 02       		.uleb128 0x2
  552 002d 01       		.byte	0x1
  553 002e 08       		.byte	0x8
- 554 002f CC000000 		.4byte	.LASF1
+ 554 002f 99000000 		.4byte	.LASF1
  555 0033 02       		.uleb128 0x2
  556 0034 02       		.byte	0x2
  557 0035 05       		.byte	0x5
- 558 0036 7E020000 		.4byte	.LASF2
+ 558 0036 4B020000 		.4byte	.LASF2
  559 003a 02       		.uleb128 0x2
  560 003b 02       		.byte	0x2
  561 003c 07       		.byte	0x7
- 562 003d 78000000 		.4byte	.LASF3
+ 562 003d 45000000 		.4byte	.LASF3
  563 0041 02       		.uleb128 0x2
  564 0042 04       		.byte	0x4
  565 0043 05       		.byte	0x5
- 566 0044 AF020000 		.4byte	.LASF4
+ 566 0044 7C020000 		.4byte	.LASF4
  567 0048 02       		.uleb128 0x2
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 18
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 18
 
 
  568 0049 04       		.byte	0x4
  569 004a 07       		.byte	0x7
- 570 004b FC000000 		.4byte	.LASF5
+ 570 004b C9000000 		.4byte	.LASF5
  571 004f 02       		.uleb128 0x2
  572 0050 08       		.byte	0x8
  573 0051 05       		.byte	0x5
- 574 0052 30020000 		.4byte	.LASF6
+ 574 0052 FD010000 		.4byte	.LASF6
  575 0056 02       		.uleb128 0x2
  576 0057 08       		.byte	0x8
  577 0058 07       		.byte	0x7
- 578 0059 03020000 		.4byte	.LASF7
+ 578 0059 D0010000 		.4byte	.LASF7
  579 005d 03       		.uleb128 0x3
  580 005e 04       		.byte	0x4
  581 005f 05       		.byte	0x5
@@ -1039,29 +1039,29 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  583 0064 02       		.uleb128 0x2
  584 0065 04       		.byte	0x4
  585 0066 07       		.byte	0x7
- 586 0067 E2010000 		.4byte	.LASF8
+ 586 0067 AF010000 		.4byte	.LASF8
  587 006b 04       		.uleb128 0x4
- 588 006c 0E010000 		.4byte	.LASF9
+ 588 006c DB000000 		.4byte	.LASF9
  589 0070 02       		.byte	0x2
  590 0071 D201     		.2byte	0x1d2
  591 0073 2C000000 		.4byte	0x2c
  592 0077 04       		.uleb128 0x4
- 593 0078 DB010000 		.4byte	.LASF10
+ 593 0078 A8010000 		.4byte	.LASF10
  594 007c 02       		.byte	0x2
  595 007d D401     		.2byte	0x1d4
  596 007f 48000000 		.4byte	0x48
  597 0083 02       		.uleb128 0x2
  598 0084 04       		.byte	0x4
  599 0085 04       		.byte	0x4
- 600 0086 C6000000 		.4byte	.LASF11
+ 600 0086 93000000 		.4byte	.LASF11
  601 008a 02       		.uleb128 0x2
  602 008b 08       		.byte	0x8
  603 008c 04       		.byte	0x4
- 604 008d B4010000 		.4byte	.LASF12
+ 604 008d 81010000 		.4byte	.LASF12
  605 0091 02       		.uleb128 0x2
  606 0092 01       		.byte	0x1
  607 0093 08       		.byte	0x8
- 608 0094 4E020000 		.4byte	.LASF13
+ 608 0094 1B020000 		.4byte	.LASF13
  609 0098 04       		.uleb128 0x4
  610 0099 00000000 		.4byte	.LASF14
  611 009d 02       		.byte	0x2
@@ -1070,7 +1070,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  614 00a4 05       		.uleb128 0x5
  615 00a5 77000000 		.4byte	0x77
  616 00a9 04       		.uleb128 0x4
- 617 00aa 1A020000 		.4byte	.LASF15
+ 617 00aa E7010000 		.4byte	.LASF15
  618 00ae 02       		.byte	0x2
  619 00af 8E02     		.2byte	0x28e
  620 00b1 B5000000 		.4byte	0xb5
@@ -1078,19 +1078,19 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  622 00b6 04       		.byte	0x4
  623 00b7 BB000000 		.4byte	0xbb
  624 00bb 07       		.uleb128 0x7
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 19
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 19
 
 
  625 00bc 02       		.uleb128 0x2
  626 00bd 08       		.byte	0x8
  627 00be 04       		.byte	0x4
- 628 00bf B8020000 		.4byte	.LASF16
+ 628 00bf A0020000 		.4byte	.LASF16
  629 00c3 02       		.uleb128 0x2
  630 00c4 04       		.byte	0x4
  631 00c5 07       		.byte	0x7
- 632 00c6 27020000 		.4byte	.LASF17
+ 632 00c6 F4010000 		.4byte	.LASF17
  633 00ca 08       		.uleb128 0x8
- 634 00cb 8B000000 		.4byte	.LASF18
+ 634 00cb 58000000 		.4byte	.LASF18
  635 00cf 01       		.byte	0x1
  636 00d0 38       		.byte	0x38
  637 00d1 00000000 		.4byte	.LFB1
@@ -1098,7 +1098,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  639 00d9 01       		.uleb128 0x1
  640 00da 9C       		.byte	0x9c
  641 00db 09       		.uleb128 0x9
- 642 00dc 9C000000 		.4byte	.LASF21
+ 642 00dc 69000000 		.4byte	.LASF21
  643 00e0 01       		.byte	0x1
  644 00e1 63       		.byte	0x63
  645 00e2 00000000 		.4byte	.LFB2
@@ -1116,7 +1116,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  657 00fd 74       		.sleb128 -12
  658 00fe 00       		.byte	0
  659 00ff 08       		.uleb128 0x8
- 660 0100 3E020000 		.4byte	.LASF19
+ 660 0100 0B020000 		.4byte	.LASF19
  661 0104 01       		.byte	0x1
  662 0105 81       		.byte	0x81
  663 0106 00000000 		.4byte	.LFB3
@@ -1124,7 +1124,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  665 010e 01       		.uleb128 0x1
  666 010f 9C       		.byte	0x9c
  667 0110 0B       		.uleb128 0xb
- 668 0111 63000000 		.4byte	.LASF20
+ 668 0111 30000000 		.4byte	.LASF20
  669 0115 01       		.byte	0x1
  670 0116 9F       		.byte	0x9f
  671 0117 00000000 		.4byte	.LFB4
@@ -1132,13 +1132,13 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  673 011f 01       		.uleb128 0x1
  674 0120 9C       		.byte	0x9c
  675 0121 0C       		.uleb128 0xc
- 676 0122 53020000 		.4byte	.LASF22
+ 676 0122 20020000 		.4byte	.LASF22
  677 0126 01       		.byte	0x1
  678 0127 C7       		.byte	0xc7
  679 0128 00000000 		.4byte	.LFB5
  680 012c 1C000000 		.4byte	.LFE5-.LFB5
  681 0130 01       		.uleb128 0x1
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 20
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 20
 
 
  682 0131 9C       		.byte	0x9c
@@ -1153,7 +1153,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  691 0143 74       		.sleb128 -12
  692 0144 00       		.byte	0
  693 0145 0D       		.uleb128 0xd
- 694 0146 4E000000 		.4byte	.LASF29
+ 694 0146 1B000000 		.4byte	.LASF29
  695 014a 01       		.byte	0x1
  696 014b DB       		.byte	0xdb
  697 014c A9000000 		.4byte	0xa9
@@ -1162,7 +1162,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  700 0158 01       		.uleb128 0x1
  701 0159 9C       		.byte	0x9c
  702 015a 09       		.uleb128 0x9
- 703 015b C4010000 		.4byte	.LASF24
+ 703 015b 91010000 		.4byte	.LASF24
  704 015f 01       		.byte	0x1
  705 0160 F9       		.byte	0xf9
  706 0161 00000000 		.4byte	.LFB7
@@ -1171,7 +1171,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  709 016a 9C       		.byte	0x9c
  710 016b 9A010000 		.4byte	0x19a
  711 016f 0A       		.uleb128 0xa
- 712 0170 BB010000 		.4byte	.LASF25
+ 712 0170 88010000 		.4byte	.LASF25
  713 0174 01       		.byte	0x1
  714 0175 F9       		.byte	0xf9
  715 0176 6B000000 		.4byte	0x6b
@@ -1179,7 +1179,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  717 017b 91       		.byte	0x91
  718 017c 67       		.sleb128 -25
  719 017d 0E       		.uleb128 0xe
- 720 017e ED000000 		.4byte	.LASF26
+ 720 017e BA000000 		.4byte	.LASF26
  721 0182 01       		.byte	0x1
  722 0183 FB       		.byte	0xfb
  723 0184 6B000000 		.4byte	0x6b
@@ -1187,7 +1187,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  725 0189 91       		.byte	0x91
  726 018a 6B       		.sleb128 -21
  727 018b 0E       		.uleb128 0xe
- 728 018c A0020000 		.4byte	.LASF27
+ 728 018c 6D020000 		.4byte	.LASF27
  729 0190 01       		.byte	0x1
  730 0191 FC       		.byte	0xfc
  731 0192 77000000 		.4byte	0x77
@@ -1196,9 +1196,9 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  734 0198 6C       		.sleb128 -20
  735 0199 00       		.byte	0
  736 019a 0F       		.uleb128 0xf
- 737 019b AF000000 		.4byte	.LASF37
+ 737 019b 7C000000 		.4byte	.LASF37
  738 019f 01       		.byte	0x1
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 21
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 21
 
 
  739 01a0 1501     		.2byte	0x115
@@ -1209,7 +1209,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  744 01af 9C       		.byte	0x9c
  745 01b0 D3010000 		.4byte	0x1d3
  746 01b4 10       		.uleb128 0x10
- 747 01b5 BB010000 		.4byte	.LASF25
+ 747 01b5 88010000 		.4byte	.LASF25
  748 01b9 01       		.byte	0x1
  749 01ba 1701     		.2byte	0x117
  750 01bc 77000000 		.4byte	0x77
@@ -1217,7 +1217,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  752 01c1 91       		.byte	0x91
  753 01c2 70       		.sleb128 -16
  754 01c3 10       		.uleb128 0x10
- 755 01c4 A0020000 		.4byte	.LASF27
+ 755 01c4 6D020000 		.4byte	.LASF27
  756 01c8 01       		.byte	0x1
  757 01c9 1801     		.2byte	0x118
  758 01cb 77000000 		.4byte	0x77
@@ -1226,7 +1226,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  761 01d1 74       		.sleb128 -12
  762 01d2 00       		.byte	0
  763 01d3 11       		.uleb128 0x11
- 764 01d4 A2010000 		.4byte	.LASF28
+ 764 01d4 6F010000 		.4byte	.LASF28
  765 01d8 01       		.byte	0x1
  766 01d9 3001     		.2byte	0x130
  767 01db 00000000 		.4byte	.LFB9
@@ -1234,7 +1234,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  769 01e3 01       		.uleb128 0x1
  770 01e4 9C       		.byte	0x9c
  771 01e5 12       		.uleb128 0x12
- 772 01e6 EF010000 		.4byte	.LASF30
+ 772 01e6 BC010000 		.4byte	.LASF30
  773 01ea 01       		.byte	0x1
  774 01eb 4501     		.2byte	0x145
  775 01ed 6B000000 		.4byte	0x6b
@@ -1243,7 +1243,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  778 01f9 01       		.uleb128 0x1
  779 01fa 9C       		.byte	0x9c
  780 01fb 11       		.uleb128 0x11
- 781 01fc DA000000 		.4byte	.LASF31
+ 781 01fc A7000000 		.4byte	.LASF31
  782 0200 01       		.byte	0x1
  783 0201 5A01     		.2byte	0x15a
  784 0203 00000000 		.4byte	.LFB11
@@ -1251,18 +1251,18 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  786 020b 01       		.uleb128 0x1
  787 020c 9C       		.byte	0x9c
  788 020d 11       		.uleb128 0x11
- 789 020e 68020000 		.4byte	.LASF32
+ 789 020e 35020000 		.4byte	.LASF32
  790 0212 01       		.byte	0x1
  791 0213 7501     		.2byte	0x175
  792 0215 00000000 		.4byte	.LFB12
  793 0219 14000000 		.4byte	.LFE12-.LFB12
  794 021d 01       		.uleb128 0x1
  795 021e 9C       		.byte	0x9c
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 22
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 22
 
 
  796 021f 11       		.uleb128 0x11
- 797 0220 88020000 		.4byte	.LASF33
+ 797 0220 55020000 		.4byte	.LASF33
  798 0224 01       		.byte	0x1
  799 0225 8E01     		.2byte	0x18e
  800 0227 00000000 		.4byte	.LFB13
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  850 001f 24       		.uleb128 0x24
  851 0020 00       		.byte	0
  852 0021 0B       		.uleb128 0xb
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 23
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 23
 
 
  853 0022 0B       		.uleb128 0xb
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  907 0058 27       		.uleb128 0x27
  908 0059 19       		.uleb128 0x19
  909 005a 11       		.uleb128 0x11
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 24
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 24
 
 
  910 005b 01       		.uleb128 0x1
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  964 0093 03       		.uleb128 0x3
  965 0094 0E       		.uleb128 0xe
  966 0095 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 25
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 25
 
 
  967 0096 0B       		.uleb128 0xb
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  1021 00ce 13       		.uleb128 0x13
  1022 00cf 11       		.uleb128 0x11
  1023 00d0 01       		.uleb128 0x1
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 26
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 26
 
 
  1024 00d1 12       		.uleb128 0x12
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  1078 0109 0E       		.uleb128 0xe
  1079 010a 3A       		.uleb128 0x3a
  1080 010b 0B       		.uleb128 0xb
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 27
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 27
 
 
  1081 010c 3B       		.uleb128 0x3b
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  1135 0144 00       		.byte	0
  1136 0145 00       		.byte	0
  1137 0146 13       		.uleb128 0x13
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 28
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 28
 
 
  1138 0147 01       		.uleb128 0x1
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  1192 003c 14000000 		.4byte	.LFE6-.LFB6
  1193 0040 00000000 		.4byte	.LFB7
  1194 0044 50000000 		.4byte	.LFE7-.LFB7
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 29
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 29
 
 
  1195 0048 00000000 		.4byte	.LFB8
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  1244              	.LASF38:
  1245 0006 43795261 		.ascii	"CyRamVectors\000"
  1245      6D566563 
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 30
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 30
 
 
  1245      746F7273 
@@ -1746,206 +1746,205 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 1
  1246              	.LASF23:
  1247 0013 61646472 		.ascii	"address\000"
  1247      65737300 
- 1248              	.LASF36:
- 1249 001b 433A5C53 		.ascii	"C:\\SysTick_Example02.cydsn\\SysTick_Example02.cyds"
- 1249      79735469 
- 1249      636B5F45 
- 1249      78616D70 
- 1249      6C653032 
- 1250 004c 6E00     		.ascii	"n\000"
- 1251              	.LASF29:
- 1252 004e 6973725F 		.ascii	"isr_GPIO_4_GetVector\000"
- 1252      4750494F 
- 1252      5F345F47 
- 1252      65745665 
- 1252      63746F72 
- 1253              	.LASF20:
- 1254 0063 6973725F 		.ascii	"isr_GPIO_4_Interrupt\000"
- 1254      4750494F 
- 1254      5F345F49 
- 1254      6E746572 
- 1254      72757074 
- 1255              	.LASF3:
- 1256 0078 73686F72 		.ascii	"short unsigned int\000"
- 1256      7420756E 
- 1256      7369676E 
- 1256      65642069 
- 1256      6E7400
- 1257              	.LASF18:
- 1258 008b 6973725F 		.ascii	"isr_GPIO_4_Start\000"
- 1258      4750494F 
- 1258      5F345F53 
- 1258      74617274 
- 1258      00
- 1259              	.LASF21:
- 1260 009c 6973725F 		.ascii	"isr_GPIO_4_StartEx\000"
- 1260      4750494F 
- 1260      5F345F53 
- 1260      74617274 
- 1260      457800
- 1261              	.LASF37:
- 1262 00af 6973725F 		.ascii	"isr_GPIO_4_GetPriority\000"
- 1262      4750494F 
- 1262      5F345F47 
- 1262      65745072 
- 1262      696F7269 
- 1263              	.LASF11:
- 1264 00c6 666C6F61 		.ascii	"float\000"
- 1264      7400
- 1265              	.LASF1:
- 1266 00cc 756E7369 		.ascii	"unsigned char\000"
- 1266      676E6564 
- 1266      20636861 
- 1266      7200
- 1267              	.LASF31:
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 31
+ 1248              	.LASF29:
+ 1249 001b 6973725F 		.ascii	"isr_GPIO_4_GetVector\000"
+ 1249      4750494F 
+ 1249      5F345F47 
+ 1249      65745665 
+ 1249      63746F72 
+ 1250              	.LASF20:
+ 1251 0030 6973725F 		.ascii	"isr_GPIO_4_Interrupt\000"
+ 1251      4750494F 
+ 1251      5F345F49 
+ 1251      6E746572 
+ 1251      72757074 
+ 1252              	.LASF3:
+ 1253 0045 73686F72 		.ascii	"short unsigned int\000"
+ 1253      7420756E 
+ 1253      7369676E 
+ 1253      65642069 
+ 1253      6E7400
+ 1254              	.LASF18:
+ 1255 0058 6973725F 		.ascii	"isr_GPIO_4_Start\000"
+ 1255      4750494F 
+ 1255      5F345F53 
+ 1255      74617274 
+ 1255      00
+ 1256              	.LASF21:
+ 1257 0069 6973725F 		.ascii	"isr_GPIO_4_StartEx\000"
+ 1257      4750494F 
+ 1257      5F345F53 
+ 1257      74617274 
+ 1257      457800
+ 1258              	.LASF37:
+ 1259 007c 6973725F 		.ascii	"isr_GPIO_4_GetPriority\000"
+ 1259      4750494F 
+ 1259      5F345F47 
+ 1259      65745072 
+ 1259      696F7269 
+ 1260              	.LASF11:
+ 1261 0093 666C6F61 		.ascii	"float\000"
+ 1261      7400
+ 1262              	.LASF1:
+ 1263 0099 756E7369 		.ascii	"unsigned char\000"
+ 1263      676E6564 
+ 1263      20636861 
+ 1263      7200
+ 1264              	.LASF31:
+ 1265 00a7 6973725F 		.ascii	"isr_GPIO_4_Disable\000"
+ 1265      4750494F 
+ 1265      5F345F44 
+ 1265      69736162 
+ 1265      6C6500
+ 1266              	.LASF26:
+ 1267 00ba 696E7465 		.ascii	"interruptState\000"
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 31
 
 
- 1268 00da 6973725F 		.ascii	"isr_GPIO_4_Disable\000"
- 1268      4750494F 
- 1268      5F345F44 
- 1268      69736162 
- 1268      6C6500
- 1269              	.LASF26:
- 1270 00ed 696E7465 		.ascii	"interruptState\000"
- 1270      72727570 
- 1270      74537461 
- 1270      746500
- 1271              	.LASF5:
- 1272 00fc 6C6F6E67 		.ascii	"long unsigned int\000"
- 1272      20756E73 
- 1272      69676E65 
- 1272      6420696E 
- 1272      7400
- 1273              	.LASF9:
- 1274 010e 75696E74 		.ascii	"uint8\000"
- 1274      3800
- 1275              	.LASF34:
- 1276 0114 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1276      43313120 
- 1276      352E342E 
- 1276      31203230 
- 1276      31363036 
- 1277 0147 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 1277      20726576 
- 1277      6973696F 
- 1277      6E203233 
- 1277      37373135 
- 1278 017a 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 1278      66756E63 
- 1278      74696F6E 
- 1278      2D736563 
- 1278      74696F6E 
- 1279              	.LASF28:
- 1280 01a2 6973725F 		.ascii	"isr_GPIO_4_Enable\000"
- 1280      4750494F 
- 1280      5F345F45 
- 1280      6E61626C 
- 1280      6500
- 1281              	.LASF12:
- 1282 01b4 646F7562 		.ascii	"double\000"
- 1282      6C6500
- 1283              	.LASF25:
- 1284 01bb 7072696F 		.ascii	"priority\000"
- 1284      72697479 
- 1284      00
- 1285              	.LASF24:
- 1286 01c4 6973725F 		.ascii	"isr_GPIO_4_SetPriority\000"
- 1286      4750494F 
- 1286      5F345F53 
- 1286      65745072 
- 1286      696F7269 
- 1287              	.LASF10:
- 1288 01db 75696E74 		.ascii	"uint32\000"
- 1288      333200
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 32
+ 1267      72727570 
+ 1267      74537461 
+ 1267      746500
+ 1268              	.LASF5:
+ 1269 00c9 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1269      20756E73 
+ 1269      69676E65 
+ 1269      6420696E 
+ 1269      7400
+ 1270              	.LASF9:
+ 1271 00db 75696E74 		.ascii	"uint8\000"
+ 1271      3800
+ 1272              	.LASF34:
+ 1273 00e1 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1273      43313120 
+ 1273      352E342E 
+ 1273      31203230 
+ 1273      31363036 
+ 1274 0114 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1274      20726576 
+ 1274      6973696F 
+ 1274      6E203233 
+ 1274      37373135 
+ 1275 0147 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1275      66756E63 
+ 1275      74696F6E 
+ 1275      2D736563 
+ 1275      74696F6E 
+ 1276              	.LASF28:
+ 1277 016f 6973725F 		.ascii	"isr_GPIO_4_Enable\000"
+ 1277      4750494F 
+ 1277      5F345F45 
+ 1277      6E61626C 
+ 1277      6500
+ 1278              	.LASF12:
+ 1279 0181 646F7562 		.ascii	"double\000"
+ 1279      6C6500
+ 1280              	.LASF25:
+ 1281 0188 7072696F 		.ascii	"priority\000"
+ 1281      72697479 
+ 1281      00
+ 1282              	.LASF24:
+ 1283 0191 6973725F 		.ascii	"isr_GPIO_4_SetPriority\000"
+ 1283      4750494F 
+ 1283      5F345F53 
+ 1283      65745072 
+ 1283      696F7269 
+ 1284              	.LASF10:
+ 1285 01a8 75696E74 		.ascii	"uint32\000"
+ 1285      333200
+ 1286              	.LASF8:
+ 1287 01af 756E7369 		.ascii	"unsigned int\000"
+ 1287      676E6564 
+ 1287      20696E74 
+ 1287      00
+ 1288              	.LASF30:
+ 1289 01bc 6973725F 		.ascii	"isr_GPIO_4_GetState\000"
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 32
 
 
- 1289              	.LASF8:
- 1290 01e2 756E7369 		.ascii	"unsigned int\000"
- 1290      676E6564 
- 1290      20696E74 
- 1290      00
- 1291              	.LASF30:
- 1292 01ef 6973725F 		.ascii	"isr_GPIO_4_GetState\000"
- 1292      4750494F 
- 1292      5F345F47 
- 1292      65745374 
- 1292      61746500 
- 1293              	.LASF7:
- 1294 0203 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1294      206C6F6E 
- 1294      6720756E 
- 1294      7369676E 
- 1294      65642069 
- 1295              	.LASF15:
- 1296 021a 63796973 		.ascii	"cyisraddress\000"
- 1296      72616464 
- 1296      72657373 
- 1296      00
- 1297              	.LASF17:
- 1298 0227 73697A65 		.ascii	"sizetype\000"
- 1298      74797065 
- 1298      00
- 1299              	.LASF6:
- 1300 0230 6C6F6E67 		.ascii	"long long int\000"
- 1300      206C6F6E 
- 1300      6720696E 
- 1300      7400
- 1301              	.LASF19:
- 1302 023e 6973725F 		.ascii	"isr_GPIO_4_Stop\000"
- 1302      4750494F 
- 1302      5F345F53 
- 1302      746F7000 
- 1303              	.LASF13:
- 1304 024e 63686172 		.ascii	"char\000"
- 1304      00
- 1305              	.LASF22:
- 1306 0253 6973725F 		.ascii	"isr_GPIO_4_SetVector\000"
- 1306      4750494F 
- 1306      5F345F53 
- 1306      65745665 
- 1306      63746F72 
- 1307              	.LASF32:
- 1308 0268 6973725F 		.ascii	"isr_GPIO_4_SetPending\000"
- 1308      4750494F 
- 1308      5F345F53 
- 1308      65745065 
- 1308      6E64696E 
- 1309              	.LASF2:
- 1310 027e 73686F72 		.ascii	"short int\000"
- 1310      7420696E 
- 1310      7400
- 1311              	.LASF33:
- 1312 0288 6973725F 		.ascii	"isr_GPIO_4_ClearPending\000"
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccvdz6cO.s 			page 33
+ 1289      4750494F 
+ 1289      5F345F47 
+ 1289      65745374 
+ 1289      61746500 
+ 1290              	.LASF7:
+ 1291 01d0 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1291      206C6F6E 
+ 1291      6720756E 
+ 1291      7369676E 
+ 1291      65642069 
+ 1292              	.LASF15:
+ 1293 01e7 63796973 		.ascii	"cyisraddress\000"
+ 1293      72616464 
+ 1293      72657373 
+ 1293      00
+ 1294              	.LASF17:
+ 1295 01f4 73697A65 		.ascii	"sizetype\000"
+ 1295      74797065 
+ 1295      00
+ 1296              	.LASF6:
+ 1297 01fd 6C6F6E67 		.ascii	"long long int\000"
+ 1297      206C6F6E 
+ 1297      6720696E 
+ 1297      7400
+ 1298              	.LASF19:
+ 1299 020b 6973725F 		.ascii	"isr_GPIO_4_Stop\000"
+ 1299      4750494F 
+ 1299      5F345F53 
+ 1299      746F7000 
+ 1300              	.LASF13:
+ 1301 021b 63686172 		.ascii	"char\000"
+ 1301      00
+ 1302              	.LASF22:
+ 1303 0220 6973725F 		.ascii	"isr_GPIO_4_SetVector\000"
+ 1303      4750494F 
+ 1303      5F345F53 
+ 1303      65745665 
+ 1303      63746F72 
+ 1304              	.LASF32:
+ 1305 0235 6973725F 		.ascii	"isr_GPIO_4_SetPending\000"
+ 1305      4750494F 
+ 1305      5F345F53 
+ 1305      65745065 
+ 1305      6E64696E 
+ 1306              	.LASF2:
+ 1307 024b 73686F72 		.ascii	"short int\000"
+ 1307      7420696E 
+ 1307      7400
+ 1308              	.LASF33:
+ 1309 0255 6973725F 		.ascii	"isr_GPIO_4_ClearPending\000"
+ 1309      4750494F 
+ 1309      5F345F43 
+ 1309      6C656172 
+ 1309      50656E64 
+ 1310              	.LASF27:
+ 1311 026d 7072696F 		.ascii	"priorityOffset\000"
+ 1311      72697479 
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccwDJZLo.s 			page 33
 
 
- 1312      4750494F 
- 1312      5F345F43 
- 1312      6C656172 
- 1312      50656E64 
- 1313              	.LASF27:
- 1314 02a0 7072696F 		.ascii	"priorityOffset\000"
- 1314      72697479 
- 1314      4F666673 
- 1314      657400
- 1315              	.LASF4:
- 1316 02af 6C6F6E67 		.ascii	"long int\000"
- 1316      20696E74 
- 1316      00
- 1317              	.LASF16:
- 1318 02b8 6C6F6E67 		.ascii	"long double\000"
- 1318      20646F75 
- 1318      626C6500 
- 1319              	.LASF0:
- 1320 02c4 7369676E 		.ascii	"signed char\000"
- 1320      65642063 
- 1320      68617200 
- 1321              	.LASF35:
- 1322 02d0 47656E65 		.ascii	"Generated_Source\\PSoC4\\isr_GPIO_4.c\000"
- 1322      72617465 
- 1322      645F536F 
- 1322      75726365 
- 1322      5C50536F 
- 1323              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1311      4F666673 
+ 1311      657400
+ 1312              	.LASF4:
+ 1313 027c 6C6F6E67 		.ascii	"long int\000"
+ 1313      20696E74 
+ 1313      00
+ 1314              	.LASF36:
+ 1315 0285 443A5C53 		.ascii	"D:\\SysTick_Example02.cydsn\000"
+ 1315      79735469 
+ 1315      636B5F45 
+ 1315      78616D70 
+ 1315      6C653032 
+ 1316              	.LASF16:
+ 1317 02a0 6C6F6E67 		.ascii	"long double\000"
+ 1317      20646F75 
+ 1317      626C6500 
+ 1318              	.LASF0:
+ 1319 02ac 7369676E 		.ascii	"signed char\000"
+ 1319      65642063 
+ 1319      68617200 
+ 1320              	.LASF35:
+ 1321 02b8 47656E65 		.ascii	"Generated_Source\\PSoC4\\isr_GPIO_4.c\000"
+ 1321      72617465 
+ 1321      645F536F 
+ 1321      75726365 
+ 1321      5C50536F 
+ 1322              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

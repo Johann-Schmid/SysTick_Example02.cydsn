@@ -292,18 +292,19 @@ void cyfitter_cfg(void)
 	CY_SET_REG8((void *)CYREG_UDB_UDBIF_INT_CLK_CTL, 0x01u);
 	{
 		static const uint32 CYCODE cy_cfg_addr_table[] = {
-			0x400F400Eu, /* Base address: 0x400F4000 Count: 14 */
+			0x400F400Fu, /* Base address: 0x400F4000 Count: 15 */
 		};
 
 		static const cy_cfg_addrvalue_t CYCODE cy_cfg_data_table[] = {
-			{0x13u, 0x82u},
-			{0x17u, 0x14u},
+			{0x11u, 0x80u},
+			{0x13u, 0x02u},
+			{0x17u, 0x84u},
 			{0x1Bu, 0x02u},
-			{0x1Eu, 0x04u},
-			{0x6Bu, 0x02u},
-			{0x6Fu, 0x10u},
-			{0x72u, 0x04u},
-			{0x77u, 0x84u},
+			{0x1Cu, 0x08u},
+			{0x6Bu, 0x82u},
+			{0x6Du, 0x80u},
+			{0x74u, 0x04u},
+			{0x77u, 0x04u},
 			{0x7Bu, 0x02u},
 			{0xC4u, 0xF0u},
 			{0xC6u, 0x90u},
@@ -364,9 +365,9 @@ void cyfitter_cfg(void)
 
 	/* Perform second pass device configuration. These items must be configured in specific order after the regular configuration is done. */
 	/* IOPINS0_0 Starting address: CYDEV_GPIO_PRT0_BASE */
-	CY_SET_REG32((void *)(CYDEV_GPIO_PRT0_BASE), 0x00000001u);
-	CY_SET_REG32((void *)(CYREG_GPIO_PRT0_PC), 0x001B6C01u);
-	CY_SET_REG32((void *)(CYREG_GPIO_PRT0_INTR_CFG), 0x00000002u);
+	CY_SET_REG32((void *)(CYDEV_GPIO_PRT0_BASE), 0x00000080u);
+	CY_SET_REG32((void *)(CYREG_GPIO_PRT0_PC), 0x003B6C00u);
+	CY_SET_REG32((void *)(CYREG_GPIO_PRT0_INTR_CFG), 0x00008000u);
 
 	/* IOPINS0_1 Starting address: CYDEV_GPIO_PRT1_BASE */
 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT1_BASE), 0x00000041u);

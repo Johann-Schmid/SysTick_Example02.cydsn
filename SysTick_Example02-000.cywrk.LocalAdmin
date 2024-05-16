@@ -18,7 +18,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="SysTick_Example02-000\SysTick_Example02\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>SysTick_Example02-000</v>
 <v>SysTick_Example02-000\SysTick_Example02</v>
@@ -363,7 +363,7 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\main.c" />
+<name v=".\SysTick_Example02.cydwr" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -371,7 +371,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="2079, 1071" SelectedTabbedMdiWindow="ecc55e14-7693-4ffd-8fde-669b09168578"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="5d3464ff-a258-409f-b60d-9b3ed8d026d1" /><DocumentWindow Key="D:\SysTick_Example02.cydsn\SysTick_Example02.cydsn\main.c" Guid="ecc55e14-7693-4ffd-8fde-669b09168578" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="2333, 1071" SelectedTabbedMdiWindow="8b238680-10a4-4aac-90ff-984fdf8defe3"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="5d3464ff-a258-409f-b60d-9b3ed8d026d1" /><DocumentWindow Key="D:\SysTick_Example02.cydsn\SysTick_Example02.cydwr" Guid="8b238680-10a4-4aac-90ff-984fdf8defe3" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

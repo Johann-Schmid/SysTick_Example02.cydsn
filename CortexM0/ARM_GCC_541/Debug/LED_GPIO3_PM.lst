@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 1
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccQ1Ry1m.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 1
   22:Generated_Source\PSoC4/LED_GPIO3_PM.c **** 
   23:Generated_Source\PSoC4/LED_GPIO3_PM.c **** /*******************************************************************************
   24:Generated_Source\PSoC4/LED_GPIO3_PM.c **** * Function Name: LED_GPIO3_Sleep
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 2
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccQ1Ry1m.s 			page 2
 
 
   25:Generated_Source\PSoC4/LED_GPIO3_PM.c **** ****************************************************************************//**
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 1
   49 000e BD46     		mov	sp, r7
   50              		@ sp needed
   51 0010 80BD     		pop	{r7, pc}
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 3
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccQ1Ry1m.s 			page 3
 
 
   52              	.L3:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 1
   82 000a 1360     		str	r3, [r2]
   86:Generated_Source\PSoC4/LED_GPIO3_PM.c ****     #else
   87:Generated_Source\PSoC4/LED_GPIO3_PM.c ****         #if (CY_PSOC4_4200L)
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 4
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccQ1Ry1m.s 			page 4
 
 
   88:Generated_Source\PSoC4/LED_GPIO3_PM.c ****             /* Restore the regulator state and come out of suspend mode */
@@ -215,48 +215,48 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 1
  104 0006 00000000 		.4byte	.Ldebug_abbrev0
  105 000a 04       		.byte	0x4
  106 000b 01       		.uleb128 0x1
- 107 000c B9000000 		.4byte	.LASF20
+ 107 000c 86000000 		.4byte	.LASF20
  108 0010 0C       		.byte	0xc
- 109 0011 42000000 		.4byte	.LASF21
- 110 0015 0F000000 		.4byte	.LASF22
+ 109 0011 0F000000 		.4byte	.LASF21
+ 110 0015 AF010000 		.4byte	.LASF22
  111 0019 00000000 		.4byte	.Ldebug_ranges0+0
  112 001d 00000000 		.4byte	0
  113 0021 00000000 		.4byte	.Ldebug_line0
  114 0025 02       		.uleb128 0x2
  115 0026 01       		.byte	0x1
  116 0027 06       		.byte	0x6
- 117 0028 E2010000 		.4byte	.LASF0
+ 117 0028 CA010000 		.4byte	.LASF0
  118 002c 02       		.uleb128 0x2
  119 002d 01       		.byte	0x1
  120 002e 08       		.byte	0x8
- 121 002f 6E000000 		.4byte	.LASF1
+ 121 002f 3B000000 		.4byte	.LASF1
  122 0033 02       		.uleb128 0x2
  123 0034 02       		.byte	0x2
  124 0035 05       		.byte	0x5
- 125 0036 C7010000 		.4byte	.LASF2
+ 125 0036 94010000 		.4byte	.LASF2
  126 003a 02       		.uleb128 0x2
  127 003b 02       		.byte	0x2
  128 003c 07       		.byte	0x7
- 129 003d A6000000 		.4byte	.LASF3
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 5
+ 129 003d 73000000 		.4byte	.LASF3
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccQ1Ry1m.s 			page 5
 
 
  130 0041 02       		.uleb128 0x2
  131 0042 04       		.byte	0x4
  132 0043 05       		.byte	0x5
- 133 0044 D9010000 		.4byte	.LASF4
+ 133 0044 A6010000 		.4byte	.LASF4
  134 0048 02       		.uleb128 0x2
  135 0049 04       		.byte	0x4
  136 004a 07       		.byte	0x7
- 137 004b 94000000 		.4byte	.LASF5
+ 137 004b 61000000 		.4byte	.LASF5
  138 004f 02       		.uleb128 0x2
  139 0050 08       		.byte	0x8
  140 0051 05       		.byte	0x5
- 141 0052 B4010000 		.4byte	.LASF6
+ 141 0052 81010000 		.4byte	.LASF6
  142 0056 02       		.uleb128 0x2
  143 0057 08       		.byte	0x8
  144 0058 07       		.byte	0x7
- 145 0059 83010000 		.4byte	.LASF7
+ 145 0059 50010000 		.4byte	.LASF7
  146 005d 03       		.uleb128 0x3
  147 005e 04       		.byte	0x4
  148 005f 05       		.byte	0x5
@@ -264,24 +264,24 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 1
  150 0064 02       		.uleb128 0x2
  151 0065 04       		.byte	0x4
  152 0066 07       		.byte	0x7
- 153 0067 76010000 		.4byte	.LASF8
+ 153 0067 43010000 		.4byte	.LASF8
  154 006b 04       		.uleb128 0x4
- 155 006c 6F010000 		.4byte	.LASF12
+ 155 006c 3C010000 		.4byte	.LASF12
  156 0070 02       		.byte	0x2
  157 0071 D401     		.2byte	0x1d4
  158 0073 48000000 		.4byte	0x48
  159 0077 02       		.uleb128 0x2
  160 0078 04       		.byte	0x4
  161 0079 04       		.byte	0x4
- 162 007a 68000000 		.4byte	.LASF9
+ 162 007a 35000000 		.4byte	.LASF9
  163 007e 02       		.uleb128 0x2
  164 007f 08       		.byte	0x8
  165 0080 04       		.byte	0x4
- 166 0081 68010000 		.4byte	.LASF10
+ 166 0081 35010000 		.4byte	.LASF10
  167 0085 02       		.uleb128 0x2
  168 0086 01       		.byte	0x1
  169 0087 08       		.byte	0x8
- 170 0088 C2010000 		.4byte	.LASF11
+ 170 0088 8F010000 		.4byte	.LASF11
  171 008c 04       		.uleb128 0x4
  172 008d 00000000 		.4byte	.LASF13
  173 0091 02       		.byte	0x2
@@ -295,16 +295,16 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 1
  181 00a0 21       		.byte	0x21
  182 00a1 CA000000 		.4byte	0xca
  183 00a5 07       		.uleb128 0x7
- 184 00a6 D1010000 		.4byte	.LASF14
+ 184 00a6 9E010000 		.4byte	.LASF14
  185 00aa 03       		.byte	0x3
  186 00ab 23       		.byte	0x23
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 6
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccQ1Ry1m.s 			page 6
 
 
  187 00ac 6B000000 		.4byte	0x6b
  188 00b0 00       		.byte	0
  189 00b1 07       		.uleb128 0x7
- 190 00b2 AB010000 		.4byte	.LASF15
+ 190 00b2 78010000 		.4byte	.LASF15
  191 00b6 03       		.byte	0x3
  192 00b7 24       		.byte	0x24
  193 00b8 6B000000 		.4byte	0x6b
@@ -317,12 +317,12 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 1
  200 00c8 08       		.byte	0x8
  201 00c9 00       		.byte	0
  202 00ca 08       		.uleb128 0x8
- 203 00cb 7C000000 		.4byte	.LASF17
+ 203 00cb 49000000 		.4byte	.LASF17
  204 00cf 03       		.byte	0x3
  205 00d0 26       		.byte	0x26
  206 00d1 9D000000 		.4byte	0x9d
  207 00d5 09       		.uleb128 0x9
- 208 00d6 47010000 		.4byte	.LASF18
+ 208 00d6 14010000 		.4byte	.LASF18
  209 00da 01       		.byte	0x1
  210 00db 2C       		.byte	0x2c
  211 00dc 00000000 		.4byte	.LFB0
@@ -330,7 +330,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 1
  213 00e4 01       		.uleb128 0x1
  214 00e5 9C       		.byte	0x9c
  215 00e6 09       		.uleb128 0x9
- 216 00e7 9A010000 		.4byte	.LASF19
+ 216 00e7 67010000 		.4byte	.LASF19
  217 00eb 01       		.byte	0x1
  218 00ec 52       		.byte	0x52
  219 00ed 00000000 		.4byte	.LFB1
@@ -338,7 +338,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 1
  221 00f5 01       		.uleb128 0x1
  222 00f6 9C       		.byte	0x9c
  223 00f7 0A       		.uleb128 0xa
- 224 00f8 57010000 		.4byte	.LASF23
+ 224 00f8 24010000 		.4byte	.LASF23
  225 00fc 01       		.byte	0x1
  226 00fd 14       		.byte	0x14
  227 00fe CA000000 		.4byte	0xca
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 1
  241 0007 03       		.uleb128 0x3
  242 0008 0E       		.uleb128 0xe
  243 0009 1B       		.uleb128 0x1b
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 7
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccQ1Ry1m.s 			page 7
 
 
  244 000a 0E       		.uleb128 0xe
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 1
  298 0040 0B       		.uleb128 0xb
  299 0041 0B       		.uleb128 0xb
  300 0042 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 8
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccQ1Ry1m.s 			page 8
 
 
  301 0043 0B       		.uleb128 0xb
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 1
  355 0079 9742     		.uleb128 0x2117
  356 007b 19       		.uleb128 0x19
  357 007c 00       		.byte	0
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 9
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccQ1Ry1m.s 			page 9
 
 
  358 007d 00       		.byte	0
@@ -534,126 +534,125 @@ ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 1
  403 0006 75736253 		.ascii	"usbState\000"
  403      74617465 
  403      00
- 404              	.LASF22:
- 405 000f 433A5C53 		.ascii	"C:\\SysTick_Example02.cydsn\\SysTick_Example02.cyds"
- 405      79735469 
- 405      636B5F45 
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 10
+ 404              	.LASF21:
+ 405 000f 47656E65 		.ascii	"Generated_Source\\PSoC4\\LED_GPIO3_PM.c\000"
+ 405      72617465 
+ 405      645F536F 
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccQ1Ry1m.s 			page 10
 
 
- 405      78616D70 
- 405      6C653032 
- 406 0040 6E00     		.ascii	"n\000"
- 407              	.LASF21:
- 408 0042 47656E65 		.ascii	"Generated_Source\\PSoC4\\LED_GPIO3_PM.c\000"
- 408      72617465 
- 408      645F536F 
- 408      75726365 
- 408      5C50536F 
- 409              	.LASF9:
- 410 0068 666C6F61 		.ascii	"float\000"
- 410      7400
- 411              	.LASF1:
- 412 006e 756E7369 		.ascii	"unsigned char\000"
- 412      676E6564 
- 412      20636861 
- 412      7200
- 413              	.LASF17:
- 414 007c 4C45445F 		.ascii	"LED_GPIO3_BACKUP_STRUCT\000"
- 414      4750494F 
- 414      335F4241 
- 414      434B5550 
- 414      5F535452 
- 415              	.LASF5:
- 416 0094 6C6F6E67 		.ascii	"long unsigned int\000"
- 416      20756E73 
- 416      69676E65 
- 416      6420696E 
- 416      7400
- 417              	.LASF3:
- 418 00a6 73686F72 		.ascii	"short unsigned int\000"
- 418      7420756E 
- 418      7369676E 
- 418      65642069 
- 418      6E7400
- 419              	.LASF20:
- 420 00b9 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 420      43313120 
- 420      352E342E 
- 420      31203230 
- 420      31363036 
- 421 00ec 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 421      20726576 
- 421      6973696F 
- 421      6E203233 
- 421      37373135 
- 422 011f 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 422      66756E63 
- 422      74696F6E 
- 422      2D736563 
- 422      74696F6E 
- 423              	.LASF18:
- 424 0147 4C45445F 		.ascii	"LED_GPIO3_Sleep\000"
- 424      4750494F 
- 424      335F536C 
- 424      65657000 
- 425              	.LASF23:
-ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\cch0c61M.s 			page 11
+ 405      75726365 
+ 405      5C50536F 
+ 406              	.LASF9:
+ 407 0035 666C6F61 		.ascii	"float\000"
+ 407      7400
+ 408              	.LASF1:
+ 409 003b 756E7369 		.ascii	"unsigned char\000"
+ 409      676E6564 
+ 409      20636861 
+ 409      7200
+ 410              	.LASF17:
+ 411 0049 4C45445F 		.ascii	"LED_GPIO3_BACKUP_STRUCT\000"
+ 411      4750494F 
+ 411      335F4241 
+ 411      434B5550 
+ 411      5F535452 
+ 412              	.LASF5:
+ 413 0061 6C6F6E67 		.ascii	"long unsigned int\000"
+ 413      20756E73 
+ 413      69676E65 
+ 413      6420696E 
+ 413      7400
+ 414              	.LASF3:
+ 415 0073 73686F72 		.ascii	"short unsigned int\000"
+ 415      7420756E 
+ 415      7369676E 
+ 415      65642069 
+ 415      6E7400
+ 416              	.LASF20:
+ 417 0086 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 417      43313120 
+ 417      352E342E 
+ 417      31203230 
+ 417      31363036 
+ 418 00b9 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 418      20726576 
+ 418      6973696F 
+ 418      6E203233 
+ 418      37373135 
+ 419 00ec 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 419      66756E63 
+ 419      74696F6E 
+ 419      2D736563 
+ 419      74696F6E 
+ 420              	.LASF18:
+ 421 0114 4C45445F 		.ascii	"LED_GPIO3_Sleep\000"
+ 421      4750494F 
+ 421      335F536C 
+ 421      65657000 
+ 422              	.LASF23:
+ 423 0124 4C45445F 		.ascii	"LED_GPIO3_backup\000"
+ 423      4750494F 
+ 423      335F6261 
+ 423      636B7570 
+ 423      00
+ 424              	.LASF10:
+ 425 0135 646F7562 		.ascii	"double\000"
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccQ1Ry1m.s 			page 11
 
 
- 426 0157 4C45445F 		.ascii	"LED_GPIO3_backup\000"
- 426      4750494F 
- 426      335F6261 
- 426      636B7570 
- 426      00
- 427              	.LASF10:
- 428 0168 646F7562 		.ascii	"double\000"
- 428      6C6500
- 429              	.LASF12:
- 430 016f 75696E74 		.ascii	"uint32\000"
- 430      333200
- 431              	.LASF8:
- 432 0176 756E7369 		.ascii	"unsigned int\000"
- 432      676E6564 
- 432      20696E74 
- 432      00
- 433              	.LASF7:
- 434 0183 6C6F6E67 		.ascii	"long long unsigned int\000"
- 434      206C6F6E 
- 434      6720756E 
- 434      7369676E 
- 434      65642069 
- 435              	.LASF19:
- 436 019a 4C45445F 		.ascii	"LED_GPIO3_Wakeup\000"
- 436      4750494F 
- 436      335F5761 
- 436      6B657570 
- 436      00
- 437              	.LASF15:
- 438 01ab 73696F53 		.ascii	"sioState\000"
- 438      74617465 
- 438      00
- 439              	.LASF6:
- 440 01b4 6C6F6E67 		.ascii	"long long int\000"
- 440      206C6F6E 
- 440      6720696E 
- 440      7400
- 441              	.LASF11:
- 442 01c2 63686172 		.ascii	"char\000"
- 442      00
- 443              	.LASF2:
- 444 01c7 73686F72 		.ascii	"short int\000"
- 444      7420696E 
- 444      7400
- 445              	.LASF14:
- 446 01d1 70635374 		.ascii	"pcState\000"
- 446      61746500 
- 447              	.LASF4:
- 448 01d9 6C6F6E67 		.ascii	"long int\000"
- 448      20696E74 
- 448      00
- 449              	.LASF0:
- 450 01e2 7369676E 		.ascii	"signed char\000"
- 450      65642063 
- 450      68617200 
- 451              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 425      6C6500
+ 426              	.LASF12:
+ 427 013c 75696E74 		.ascii	"uint32\000"
+ 427      333200
+ 428              	.LASF8:
+ 429 0143 756E7369 		.ascii	"unsigned int\000"
+ 429      676E6564 
+ 429      20696E74 
+ 429      00
+ 430              	.LASF7:
+ 431 0150 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 431      206C6F6E 
+ 431      6720756E 
+ 431      7369676E 
+ 431      65642069 
+ 432              	.LASF19:
+ 433 0167 4C45445F 		.ascii	"LED_GPIO3_Wakeup\000"
+ 433      4750494F 
+ 433      335F5761 
+ 433      6B657570 
+ 433      00
+ 434              	.LASF15:
+ 435 0178 73696F53 		.ascii	"sioState\000"
+ 435      74617465 
+ 435      00
+ 436              	.LASF6:
+ 437 0181 6C6F6E67 		.ascii	"long long int\000"
+ 437      206C6F6E 
+ 437      6720696E 
+ 437      7400
+ 438              	.LASF11:
+ 439 018f 63686172 		.ascii	"char\000"
+ 439      00
+ 440              	.LASF2:
+ 441 0194 73686F72 		.ascii	"short int\000"
+ 441      7420696E 
+ 441      7400
+ 442              	.LASF14:
+ 443 019e 70635374 		.ascii	"pcState\000"
+ 443      61746500 
+ 444              	.LASF4:
+ 445 01a6 6C6F6E67 		.ascii	"long int\000"
+ 445      20696E74 
+ 445      00
+ 446              	.LASF22:
+ 447 01af 443A5C53 		.ascii	"D:\\SysTick_Example02.cydsn\000"
+ 447      79735469 
+ 447      636B5F45 
+ 447      78616D70 
+ 447      6C653032 
+ 448              	.LASF0:
+ 449 01ca 7369676E 		.ascii	"signed char\000"
+ 449      65642063 
+ 449      68617200 
+ 450              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

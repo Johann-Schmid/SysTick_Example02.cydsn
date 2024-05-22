@@ -198,7 +198,7 @@ void HandleSwitch(uint8 switchIndex, char* buffer, char* time)
     sprintf(time, "%lu;", intSW[switchIndex]);
     UART_UartPutString(time);
 
-    sprintf(buffer, "%u\r\n", boUART[switchIndex]);
+    sprintf(buffer, "%u\n", boUART[switchIndex]);
     UART_UartPutString(buffer);
 
     // Toggle the LED based on switch index
